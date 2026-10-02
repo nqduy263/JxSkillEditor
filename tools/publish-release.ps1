@@ -17,7 +17,7 @@ $client.DefaultRequestHeaders.Accept.ParseAdd('application/vnd.github+json')
 $token = $null
 function SendJson([string]$method,[string]$url,[object]$body) {
     $request = [System.Net.Http.HttpRequestMessage]::new([System.Net.Http.HttpMethod]::new($method),$url)
-    if ($null -ne $body) { $request.Content = [System.Net.Http.StringContent]::new(($body | ConvertTo-Json -Depth 10),'utf8','application/json') }
+    if ($null -ne $body) { $request.Content = [System.Net.Http.StringContent]::new(($body | ConvertTo-Json -Depth 10),[Text.Encoding]::UTF8,'application/json') }
     try {
         $response = $client.SendAsync($request).GetAwaiter().GetResult()
         $raw = $response.Content.ReadAsStringAsync().GetAwaiter().GetResult()
