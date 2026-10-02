@@ -1,0 +1,10 @@
+(function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.JXCast=api;})(typeof globalThis!=='undefined'?globalThis:this,function(){
+ 'use strict';
+ function resolve(id,getSkill,getMissile,resources){const stages=[],warnings=[],seen=new Set();
+  function missile(mid,label){const m=getMissile(mid);if(!m){warnings.push('Thiếu missile #'+mid);return;}for(const [field,path] of Object.entries(m.fields)){if(!/^AnimFileB?\d$/.test(field)||!path)continue;const resource=resources.find(r=>r.path===path);stages.push({kind:'effect',label:label+' · missile #'+mid+' · '+field,path,resource,missile:m,field});if(!resource||resource.status!=='ready')warnings.push('Chưa xem được '+field+' của missile #'+mid+': '+(resource?.reason||'SPR chưa có trong snapshot'));}}
+  function walk(sid,depth,label){if(depth>7||seen.has(sid))return;seen.add(sid);const s=getSkill(sid);if(!s){warnings.push('Thiếu skill #'+sid);return;}const f=s.fields;if(f.PreCastSpr)stages.push({kind:'effect',label:label+' · PreCastSpr',path:f.PreCastSpr,resource:resources.find(r=>r.path===f.PreCastSpr),field:'PreCastSpr'});const mid=Number(f.ChildSkillId);if(mid>0){if(f.BaseSkill==='1'||f.ByMissle==='1')missile(mid,label);else walk(mid,depth+1,label+' → skill #'+mid);}for(const [flag,key,phase] of [['StartEvent','StartSkillId','Xuất chiêu'],['FlyEvent','FlySkillId','Đạn bay'],['CollideEvent','CollidSkillId','Va chạm'],['VanishedEvent','VanishedSkillId','Tan biến']])if(Number(f[flag])&&Number(f[key])>0)walk(Number(f[key]),depth+1,phase);}
+  walk(Number(id),0,'Skill #'+id);return {stages,warnings};
+ }
+ function timing(fields,missile,resource,override){const tick=1000/18,wait=Math.max(0,Number(fields.WaitTime)||0),cast=Math.max(0,Number(fields.TimePerCast)||0),life=Math.max(0,Number(missile?.fields.LifeTime)||0),interval=Number(override)>0?Number(override):Math.max(16,Number(resource?.interval)||100);return {waitMs:Math.round(wait*tick),castMs:Math.round(cast*tick),lifeMs:Math.round(life*tick),frameIntervalMs:interval};}
+ return {resolve,timing};
+});

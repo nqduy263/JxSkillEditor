@@ -1,0 +1,1193 @@
+{
+  "snapshotId": "ab1d6ed422c67793b8451bf8e25a031ac739a07114e2f69964582167d2288702",
+  "generatedAt": "2026-10-01T15:36:57.458Z",
+  "scope": "Verified running client root; loose-file snapshot; learning references from captured running WSL server root. No in-memory skill list read.",
+  "source": "Client6.0/settings/skills.txt",
+  "coverage": {
+    "rawRows": 1236,
+    "rows": 1235,
+    "icons": 978,
+    "learned": 170,
+    "script": 288,
+    "missiles": 441,
+    "scripts": 227,
+    "factions": 13
+  },
+  "invalid": [],
+  "duplicates": [
+    {
+      "id": 521,
+      "lines": [
+        522,
+        523
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "Client6.0/settings/skills.txt",
+      "bytes": 579712,
+      "sha256": "d9b19692f54a42794b2c8bff0df7a31318b1d2b59d11d4860b87cfb7dd1bab64"
+    },
+    {
+      "path": "Client6.0/settings/missles.txt",
+      "bytes": 89787,
+      "sha256": "6c5e1720905278e09e7dc7fc8786b6062b07edf2f9ffd2113aec86a5566d7b4a"
+    },
+    {
+      "path": "SkillStudio/evidence/live_skills_table.lua",
+      "bytes": 45889,
+      "sha256": "4f8d9e3557b2d6e802558cae6804b4855effe511d901cc407526b32377b4533a"
+    },
+    {
+      "path": "Client6.0/settings/faction/ÃÅÅÉÉè¶¨.ini",
+      "bytes": 916,
+      "sha256": "131fb583f53902f3b21bdba43a599b32cda947e3e966aaedbc9967ba77ff6e1d"
+    },
+    {
+      "path": "Client6.0/settings/gamesetting.ini",
+      "bytes": 7960,
+      "sha256": "26a28e1390a44c7fcf22d496753896090c5c72b7df5ccea85212a027f5fd559d"
+    },
+    {
+      "path": "Simcity/tcvn3.py",
+      "bytes": 3370,
+      "sha256": "dbbd9efc075604f5956c1155211f9458b1ae239ae0312698baa38ca205683711"
+    },
+    {
+      "path": "Client6.0/script/skill/special/³¤±øÎïÀí¹¥»÷.lua",
+      "bytes": 688,
+      "sha256": "d61647612cae59f964a580158cd24062fcdfd231128e5519074803d2ee87025c"
+    },
+    {
+      "path": "Client6.0/script/skill/special/Ô¶³ÌÎïÀí¹¥»÷.lua",
+      "bytes": 688,
+      "sha256": "d61647612cae59f964a580158cd24062fcdfd231128e5519074803d2ee87025c"
+    },
+    {
+      "path": "Client6.0/script/skill/saolin/ÉÙÁÖ½£·¨.lua",
+      "bytes": 770,
+      "sha256": "4c025d703ca262b7ba38b77322af65dda6f9625d05b0f0d7e6ea758d87870052"
+    },
+    {
+      "path": "Client6.0/script/skill/shaolin.lua",
+      "bytes": 32215,
+      "sha256": "4f78a2d37bba1419f85260f55e66850fa69298fbc609a40aed1f7d58b256528d"
+    },
+    {
+      "path": "Client6.0/script/skill/skill.lua",
+      "bytes": 406,
+      "sha256": "494fd1dfbb70dfd1fcc8bec7d9a27fd3b9c7fc332bf2bcf4609442f27ee2af33"
+    },
+    {
+      "path": "Client6.0/script/skill/tianwang.lua",
+      "bytes": 43402,
+      "sha256": "e3da3ff847523e08a9a40ae03eb112fe3f914952cf2fbd7bbddda45d9e0548d5"
+    },
+    {
+      "path": "Client6.0/script/skill/tangmen.lua",
+      "bytes": 39012,
+      "sha256": "5a03e0cac78a363dba3f61756dbafe57805594e39a8d8be4b1c70fa14acd7ca2"
+    },
+    {
+      "path": "Client6.0/script/skill/special/½ü³ÌÎïÀí¹¥»÷.lua",
+      "bytes": 688,
+      "sha256": "d61647612cae59f964a580158cd24062fcdfd231128e5519074803d2ee87025c"
+    },
+    {
+      "path": "Client6.0/script/skill/wudu.lua",
+      "bytes": 27709,
+      "sha256": "094a3bdb6b71bd5691e76ed4f80d782c586e20f3bdee7774028aa3e87588baa2"
+    },
+    {
+      "path": "Client6.0/script/skill/emei.lua",
+      "bytes": 28835,
+      "sha256": "90a44be367e9352d9d984e43693f245d3e9e8f869cfb1884bf84b41c0aef95a6"
+    },
+    {
+      "path": "Client6.0/script/skill/kunlun.lua",
+      "bytes": 31928,
+      "sha256": "c0d746597e220311fc589e4d14b495f82374f74dbb562220840852a43c48218d"
+    },
+    {
+      "path": "Client6.0/script/skill/cuiyan.lua",
+      "bytes": 32367,
+      "sha256": "3d3c654c4050b62dafae642c40c8b402e6a75bdb0fbe734931c6e63e541262d5"
+    },
+    {
+      "path": "Client6.0/script/skill/gaibang.lua",
+      "bytes": 26308,
+      "sha256": "6f0833f47a2e499758c561bfb1e454c482127f3eac3b9c14c96699efe218a4a4"
+    },
+    {
+      "path": "Client6.0/script/skill/tianren.lua",
+      "bytes": 31831,
+      "sha256": "96fbf7b7a47bb90819dc67f29cf3e56341847f9d22042f58dd47fa8dd5a6b8c0"
+    },
+    {
+      "path": "Client6.0/script/skill/wudang.lua",
+      "bytes": 27550,
+      "sha256": "9b9b5b1d55726d08de624b2acb0872734e1f4377d2253ab741ee00b0508197ec"
+    },
+    {
+      "path": "Client6.0/script/skill/saolin/½ð¸Õ·üÄ§.lua",
+      "bytes": 542,
+      "sha256": "622bb0ae01523992920bbe9c702eec5511c30e34a9226b8f77b9564683e8d8f6"
+    },
+    {
+      "path": "Client6.0/script/skill/saolin/ÐÐÁú²»Óê.lua",
+      "bytes": 715,
+      "sha256": "bea88132cbe933fd25c82bfbe91607d389783d1dbba8746fb4be10f48e069d8f"
+    },
+    {
+      "path": "Client6.0/script/skill/tangmeng/ÂþÌì»¨Óê.lua",
+      "bytes": 745,
+      "sha256": "61a19a99beb6e6c0e33f8a1d252406e3cc6fe145943a99ec47505efe81693a3f"
+    },
+    {
+      "path": "Client6.0/script/skill/emei/·ð¹âÆÕÕÕ.lua",
+      "bytes": 748,
+      "sha256": "933ab9153805b8154ba0a99ad761d418c78c20ba26ffadfa74f9b2d29322a021"
+    },
+    {
+      "path": "Client6.0/script/skill/chuiyang/¹ÛÒôÉ¢Ñ©.lua",
+      "bytes": 796,
+      "sha256": "7962b6babf19b97ed85aa30c2e1c60f8fc18e96365843e0e73e3655f02e34558"
+    },
+    {
+      "path": "Client6.0/script/skill/tianren/ÆßÉËÉñÈ­.lua",
+      "bytes": 922,
+      "sha256": "0a6993ec6ed44612f639db28c0ea2733cfc62cd2e2f44a9e60cecfcca52e2322"
+    },
+    {
+      "path": "Client6.0/script/skill/tangmeng/Ð¡Àî·Éµ¶.lua",
+      "bytes": 559,
+      "sha256": "b31482ce7acd94bdbd57adbca24fabf921128511005ab09b6b9aa0be4da49feb"
+    },
+    {
+      "path": "Client6.0/script/skill/special/¶¾¹¥»÷.lua",
+      "bytes": 561,
+      "sha256": "151adbb3af7282baf5f5b74eed69971914b500a72a073e1c77ec80d9616f149a"
+    },
+    {
+      "path": "Client6.0/script/skill/emei/Çï·çÒ¶.lua",
+      "bytes": 376,
+      "sha256": "db92926366e5ceec4dc2ae047490136fae5180b2dbde9c789e79a89fe7763fe0"
+    },
+    {
+      "path": "Client6.0/script/skill/special/Çá¹¦.lua",
+      "bytes": 343,
+      "sha256": "2b391d1d3bc798904a74fcf0a3f09b35dc8f1dec13a023fbfcfea5ca19242ddc"
+    },
+    {
+      "path": "Client6.0/script/skill/saolin/»ÛÑÛÖä.lua",
+      "bytes": 598,
+      "sha256": "a875843befc6381fc081bee40c1746f942486469a2541cb9e90a6bf827c792a0"
+    },
+    {
+      "path": "Client6.0/script/skill/tianwang/ÅÌ¹Å¾ÅÊ½.lua",
+      "bytes": 547,
+      "sha256": "2b6173da43970284eb5429184164094ad014bf631dc73d281e3e935fd6d126b9"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/²ÐÑôÈçÑª.lua",
+      "bytes": 545,
+      "sha256": "ec47de37657334cb622b0f075479b4bd7bb23c659180a3c0682a1e3b2de4c849"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/¶¾É°ÕÆ.lua",
+      "bytes": 781,
+      "sha256": "36655da9fdcc25015d370540f02a3e8a3241f74f20e597daf580b12d81266240"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/¶á»ê¼ý.lua",
+      "bytes": 530,
+      "sha256": "2583928b283b778eabfe4a362d36cc77e441151dbb2416507b261e436958818b"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/·çÔÆÍ»Æð.lua",
+      "bytes": 553,
+      "sha256": "fa25a2e5a17ff8f3028050b299d4c1aa9ed8076e9b5c701958f3f2edaef0e841"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/ºô·ç·¨.lua",
+      "bytes": 751,
+      "sha256": "6ef6d48a971af5ee6844155dc934a799cb2e77818ff7ff38d04ab64565e1df55"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/¾ªÀ×Õ¶.lua",
+      "bytes": 730,
+      "sha256": "417fd2d757e0b6ad7865822cb78284df5a325f7d91872b5bc8a2a151f560e672"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/Å­À×Ö¸.lua",
+      "bytes": 566,
+      "sha256": "9bccda6fe2e5614219f082d40f97aee16b884afcaa1875ba8e282e07219f1ae6"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/Åùö¨µ¯.lua",
+      "bytes": 546,
+      "sha256": "9c9d56538d54f0dd6e0e63fa7e304d8354b39ff85f99caea5634c87c19ea03eb"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/Æ®Ñ©´©ÔÆ.lua",
+      "bytes": 737,
+      "sha256": "7b86c0082c39a7ab20fa204fcf3293e14d52d0a5132bc3b88db4bb68e54d5970"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/Õ¶Áú¾ö.lua",
+      "bytes": 718,
+      "sha256": "af03168d39977d571c5e5ea50dffe3d81cb59ba4b03ebd7cb37d849a891c389e"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/´ïÄ¦¶É½­.lua",
+      "bytes": 536,
+      "sha256": "90cf2f424f877eb99c93f451fb43f495096b18295dc36720127c9b030a726323"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/ÐþÒ»ÎÞÏó.lua",
+      "bytes": 575,
+      "sha256": "7a6c4280628baa0ae681313f6d06d961e0d760aae00eaf66598e7c2991c90244"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/µ¯Ö¸ÁÒÑæ.lua",
+      "bytes": 562,
+      "sha256": "67c04432c8b5dc246c7a3c1be58c49ee1a329919dbeab1be5f989a3b438e972a"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/Ð¡Àî·Éµ¶.lua",
+      "bytes": 530,
+      "sha256": "31a3506b6ff04fda9b62079ab7db999fa32c2a8e180074cc4f3b166cd5164bab"
+    },
+    {
+      "path": "Client6.0/script/skill/tangmeng/yudu-shigu.lua",
+      "bytes": 363,
+      "sha256": "df061cb6454433529664be2e8c8e55d816d45bab1a229485482d3669da8ea88b"
+    },
+    {
+      "path": "Client6.0/script/skill/tianren/sanmei-zhenhuo.lua",
+      "bytes": 370,
+      "sha256": "804ab57b203981b341e5edbdab9a2ac90b1aa0ba77e1d4158c29e18ea0f07876"
+    },
+    {
+      "path": "Client6.0/script/skill/saolin/Ê¨×Óºð.lua",
+      "bytes": 909,
+      "sha256": "9778cda5be3a80b217e51a5d6f88d0bcf5a7203095c9895b6c9ed83dc3eca155"
+    },
+    {
+      "path": "Client6.0/script/skill/special/changming-wan.lua",
+      "bytes": 382,
+      "sha256": "858f73716b26db37cfc99244b3b524de0de998c2d4fdfff7812cd6f5b7b41ec8"
+    },
+    {
+      "path": "Client6.0/script/skill/special/jiapao-wan.lua",
+      "bytes": 316,
+      "sha256": "3f73cf74dc49d7f11996afbc7544c2c657fcd8118f137dfa00b941b71d3bd5bc"
+    },
+    {
+      "path": "Client6.0/script/skill/special/dali-wan.lua",
+      "bytes": 332,
+      "sha256": "cfff3be4234b700d2f56250b6691fb51adb629689c6c4f4740ad286fcda55a4c"
+    },
+    {
+      "path": "Client6.0/script/skill/special/gaoshan-wan.lua",
+      "bytes": 314,
+      "sha256": "60b63d036f31cba2ee910c345ea264bbe79ce6c45195967a63907a0d50a1a783"
+    },
+    {
+      "path": "Client6.0/script/skill/special/gaozhong-wan.lua",
+      "bytes": 341,
+      "sha256": "6bbf59aa57367a0ca901dd275229f879cde68b76f66e96ce62a0a29f1fe4b581"
+    },
+    {
+      "path": "Client6.0/script/skill/special/feisu-wan.lua",
+      "bytes": 401,
+      "sha256": "428ac3f8e6959d589eb6bb78aff162bdc45fca27b7932c84379687291e0f6de6"
+    },
+    {
+      "path": "Client6.0/script/skill/special/bingfang-wan.lua",
+      "bytes": 377,
+      "sha256": "8714fb2c70ae38a9a35686bab27ae75e1d7601597a91800c8e14d840ea73e33b"
+    },
+    {
+      "path": "Client6.0/script/skill/special/leifang-wan.lua",
+      "bytes": 397,
+      "sha256": "a60f9f0dcd1cd1b20e8d46cd57c6b82c3817abed8d7b71fd06eaaa97f1912e17"
+    },
+    {
+      "path": "Client6.0/script/skill/special/huofang-wan.lua",
+      "bytes": 377,
+      "sha256": "1c9aa6c5524449c5fe3e0ba2e890a91261488ab436b1d4e6f5fea6c1963d73cd"
+    },
+    {
+      "path": "Client6.0/script/skill/special/dufang-wan.lua",
+      "bytes": 387,
+      "sha256": "995d40aa7037a58b42081767288496f6c6043624691a80501c8cbd83c33e05fc"
+    },
+    {
+      "path": "Client6.0/script/skill/chuiyang/·ç¾í²ÐÑ©.lua",
+      "bytes": 568,
+      "sha256": "dac0e033e8a45a9d26ce84578825dd0085d8343740e58ecc5eb1b0f1e773ee3a"
+    },
+    {
+      "path": "Client6.0/script/skill/tianwang/fengyun-jiang.lua",
+      "bytes": 556,
+      "sha256": "99c400f4f442d4487f3a5c056c95fcdf9deb32d70435bee3d1dad833055812b4"
+    },
+    {
+      "path": "Client6.0/script/skill/tianren/ÍÆÉ½Ìîº£.lua",
+      "bytes": 553,
+      "sha256": "6b8f29ff1abb0d13a71007d5a94327e98789d485a49f46f8a300d18bdc32b53c"
+    },
+    {
+      "path": "Client6.0/script/skill/special/rose.lua",
+      "bytes": 373,
+      "sha256": "d114b4fed04baf1c58cfdf86e0915c5c126afdac8a57edbfe7af739fad1a2245"
+    },
+    {
+      "path": "Client6.0/script/skill/wudang/°þ¼°¶ø¸´.lua",
+      "bytes": 754,
+      "sha256": "e18ebc7f9869d1861be19ac6b000575cfdc5939ef188745d1002ade51f2f251a"
+    },
+    {
+      "path": "Client6.0/script/skill/special/xingyun-xing.lua",
+      "bytes": 318,
+      "sha256": "d22abed526b07080bca25d35f91977dea51232c293cf6afd69ca8fa5b471da78"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/mianyi.lua",
+      "bytes": 1352,
+      "sha256": "b4db7d6c8d1a0d35a06efb0ad3986bf3c1e4aa2287a4f1b7d2858ffe916f9418"
+    },
+    {
+      "path": "Client6.0/script/skill/tangmeng/ÇàÄ¾¹¦.lua",
+      "bytes": 377,
+      "sha256": "e3cb022618e0a70df885f73f6aa7e7c2d9e8f29e104d17e6d8c2368905b0a3bc"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/¹¥³Ç³µ.lua",
+      "bytes": 357,
+      "sha256": "c90d3998fd197aaa11c8beca2dab9fdd13094d4ee97a586e4ccb6ec35bfcd76e"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/Í¶Ê¯³µ.lua",
+      "bytes": 894,
+      "sha256": "62196d607dfc5854d696957e2dca051cc9d893e7b716c7f9be7d31139011a3bc"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/×´Ì¬ÃâÒß.lua",
+      "bytes": 1174,
+      "sha256": "0d56a25fe6210669a9670ccc3b5cb67d6615c71338b0434dd64993216b47c6e4"
+    },
+    {
+      "path": "Client6.0/script/skill/special/zhengjiakangxing.lua",
+      "bytes": 338,
+      "sha256": "a6152027d99478e657f5431d68147885f60f3889b6963551319a734c4cb4e2d7"
+    },
+    {
+      "path": "Client6.0/script/skill/special/ÉúÃüÄÚÁ¦Ë«²¹.lua",
+      "bytes": 535,
+      "sha256": "64f55371aaa9150cd1d608459961f94ae042a84f31263c01516fd96138745b6b"
+    },
+    {
+      "path": "Client6.0/script/skill/baiming/yeqiu.lua",
+      "bytes": 565,
+      "sha256": "80fe75ff02303dcb9227d4d7f438fab5e0522894aa4fbfccbd70f124daaf7747"
+    },
+    {
+      "path": "Client6.0/script/skill/baiming/´º·çÓêÂ¶.lua",
+      "bytes": 350,
+      "sha256": "2e7110a1e17d1b837a438df21cc70efc40e91707c69672eb74643cc64f9bde6b"
+    },
+    {
+      "path": "Client6.0/script/skill/baiming/ÓêÂ¶´º·ç.lua",
+      "bytes": 553,
+      "sha256": "e55a6b3ef27f8b48251709e86fd071e83ba0f58924ca52155489eb13d3639c08"
+    },
+    {
+      "path": "Client6.0/script/skill/special/401.lua",
+      "bytes": 461,
+      "sha256": "56e1227f119539bae000460ff464fb3f9bf805e25b6958901bddcde3f29fbc69"
+    },
+    {
+      "path": "Client6.0/script/skill/special/402.lua",
+      "bytes": 451,
+      "sha256": "2358c94b534fd40fa2303e6ef78575f57506253ca25a7822ec0543a04455dbbc"
+    },
+    {
+      "path": "Client6.0/script/skill/special/403.lua",
+      "bytes": 892,
+      "sha256": "94fc045b799857b9ec0dc108145f9f44716e157ee2b1cc32ec1bc4000303c8d1"
+    },
+    {
+      "path": "Client6.0/script/skill/special/404.lua",
+      "bytes": 324,
+      "sha256": "be00539be9823b146fff8f09189083eae043d68008bc21e31ce603b1f8b430a9"
+    },
+    {
+      "path": "Client6.0/script/skill/baiming/niqiu.lua",
+      "bytes": 571,
+      "sha256": "242eed20d507b9b168a6b4491258954df5e161115f3e189f2ee283d33c90d00f"
+    },
+    {
+      "path": "Client6.0/script/skill/baiming/guiming.lua",
+      "bytes": 550,
+      "sha256": "8c44d797928aeb7a34b0d97a93135b28c59cbb271be90d3e93e5e5ca9ffdd62c"
+    },
+    {
+      "path": "Client6.0/script/skill/baiming/linghu.lua",
+      "bytes": 550,
+      "sha256": "339cc5f2232a3512574139d5ff763c081c4178879cfb6ae56421c80e273630b1"
+    },
+    {
+      "path": "Client6.0/script/skill/baiming/jiquan.lua",
+      "bytes": 354,
+      "sha256": "56751371f51ca9a329f195a93585974287687e3b34c339c6a44863474a5a2d02"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/duanhun_ci.lua",
+      "bytes": 1219,
+      "sha256": "1de2d326248a92990d21fece3d679b83366fcad1c54476cedac1e83ef19eefdf"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/³¤±øÎïÀí¹¥»÷npc.lua",
+      "bytes": 688,
+      "sha256": "aaa70488e00564c1010c0c79671125eb25078079a7f753853dfec00d2b1e759d"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/ÊôÐÔ¸ñ¶·npc.lua",
+      "bytes": 924,
+      "sha256": "2afe2874e43ec48eff222139f29edd352caad60e8de97c9bdcc15474611058fe"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/ÊôÐÔÔ¶³Ìnpc.lua",
+      "bytes": 1312,
+      "sha256": "9c624ce0434d05a023211a11d4e023c1b1042679cc138bf4486e680ed1ed3afb"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/Èý¶ëö«Ñ©npc.lua",
+      "bytes": 559,
+      "sha256": "7fd0c8ed04c733f7848246f0af3b6b8f99cb6d078dce09389b7d38bc03a20cb4"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/ÌìµØÎÞ¼«npc.lua",
+      "bytes": 565,
+      "sha256": "7b95d1c53d6d95b0487d1aca19f43b65c584b4eef3c6b51216fbcfde9e6ff1f5"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/ÌìÍâÁ÷ÐÇnpc.lua",
+      "bytes": 561,
+      "sha256": "e5690e8c2eace39cabcfaba13c56a32e3ba1d95b9560570376ae6a922aaba1d3"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/±©ÓêÀæ»¨npc.lua",
+      "bytes": 566,
+      "sha256": "962c8ce4ebcea532ee8bcc490e1a9895438085f65c94908d6011f105181f6f20"
+    },
+    {
+      "path": "Client6.0/script/skill/special/xiancaolu.lua",
+      "bytes": 262,
+      "sha256": "12217458f71c55f6d30e321c536b41c08ab2f4f708c2d8fe7bfeb18b70701b84"
+    },
+    {
+      "path": "Client6.0/script/skill/special/tianshanyulu.lua",
+      "bytes": 256,
+      "sha256": "3d8398e1e0bb2cf2d007fd16ab19f51e7203f57fa3a5387b42149eb570cac24f"
+    },
+    {
+      "path": "Client6.0/script/skill/special/baiguolu.lua",
+      "bytes": 338,
+      "sha256": "78e5501d28acf712d157eef180d3105657e34b1087f4c6df297ac7c09f10521a"
+    },
+    {
+      "path": "Client6.0/script/skill/special/baijuwan.lua",
+      "bytes": 261,
+      "sha256": "73b0d951ed92ca5c4c280d7438398a34b9236a82cf6da38952c194c3c2e4fc8d"
+    },
+    {
+      "path": "Client6.0/script/skill/special/fuxinggaozhao.lua",
+      "bytes": 255,
+      "sha256": "7202fdd1c42cf3c95d19657c3f551a041b9db0618834f6d3b1b1de869d4e9938"
+    },
+    {
+      "path": "Client6.0/script/skill/wuxinggongji.lua",
+      "bytes": 688,
+      "sha256": "fcbdcabbf56bf91a3e97b5936dba5b0cdfb609da66e0116bc11afccbb18ab5a7"
+    },
+    {
+      "path": "Client6.0/script/skill/zhongqiu/¹ð»¨¾Æ¹â»·.lua",
+      "bytes": 481,
+      "sha256": "f24561dcc15a60bff26e7e8ee54e81cadc803e6c2d428f4b0c536bbe586f6073"
+    },
+    {
+      "path": "Client6.0/script/skill/zhongqiu/ÍÅÔ²±ý¹â»·.lua",
+      "bytes": 501,
+      "sha256": "ded415549bb83d7157ad5cbbc066710c3f3c0dc7109e56dcfd17470ae111ac65"
+    },
+    {
+      "path": "Client6.0/script/skill/special/status_enhance.lua",
+      "bytes": 1151,
+      "sha256": "90f86ffa699d196ce72a91465da70f5e7e505caadd35f88ceddba4c1b1d6fc0b"
+    },
+    {
+      "path": "Client6.0/script/skill/special/manadamage_enhance.lua",
+      "bytes": 1389,
+      "sha256": "332ba6a4cf81b87060c1054402fe9a678950fa28319d03e795c8f0b2672aabc0"
+    },
+    {
+      "path": "Client6.0/script/skill/special/star1.lua",
+      "bytes": 359,
+      "sha256": "fde519055ea2facc7e97766913f54b56191a5463d7e6a6ad6b654894b327a8cd"
+    },
+    {
+      "path": "Client6.0/script/skill/special/star2.lua",
+      "bytes": 349,
+      "sha256": "ebe7cb1eadb49c96b800322471b67070e3e7199aa326c4a64c13f9982ffd73db"
+    },
+    {
+      "path": "Client6.0/script/skill/battles/sj_status_enhance1.lua",
+      "bytes": 788,
+      "sha256": "be14696f863600268397cf2eaca572a3e7777f6c58b6d2ace80e5cded40b444c"
+    },
+    {
+      "path": "Client6.0/script/skill/battles/sj_status_enhance2.lua",
+      "bytes": 792,
+      "sha256": "3600722d10283be302f1dfd4ba75df6430c18d7d228c5a706e119df608be93b1"
+    },
+    {
+      "path": "Client6.0/script/skill/battles/sj_reduce.lua",
+      "bytes": 1085,
+      "sha256": "767a4d4bc307d3f5a397aeb7024b335adbbebde6e8b4a2bc0e30c09857c778cf"
+    },
+    {
+      "path": "Client6.0/script/skill/battles/sj_res.lua",
+      "bytes": 1532,
+      "sha256": "ecf4312c0c7443d75ba5e457eedd63b4071191a23159312c1441001e86d37bfa"
+    },
+    {
+      "path": "Client6.0/script/skill/battles/sj_manadamage.lua",
+      "bytes": 1285,
+      "sha256": "90d40edea0d0fae3b5e7ab08d5e7fa4eb3e935c9f42bc8f4877c344cb4de1a54"
+    },
+    {
+      "path": "Client6.0/script/skill/battles/sj_physicsdamage.lua",
+      "bytes": 1813,
+      "sha256": "4fdc42c9a34730eb5a4ab7c65dcafcf2cc85039f38f9d825449211f996e6a3e2"
+    },
+    {
+      "path": "Client6.0/script/skill/battles/sj_status_max.lua",
+      "bytes": 939,
+      "sha256": "6f42593e98b7b3cdc6914245f247a20033b94ab13482800d949a009e89fad04a"
+    },
+    {
+      "path": "Client6.0/script/skill/battles/wardrum.lua",
+      "bytes": 5514,
+      "sha256": "4d8ed2753c55f642033154d0a34673fc518205b78f33712f667f3c9ded0a4648"
+    },
+    {
+      "path": "Client6.0/script/skill/battles/token.lua",
+      "bytes": 5596,
+      "sha256": "4f2ef3d716af371e28d37de29d22ee818b77baf372795743dbce3201107412f0"
+    },
+    {
+      "path": "Client6.0/script/skill/battles/sj_state_enhance.lua",
+      "bytes": 1557,
+      "sha256": "35657117c7ce256e253b77567c4f6ffe096579f1de66d1b3776dea374d74e580"
+    },
+    {
+      "path": "Client6.0/script/skill/battles/alldamage.lua",
+      "bytes": 1252,
+      "sha256": "04e3ad19f74c6070211cc99b9689bf258e554d42c0d8693cbac412c7a0807066"
+    },
+    {
+      "path": "Client6.0/script/skill/special/skillstate.lua",
+      "bytes": 3716,
+      "sha256": "012aa7578c3a37c8a17751ee7f433f780ea734e4930174767c1b7c35b526ce9e"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/wuxinggongji.lua",
+      "bytes": 1451,
+      "sha256": "2d57abb26859c43f71c3bd846775b0e3bf7c615c2cb79573b524965f002a85a3"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/mianyiguanghuan.lua",
+      "bytes": 1004,
+      "sha256": "b022c5219dc83db2c1161237426a1f5945d6ef76991794a13803dd0afeddc1b1"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/killerbossmianyi.lua",
+      "bytes": 1004,
+      "sha256": "a87006204c0260ed70ae25b4163809bc481e0013eb1befc513222f865ef0a5a7"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/resistance/½ð¸Õ²»ÆÆ.lua",
+      "bytes": 5275,
+      "sha256": "e8676225251a9e5fc95853118b12d55a7582069b38ae5568a520d40c5340abda"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/resistance/°Ù¶¾²»ÇÖ.lua",
+      "bytes": 5273,
+      "sha256": "3cf6344d0bc7139911846f4316ffe9acaaf8b6b43ae48e4e59d384638abd5d8a"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/resistance/±ùÑ©³õÈÚ.lua",
+      "bytes": 5275,
+      "sha256": "04525f1c4f1bbd0d3af8184ed6c1f4788f7e9b62736231c98ac0913e330daa15"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/resistance/Õæ»ð¿¹Á¦.lua",
+      "bytes": 5274,
+      "sha256": "402950fbc416d5f40a47e0b2048e28920d86035b807f4810504836d60dc610e0"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/resistance/À×öª»¤¼×.lua",
+      "bytes": 5277,
+      "sha256": "f624be8d3451660a7fb650cf733a96e423abed52ba92bd25a8cdead71bb4e956"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/gold/Òø¹³Ìú»®.lua",
+      "bytes": 6057,
+      "sha256": "2501004d99ce59b2d8ca42c8537035cd7bb00333f038548f6208871e44a455c9"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/gold/º£ÌìÒ»Ïß.lua",
+      "bytes": 6049,
+      "sha256": "398b99957b8b4671c248c56470214635ca4d75b56ba2402c45ba6455a9b96f9c"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/gold/ÆÆ¿ÕÕ¶Ó°.lua",
+      "bytes": 5983,
+      "sha256": "01e2622f516a4363e4fbc64d3417d47ea5d93fce6a1dc69632f93f746af4acb8"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/gold/²»ÃðÉ±Òâ.lua",
+      "bytes": 5965,
+      "sha256": "3a5a0f69ff02a3402fdd43176420e7b6f87c06c17d2d3974c4fdfc3153f5f7da"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/gold/ÕòÓüÆÆÌì¾¢.lua",
+      "bytes": 5293,
+      "sha256": "a12653c8cfa9d88e7f8f3fc0b82fe56fd969bad1888b8acea08f627ff2d65ea4"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/gold/´ó±¯Öä.lua",
+      "bytes": 5279,
+      "sha256": "ac9de1e1cb7b6bbce18a4e90b515e480345ce11eee62d9208f980c8f67ab380c"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/wood/ºÚÉ·ÉñÉ°.lua",
+      "bytes": 6130,
+      "sha256": "d51a47c1a024f30f31806e9bb7069b3df13d2c16dac43a2186859d37a06f7db4"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/wood/Ç§ÖëÍò¶¾.lua",
+      "bytes": 6082,
+      "sha256": "1a90e39fedfb7d4d5a7a3ebd9593333e7ba480bd613429da69dac8d45ec3fbc6"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/wood/±¯Ä§Ñª¹â.lua",
+      "bytes": 6074,
+      "sha256": "7d6fd23863371e517c1ed88a4aa207107587ff7326800821f8b446e914f30595"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/wood/¹ÂÑÌÖðÔÆ.lua",
+      "bytes": 6064,
+      "sha256": "7120d2df2e02c9e09054eb00066d0d9dd1d683b4252803a78da04ce84195302d"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/wood/Á¶Óü¸¯¹Æ.lua",
+      "bytes": 5282,
+      "sha256": "7242a5082ec683afedabe5671ad3af1c383e583009faac9013be4c880133dfe2"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/wood/Ê´¹ÇÑªØð.lua",
+      "bytes": 5287,
+      "sha256": "8ff7a71053c28f4d95fc9d4a431f328675cee09634c66eca686543c053b5c2da"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/water/³±ÆðÔÂÓ¯.lua",
+      "bytes": 6137,
+      "sha256": "676c9586a02fb6cb2fa7ed023dd3c2aa01f49fa364db52ce4764c2e544b6c794"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/water/ÍòÁøÆ®·ç.lua",
+      "bytes": 6073,
+      "sha256": "3a0f2b31a8d7c435f1783f13b54b5bd368d26224f89b1f4e241fed6a8088ddc1"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/water/Ñ©Ó³ºì³¾.lua",
+      "bytes": 6110,
+      "sha256": "e3d46577aec1cb6de87c5dc0a63220d3ffc40fc1bc3e87ffec89bf3230fe0ac3"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/water/ËªÒ°ÏÉ×Ù.lua",
+      "bytes": 6118,
+      "sha256": "7374aeeb775898198a32cf73f4f3276d65f93d91151b858f438b3c2ca1e37ffd"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/water/Äæ×ªÐÄ¾­.lua",
+      "bytes": 5287,
+      "sha256": "ecb8ffebe71bc8a7dab9af61ac30bf7fcfe7f06a0318dfc6488a43a37861416b"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/water/Ðþ±ùÒõÆø.lua",
+      "bytes": 5281,
+      "sha256": "56ecfc4f962f35bb3ff0352a9875193d3d68bb39bdda1de2ed6d30b9cd7d19b8"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/fire/Ñ×ÁúÖ®ÅØ.lua",
+      "bytes": 6138,
+      "sha256": "5332de30ef254306d6eb2a00561f3c41248cf00fa5de49613b1520527941a7ab"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/fire/³¯ÑôÁÒÑæ.lua",
+      "bytes": 6093,
+      "sha256": "c0120b5d74b05bc6390e84f334f2feb98b015b1bc7f0e84e9d961fb0af5fc248"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/fire/ÈçÈÕÖÐÌì.lua",
+      "bytes": 6063,
+      "sha256": "ddc7c021ecf6038b69efd19051a30b5aa57cd2889371bf794a8f65889f12fd8c"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/fire/³ã¿Õ»ðÎè.lua",
+      "bytes": 6073,
+      "sha256": "397d64340dc87b5efea7c56b0ad7a371ed4a80e8d5534263d40fb6c3edb08445"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/fire/³¾¿Õèó½ý.lua",
+      "bytes": 5285,
+      "sha256": "9269ab216f646c99d73033f24e89e458636758e807a79196c88b401ba3defc5c"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/fire/»ð·ïÇáÒ÷.lua",
+      "bytes": 5287,
+      "sha256": "1d5a143a42c43dd88e0ea8e2b37fda564ca31a542f4554fdabed61c69da5bc22"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/earth/»ìÔªÇ¬À¤.lua",
+      "bytes": 6142,
+      "sha256": "aeab72cb26fb110dbb4cc9f970a9150211959d70c50f39821203fd34eb136b96"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/earth/³¤ºÓÂäÈÕ.lua",
+      "bytes": 6073,
+      "sha256": "1aeeaeb7ad0aff116599949fa1474bf3b7df3a230a084aafb679b59db1c7b4a3"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/earth/¼²·çÑ¸À×.lua",
+      "bytes": 6079,
+      "sha256": "d818c55f74a0dddefac68ee4852fcadcfd6b4d5d2df3664c1c7f9a7a5984ba2b"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/earth/ÎÞÓ°½£¾ö.lua",
+      "bytes": 6052,
+      "sha256": "09eb9df6ac181c55267b16d7a0b66830bbe5b1f021a73885f37d5532e24386fe"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/earth/´¿ÑôÎÞ¼«.lua",
+      "bytes": 5290,
+      "sha256": "ffb44b60c1cc1d95955c84383bd0ad69d23417436997764319cb5d2eb1ed38f2"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/earth/ÔÆÉú½áº£.lua",
+      "bytes": 5283,
+      "sha256": "f4c76afc939e51f0d99500d84b43ba4ffc344e1b9921c95454481bebf4b0ca2a"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/Æ½ºÍÆø¾÷.lua",
+      "bytes": 5285,
+      "sha256": "8031b1f6ea0c1b6ade36e8f3fe9e6fcf6b2e6fbc60c66a59717f43d58b3029a0"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/Ðé¿ÕÉÁÓ°.lua",
+      "bytes": 5281,
+      "sha256": "6bbb3a32d68345c7d2844f84d1d8e9c0b41164d2a90800d2a263cca87ea2aea7"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/»áÉñ¾²ÐÄ.lua",
+      "bytes": 5288,
+      "sha256": "bc8c2c2171632e52102d4366476e27c77d971f416e4d03c690b46f9dadad1d13"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/ÎÞÄîÐÄ¾­.lua",
+      "bytes": 5288,
+      "sha256": "3534d16f0ac3b25edf7237163517e2413a517667e9ec0b0eee0c93fe3fee642a"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/ÎåÐÐÎÞÏà.lua",
+      "bytes": 5273,
+      "sha256": "e9e61c7b50b907f5cc8cd9f97a6d259209acf9d9c1e27ebbd17c05e36031740e"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/ÃÖÆøÆ®×Ù.lua",
+      "bytes": 5277,
+      "sha256": "73669c93de68e98c1d370693303ec05b63aadf694c2067cceca2ce14f8cf48e8"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/»¨·ÉµúÎè.lua",
+      "bytes": 5284,
+      "sha256": "3a53a8523cc0ec20296484f42c5fa02adccd1061315853a66ccee07f9af488be"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/Á÷¹â·ÉÎè(È¡Ïû).lua",
+      "bytes": 5284,
+      "sha256": "fdead96dc7b6735c10cff4415b273f92c081240854b9684600d142028f47dd6c"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/»¹±ËÖ®Éí.lua",
+      "bytes": 5292,
+      "sha256": "9f72f421f6dc768bfaa5216ec25e86dc5f1832ebe3e6cd9ec22e1f7dd08aefb5"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/µ¹ÐÐÄæÊ©.lua",
+      "bytes": 5291,
+      "sha256": "e0351e58d38882d1755a9c9996b9235a288f33770b6e1d273acfdc49b695a269"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/ÐÔ°ÁÈý¶¬.lua",
+      "bytes": 5282,
+      "sha256": "0d13bcfae36076f49e8be3abb2f6b1cbf9ff44bd82e84a40980c81e61ff574fc"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/µãÑª½ØÂö.lua",
+      "bytes": 5284,
+      "sha256": "f8396cdc944839d476f02a9eaba8ebe879febbe8b7ce6008cd141208c695c0f9"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/Íò¶¾²»¸´.lua",
+      "bytes": 5280,
+      "sha256": "f248d798e51bb0659e1540b3aba9a055eb0d76d39c939719584c9572de438b9a"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/ÉíÇáÈçÑà.lua",
+      "bytes": 5284,
+      "sha256": "02c606d0e6986dc0cbb57331590e5117a3eaa5846235490ad9bdd84b1b60503d"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/ÄýÒô¹éÔª.lua",
+      "bytes": 5284,
+      "sha256": "959087be519fe66fc2abc2c1f24c766ef89f72e9e73e6606d7cd46452c447442"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/Ò×¹Ç¾­.lua",
+      "bytes": 5279,
+      "sha256": "70ad1d7a03a35319bfba3f8f4c0ca7b3e33c375aef26a1d43b13574674cc8914"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/ÊøÉíÊõ.lua",
+      "bytes": 5288,
+      "sha256": "e8cbe1b86df2522daf6a20f579738fcb842df0d0fdb80de907869cc3edc3a029"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/»ºÉíÊõ.lua",
+      "bytes": 5290,
+      "sha256": "f76d27498b8cd049291a19cb56def6ebb21e69f1c5d3def76c1869172d282a3c"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/Ñ£Ä¿¶¨ÉíÊõ.lua",
+      "bytes": 5276,
+      "sha256": "92e326427c23b6386bcbb0ee85f6b247bc89d027af8a5092f0e03f79a4ad3f97"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/ÒæÊÙÒõÑô.lua",
+      "bytes": 5280,
+      "sha256": "50f36827a4c1ffcc9470420541ea1a742a5fe6ef7f83e6a0dcf72c1da5dfa35e"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/°²¸§Ö®Óï.lua",
+      "bytes": 5284,
+      "sha256": "1faec2fcc82454bcd58d1cfde03fb24db25ee88d055aa07a23261a2f16925a53"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/Å¤×ªÇ¬À¤(È¡Ïû).lua",
+      "bytes": 5262,
+      "sha256": "94d98230be18876f800948cb5311fe17487d657cac025793add3545d0d3c215a"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/ÈýÉúÓÐÐÒ.lua",
+      "bytes": 5283,
+      "sha256": "871e3557cd46f78e1cd889505ec228a820ffd227a2f506bbb10d1db927cdfc19"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/¹íÃÔ÷È»ó.lua",
+      "bytes": 5295,
+      "sha256": "77448c4b83a1316c6ec10fc2f4671412ef8d59da6ae7526e7920ba5c2f779da4"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/¶áÃü²øÈÆ.lua",
+      "bytes": 5290,
+      "sha256": "929938f4eb9f87840a0b9b883f4264d96dc409418d650fc7b91b075901d35ba1"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/ÑýºüÙ»Ó°.lua",
+      "bytes": 5296,
+      "sha256": "ac3d4869c57b9fe76d90dc6cb6efe9637365bdebd6a381b8d14672cbda0ff493"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/»óÉñÂÒÐÄ.lua",
+      "bytes": 5287,
+      "sha256": "ac9fd4f02150473b6f09403f675e1d3d30ed5610e5f6c76e4da24bd037faf84b"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/¹ÂÉíËéÓ°.lua",
+      "bytes": 5287,
+      "sha256": "c539fa27fa4ad471c5877d979f2c0313438c34a1502623e19c4d40cf585423c3"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/ËÀÍöî¿°í.lua",
+      "bytes": 5285,
+      "sha256": "97ebff039e5fd36b273f27d5eaaabaed5091ae5a3ff209c3adc1c759e71c6b1d"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/Éî»êÄî³ª.lua",
+      "bytes": 5291,
+      "sha256": "e290d22de9df61fcff78d407b1a20b0a4fda2115f14873ad2930825c1b1bbea6"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/¼°ÆÇÖ®Öä.lua",
+      "bytes": 5284,
+      "sha256": "d47bc20d378b936e8228dc21f2df46a89a94fa69f50214be7d898959c45d4900"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/»¯ËèÎÞÒâ.lua",
+      "bytes": 5291,
+      "sha256": "614dc4417f9b0e8290e033b9321efb4a6c964a27ecf4e7e47e2211006aed23df"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/ÈÚ¹ÇÎÞ×Ù.lua",
+      "bytes": 5293,
+      "sha256": "9945378821af1d5a3b586b1eab8b6b1fccdb144ec709cbf50ff5afb5640f1e06"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/Òõ³±Ö®Æø(È¡Ïû).lua",
+      "bytes": 5287,
+      "sha256": "3c3020cf69fd009e7977058738cae3377c86a9ef5d54f4f0185f5fe119194f5b"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/°µ¶¾Ö®ÊÖ.lua",
+      "bytes": 5292,
+      "sha256": "abd9bfeb0d9a77d34e5c55267584a4ecd48135e29e8b55e043fadbf7efb0a41b"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/Èý·üÖ®Æø.lua",
+      "bytes": 5288,
+      "sha256": "297f44cc87f2c78986a09e5f09fe7d24f55616f34a38076dd1365c15227c88b9"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/¶·×ªÐÇÒÆ(È¡Ïû).lua",
+      "bytes": 5261,
+      "sha256": "c98c48c7ddd76c471bd902211b2a8cff5782fb1c1bd55178fba97d710f5f041e"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/½­ºþ³õÌä.lua",
+      "bytes": 5829,
+      "sha256": "c75189d48a8546df304c3187166601c98664fbe3be441e80a10b9564a10641e9"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/Ê±¼äµÄÌôÕ½npc.lua",
+      "bytes": 5817,
+      "sha256": "5d8749441cbc3f4a2e023b1a461e11f0448982b01af9f4f255ed17cb4848ea76"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/Áè²¨Î¢²½.lua",
+      "bytes": 5332,
+      "sha256": "93f85bab2b3b2f7d985796aeb5479e6937c25bab66ee8d9a9ba8627b56df0590"
+    },
+    {
+      "path": "Client6.0/script/skill/special/messenger.lua",
+      "bytes": 6131,
+      "sha256": "e39cda274c957ba0ec6e66380b0d6b5a4a611bdb27c5e78dda2f108792744255"
+    },
+    {
+      "path": "Client6.0/script/skill/partner/expansion/ÎÞÈËÎÞÎÒ.lua",
+      "bytes": 5280,
+      "sha256": "4f7c5d3b0806d2781a223aae4d2cb70f94fbfc228153c0fd3f4fbce919ed3b7b"
+    },
+    {
+      "path": "Client6.0/script/skill/battles/sj_guanxian.lua",
+      "bytes": 770,
+      "sha256": "9029f3f80abab82b549a21bdd7342c837608f87aef76d92493a883a477b1c77f"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/randomtask_npc.lua",
+      "bytes": 6372,
+      "sha256": "b7bb46a908cce796083ddf2ba2869c03d4d88ef5da24e705513ecbad2659ed4a"
+    },
+    {
+      "path": "Client6.0/script/skill/special/christmastrap.lua",
+      "bytes": 5956,
+      "sha256": "d67d29eb3f01ae1aeb1662f02e55cc502406a43ee8969951b659f794c93c25d0"
+    },
+    {
+      "path": "Client6.0/script/skill/special/bomb.lua",
+      "bytes": 5681,
+      "sha256": "298d791b7a05452ea60e62d1f51815f3239080ec9b2c224d96a13086ce697f38"
+    },
+    {
+      "path": "Client6.0/script/skill/special/tianjiling.lua",
+      "bytes": 140,
+      "sha256": "4c4c452384c5f1685850b3248a09196f2ffa978ab82915b00b08591992b37426"
+    },
+    {
+      "path": "Client6.0/script/skill/special/mask.lua",
+      "bytes": 5238,
+      "sha256": "ae5b3052d04c53ab0a10b3d8ce2b4e57400d156d5df860335112de28073aa76e"
+    },
+    {
+      "path": "Client6.0/script/skill/special/skill120exp.lua",
+      "bytes": 273,
+      "sha256": "110412d4ad5e4a27360f2db56bc611534a749cc7e73776baa8f986a39f0900e0"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/snowball.lua",
+      "bytes": 1321,
+      "sha256": "47f61bf0b60a9cbf0ec37ede2bcf3b4c68c2080df89a6e7ae47cc33c96efc2ba"
+    },
+    {
+      "path": "Client6.0/script/skill/special/platina.lua",
+      "bytes": 18673,
+      "sha256": "04fb4701d25efb4ce0557174a701fedc0c24b7539a2ae058a8c93f40eb6fb314"
+    },
+    {
+      "path": "Client6.0/script/skill/special/skyeye.lua",
+      "bytes": 209,
+      "sha256": "b7f164c04a36a663f57a8aa1b31861790c0f047c5baf55091b7eeea68f22fdba"
+    },
+    {
+      "path": "Client6.0/script/skill/newcitydefence/gongchengzhanche.lua",
+      "bytes": 4053,
+      "sha256": "3f3df60b53b976047fea6d8153f84e23c0830c261c647c63ecd6ababa9948112"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/shaolin.lua",
+      "bytes": 4951,
+      "sha256": "5aadfbfc0916787187a22543fa49f1686d9d4330db6f633c7b901233e532f473"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/tianwang.lua",
+      "bytes": 17491,
+      "sha256": "72d000a52fd5db4dc787bb6e5c8c4c05909ee53144d8c185d94b607bb84d9d6c"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/tianren.lua",
+      "bytes": 17712,
+      "sha256": "83b36f0cadbd87dcacca3bf71ffcf516ffdf5e6a3b7a2d83076146829d543046"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/chunniu.lua",
+      "bytes": 8926,
+      "sha256": "05ef82ae3eb70f30f477cf6b9b1fa2f239be371620ddaf181822a88956d39d95"
+    },
+    {
+      "path": "Client6.0/script/skill/special/tianzi.lua",
+      "bytes": 1154,
+      "sha256": "c6f9c2aaffdb7dbf7aeaa7654aabdbcf4347e98efabd461c90ee30f88bb0c6fb"
+    },
+    {
+      "path": "Client6.0/script/skill/jiankang.lua",
+      "bytes": 3776,
+      "sha256": "7bebdfdca8e704a1229dab03cd9c9264d9501df2523d6c4b4d0963204b2ac41b"
+    },
+    {
+      "path": "Client6.0/script/skill/special/base.lua",
+      "bytes": 221,
+      "sha256": "a60f06a934514f545251179178e990cdd225e7761ea682c5cbf2d0b01e8ea12e"
+    },
+    {
+      "path": "Client6.0/script/skill/special/expbonus.lua",
+      "bytes": 269,
+      "sha256": "ad8e9575dd06513cb6fda4e7cd45f6f52e03d38ea3308aba2f8e2d9b693606bf"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/gm_skill.lua",
+      "bytes": 7315,
+      "sha256": "a33e41462b547f6212a3503d9d56aa24a2d53412ff9a458e5f31ef5b52d0de89"
+    },
+    {
+      "path": "Client6.0/script/skill/special/leaguematch.lua",
+      "bytes": 1016,
+      "sha256": "1ca9a10dea46c09a1492afe47458fb93b6f6886ef4a5a5d1b0152d75e6186426"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/luohanzhen.lua",
+      "bytes": 14710,
+      "sha256": "b8a25e2389186a783b0de6f208aff3799635735a7265cd1ab9dfe1576e3d1bb1"
+    },
+    {
+      "path": "Client6.0/script/skill/towerdefence.lua",
+      "bytes": 14713,
+      "sha256": "b8ec5185b6fd84583a35aa39115a2d7651b9d4e80dc1b875283625d38f69d4c8"
+    },
+    {
+      "path": "Client6.0/script/skill/special/changxiaoyuluwan.lua",
+      "bytes": 17448,
+      "sha256": "bab4999f9876539cbb245b1cd3a183173ea5c771dd2892a0a8778da595d1bc4d"
+    },
+    {
+      "path": "Client6.0/script/skill/mantle/mantle.lua",
+      "bytes": 2461,
+      "sha256": "376439034c21bf417801f4e2bd2e51da882f2de05477be67331827dfa489a4bf"
+    },
+    {
+      "path": "Client6.0/script/skill/special/tianchiskills.lua",
+      "bytes": 615,
+      "sha256": "edf0755b71d395af9aec701dc3bde4ac6e7fc90799502971ca6273593e36c58f"
+    },
+    {
+      "path": "Client6.0/script/skill/special/jianzhong.lua",
+      "bytes": 2225,
+      "sha256": "a5853868639dc4fccaa01e0e71cda6ee18a51e102e4f65ad8c6cbb52d975d159"
+    },
+    {
+      "path": "Client6.0/script/skill/shipin/shipin.lua",
+      "bytes": 1796,
+      "sha256": "14a32c1ad84e9a9a674b6ff55212b8ef78fe754c036f77df9dfe21dbd86cb680"
+    },
+    {
+      "path": "Client6.0/script/skill/special/spider_web.lua",
+      "bytes": 2127,
+      "sha256": "85d185d9e1bf1dda8f9d01813840a5e29cb97c497b3c4d543beb9ec5cfeff3c5"
+    },
+    {
+      "path": "Client6.0/script/skill/special/qianbaoku.lua",
+      "bytes": 1458,
+      "sha256": "5d09864ffd7ed89240eb5798d5693df065f301a488af47592001a081ba0c50c2"
+    },
+    {
+      "path": "Client6.0/script/skill/npc/gaojifantan.lua",
+      "bytes": 326,
+      "sha256": "2c31d5f9eb39aec10dfec43190ae7811cad430f03e8340a4d81e6798e83c55ba"
+    },
+    {
+      "path": "Client6.0/script/skill/special/xiaopiaosan.lua",
+      "bytes": 211,
+      "sha256": "8df59526f72338500da19629119989cd624401dea8f2799c383f69fc3c3ddec7"
+    },
+    {
+      "path": "Client6.0/script/skill/special/vn_pk_state.lua",
+      "bytes": 710,
+      "sha256": "ef3bf49510927477fde5eb8ed7e1fd550876bb91cf53feb2aefc132e03123d1c"
+    },
+    {
+      "path": "Client6.0/script/skill/special/translife4th.lua",
+      "bytes": 713,
+      "sha256": "dad90a224a692fed181c0898daf98fce0311dc5f21fceb3174a4ed5a739a7544"
+    },
+    {
+      "path": "Client6.0/script/skill/gmskills.lua",
+      "bytes": 5110,
+      "sha256": "d014d9b338a1605cea1ac273da075a5deaaf966abd7016df58aa771acccfa595"
+    },
+    {
+      "path": "Client6.0/script/skill/special/boss_specialskill.lua",
+      "bytes": 146,
+      "sha256": "e3adfd7fe8525278248d1ca9eb7ed9781b205c840e55589c415e8084ee890749"
+    },
+    {
+      "path": "Client6.0/script/skill/advancedskill.lua",
+      "bytes": 11540,
+      "sha256": "a3c44169af30fc99d59d8038d80d3e9f631af69c412b2f060be6e07f2c67884c"
+    }
+  ]
+}

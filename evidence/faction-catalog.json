@@ -1,0 +1,2560 @@
+[
+  {
+    "key": "shaolin",
+    "name": "Thiếu Lâm",
+    "learned": [
+      {
+        "id": 4,
+        "name": "Thiếu Lâm Côn pháp",
+        "line": 5,
+        "learnLine": 453
+      },
+      {
+        "id": 6,
+        "name": "Thiếu Lâm Đao pháp",
+        "line": 7,
+        "learnLine": 456
+      },
+      {
+        "id": 8,
+        "name": "Thiếu Lâm Quyền Pháp",
+        "line": 9,
+        "learnLine": 450
+      },
+      {
+        "id": 10,
+        "name": "Kim Cang Phục Ma",
+        "line": 11,
+        "learnLine": 445
+      },
+      {
+        "id": 11,
+        "name": "Hoành Tảo Lục Hợp",
+        "line": 12,
+        "learnLine": 479
+      },
+      {
+        "id": 14,
+        "name": "Hàng Long Bất Vũ",
+        "line": 15,
+        "learnLine": 442
+      },
+      {
+        "id": 15,
+        "name": "Bất động Minh Vương",
+        "line": 16,
+        "learnLine": 461
+      },
+      {
+        "id": 16,
+        "name": "La Hán Trận",
+        "line": 17,
+        "learnLine": 466
+      },
+      {
+        "id": 19,
+        "name": "Ma Ha Vô Lượng",
+        "line": 20,
+        "learnLine": 482
+      },
+      {
+        "id": 20,
+        "name": "Sư Tử Hống",
+        "line": 21,
+        "learnLine": 471
+      },
+      {
+        "id": 21,
+        "name": "Dịch Cân kinh",
+        "line": 22,
+        "learnLine": 490
+      },
+      {
+        "id": 271,
+        "name": "Long Trảo Hổ Trảo",
+        "line": 272,
+        "learnLine": 476
+      },
+      {
+        "id": 273,
+        "name": "Như Lai Thiên Diệp",
+        "line": 274,
+        "learnLine": 487
+      },
+      {
+        "id": 318,
+        "name": "Đạt Ma Độ Giang",
+        "line": 319,
+        "learnLine": 494
+      },
+      {
+        "id": 319,
+        "name": "Hoành Tảo Thiên Quân",
+        "line": 320,
+        "learnLine": 495
+      },
+      {
+        "id": 321,
+        "name": "Vô Tướng Trảm",
+        "line": 322,
+        "learnLine": 496
+      }
+    ],
+    "scriptOnly": [
+      {
+        "id": 5,
+        "name": "Thiếu Lâm thương pháp (##)",
+        "line": 6
+      },
+      {
+        "id": 7,
+        "name": "Thiếu Lâm Chùy pháp (##)",
+        "line": 8
+      },
+      {
+        "id": 9,
+        "name": "Hỗn Nguyên Nhất Khí công",
+        "line": 10
+      },
+      {
+        "id": 12,
+        "name": "Kim Cang Hộ Thể",
+        "line": 13
+      },
+      {
+        "id": 13,
+        "name": "Lập Địa Thành Phật",
+        "line": 14
+      },
+      {
+        "id": 17,
+        "name": "Long Trảo Hổ Trảo (##)",
+        "line": 18
+      },
+      {
+        "id": 18,
+        "name": "Huệ Nhãn chú",
+        "line": 19
+      },
+      {
+        "id": 202,
+        "name": "La Hán Trận",
+        "line": 203
+      },
+      {
+        "id": 213,
+        "name": "Bất động Minh Vương",
+        "line": 214
+      },
+      {
+        "id": 216,
+        "name": "Kim Cang Phục Ma",
+        "line": 217
+      },
+      {
+        "id": 217,
+        "name": "Hoành Tảo Lục Hợp",
+        "line": 218
+      },
+      {
+        "id": 218,
+        "name": "Long Trảo Hổ Trảo",
+        "line": 219
+      },
+      {
+        "id": 272,
+        "name": "Long Trảo Hổ Trảo",
+        "line": 273
+      },
+      {
+        "id": 317,
+        "name": "Kim Phật Xuất Kích",
+        "line": 318
+      },
+      {
+        "id": 320,
+        "name": "Hoành Tảo Lục Hợp 111",
+        "line": 321
+      },
+      {
+        "id": 709,
+        "name": "Đại Thừa Như Lai Chú",
+        "line": 711
+      },
+      {
+        "id": 725,
+        "name": "Đại Thừa Như Lai Chú_Phản đòn bùa chú",
+        "line": 727
+      },
+      {
+        "id": 734,
+        "name": "Kỹ năng phụ - Sư Tử Hống",
+        "line": 736
+      },
+      {
+        "id": 900,
+        "name": "´ú³ậẩỗÀ´ệọ_BOSSìăểÃ",
+        "line": 900
+      },
+      {
+        "id": 986,
+        "name": "ạư±ứẳẳÄĩ1",
+        "line": 986
+      },
+      {
+        "id": 1055,
+        "name": "Đại Lực Kim Cang Chưởng",
+        "line": 1056
+      },
+      {
+        "id": 1056,
+        "name": "Vi Đà Hiến Xử",
+        "line": 1057
+      },
+      {
+        "id": 1057,
+        "name": "Tam Giới Quy Thiền",
+        "line": 1058
+      },
+      {
+        "id": 1082,
+        "name": "ÃðìùảẫẫỳàỉÁẹ",
+        "line": 1083
+      },
+      {
+        "id": 1083,
+        "name": "Long Thừa Bát Nhã Thủ",
+        "line": 1084
+      },
+      {
+        "id": 1085,
+        "name": "ÍũÚéạộềằìểà¯",
+        "line": 1086
+      },
+      {
+        "id": 1146,
+        "name": "´úÁƯẵðáếếặnpc",
+        "line": 1147
+      },
+      {
+        "id": 1147,
+        "name": "ẻÔÍểẽìốặnpc",
+        "line": 1148
+      },
+      {
+        "id": 1148,
+        "name": "ẩỵẵọạộỡứnpc",
+        "line": 1149
+      },
+      {
+        "id": 1201,
+        "name": "ẻÔÍểằÔãă",
+        "line": 1202
+      }
+    ]
+  },
+  {
+    "key": "tianwang",
+    "name": "Thiên Vương Bang",
+    "learned": [
+      {
+        "id": 23,
+        "name": "Thiên Vương  Thương pháp",
+        "line": 24,
+        "learnLine": 386
+      },
+      {
+        "id": 24,
+        "name": "Thiên Vương  Đao pháp",
+        "line": 25,
+        "learnLine": 389
+      },
+      {
+        "id": 26,
+        "name": "Thiên Vương  Chùy Pháp",
+        "line": 27,
+        "learnLine": 383
+      },
+      {
+        "id": 29,
+        "name": "Trảm Long quyết",
+        "line": 30,
+        "learnLine": 378
+      },
+      {
+        "id": 30,
+        "name": "Hồi Phong Lạc Nhạn",
+        "line": 31,
+        "learnLine": 375
+      },
+      {
+        "id": 31,
+        "name": "Hàng Vân Quyết",
+        "line": 32,
+        "learnLine": 405
+      },
+      {
+        "id": 32,
+        "name": "Vô Tâm Trảm",
+        "line": 33,
+        "learnLine": 420
+      },
+      {
+        "id": 33,
+        "name": "Tĩnh Tâm Quyết",
+        "line": 34,
+        "learnLine": 394
+      },
+      {
+        "id": 34,
+        "name": "Kinh Lôi Trảm",
+        "line": 35,
+        "learnLine": 372
+      },
+      {
+        "id": 35,
+        "name": "Dương Quan Tam Điệp",
+        "line": 36,
+        "learnLine": 402
+      },
+      {
+        "id": 36,
+        "name": "Thiên Vương Chiến ý",
+        "line": 37,
+        "learnLine": 423
+      },
+      {
+        "id": 37,
+        "name": "Bát Phong Trảm",
+        "line": 38,
+        "learnLine": 399
+      },
+      {
+        "id": 40,
+        "name": "Đoạn Hồn Thích",
+        "line": 41,
+        "learnLine": 410
+      },
+      {
+        "id": 41,
+        "name": "Huyết Chiến Bát Phương",
+        "line": 42,
+        "learnLine": 426
+      },
+      {
+        "id": 42,
+        "name": "Kim Chung Tráo",
+        "line": 43,
+        "learnLine": 415
+      },
+      {
+        "id": 322,
+        "name": "Phá Thiên Trảm",
+        "line": 323,
+        "learnLine": 433
+      },
+      {
+        "id": 323,
+        "name": "Truy Tinh Trục Nguyệt",
+        "line": 324,
+        "learnLine": 434
+      },
+      {
+        "id": 324,
+        "name": "Thừa Long Quyết",
+        "line": 325,
+        "learnLine": 429
+      },
+      {
+        "id": 325,
+        "name": "Truy Phong Quyết",
+        "line": 326,
+        "learnLine": 435
+      }
+    ],
+    "scriptOnly": [
+      {
+        "id": 25,
+        "name": "Thánh Vương Đao pháp (##)",
+        "line": 26
+      },
+      {
+        "id": 27,
+        "name": "Thiên Vương  Phủ pháp (##)",
+        "line": 28
+      },
+      {
+        "id": 28,
+        "name": "Thánh Vương Phủ pháp (##)",
+        "line": 29
+      },
+      {
+        "id": 38,
+        "name": "Bàn Cổ Cửu Thức (##)",
+        "line": 39
+      },
+      {
+        "id": 39,
+        "name": "Triêm Y Thập Bát Điệt (##)",
+        "line": 40
+      },
+      {
+        "id": 219,
+        "name": "Hồi Phong Lạc Nhạn",
+        "line": 220
+      },
+      {
+        "id": 220,
+        "name": "Vô Tâm Trảm",
+        "line": 221
+      },
+      {
+        "id": 221,
+        "name": "Dương Quan Tam Điệp",
+        "line": 222
+      },
+      {
+        "id": 222,
+        "name": "Bát Phong Trảm",
+        "line": 223
+      },
+      {
+        "id": 224,
+        "name": "Đoạn Hồn Thích",
+        "line": 225
+      },
+      {
+        "id": 225,
+        "name": "Huyết Chiến Bát Phương",
+        "line": 226
+      },
+      {
+        "id": 326,
+        "name": "Phá Thiên Trảm",
+        "line": 327
+      },
+      {
+        "id": 327,
+        "name": "Truy Tinh Trục Nguyệt",
+        "line": 328
+      },
+      {
+        "id": 404,
+        "name": "Kinh Lôi Trảm",
+        "line": 405
+      },
+      {
+        "id": 405,
+        "name": "Trảm Long quyết",
+        "line": 406
+      },
+      {
+        "id": 406,
+        "name": "Hàng Vân Quyết",
+        "line": 407
+      },
+      {
+        "id": 407,
+        "name": "Thừa Long Quyết",
+        "line": 408
+      },
+      {
+        "id": 408,
+        "name": "Truy Phong Quyết",
+        "line": 409
+      },
+      {
+        "id": 708,
+        "name": "Đảo Hư Thiên",
+        "line": 710
+      },
+      {
+        "id": 724,
+        "name": "Đảo Hư Thiên_Kháng bùa chú",
+        "line": 726
+      },
+      {
+        "id": 930,
+        "name": "ảẽằờ´è_BOSSìăểÃ",
+        "line": 930
+      },
+      {
+        "id": 1058,
+        "name": "Hào Hùng Trảm",
+        "line": 1059
+      },
+      {
+        "id": 1059,
+        "name": "Tung Hoành Bát Hoang",
+        "line": 1060
+      },
+      {
+        "id": 1060,
+        "name": "Bá Vương Tạm Kim",
+        "line": 1061
+      },
+      {
+        "id": 1077,
+        "name": "Hào Hùng Trảm Địa Liệt",
+        "line": 1078
+      },
+      {
+        "id": 1084,
+        "name": "ºÀéÛếảìểà¯",
+        "line": 1085
+      },
+      {
+        "id": 1086,
+        "name": "ºÀéÛếảẫÂ¿ê",
+        "line": 1087
+      },
+      {
+        "id": 1087,
+        "name": "ìíºỏ°ậằÄẫậºƯ",
+        "line": 1088
+      },
+      {
+        "id": 1088,
+        "name": "°ễÍừửẫẵðẫậºƯ",
+        "line": 1089
+      },
+      {
+        "id": 1149,
+        "name": "ºÀéÛếảnpc",
+        "line": 1150
+      },
+      {
+        "id": 1150,
+        "name": "ìíºỏ°ậằÄnpc",
+        "line": 1151
+      },
+      {
+        "id": 1151,
+        "name": "°ễÍừửẫẵðnpc",
+        "line": 1152
+      }
+    ]
+  },
+  {
+    "key": "tangmen",
+    "name": "Đường Môn",
+    "learned": [
+      {
+        "id": 43,
+        "name": "Đường Môn ám khí",
+        "line": 44,
+        "learnLine": 508
+      },
+      {
+        "id": 45,
+        "name": "Tích Lịch đơn",
+        "line": 46,
+        "learnLine": 503
+      },
+      {
+        "id": 47,
+        "name": "Đoạt Hồn Tiêu",
+        "line": 48,
+        "learnLine": 527
+      },
+      {
+        "id": 48,
+        "name": "Tâm Nhãn",
+        "line": 49,
+        "learnLine": 548
+      },
+      {
+        "id": 50,
+        "name": "Truy Tâm Tiễn",
+        "line": 51,
+        "learnLine": 521
+      },
+      {
+        "id": 54,
+        "name": "Mạn Thiên Hoa Vũ",
+        "line": 55,
+        "learnLine": 524
+      },
+      {
+        "id": 58,
+        "name": "Thiên La Địa Võng",
+        "line": 59,
+        "learnLine": 551
+      },
+      {
+        "id": 249,
+        "name": "Tiểu Lý Phi Đao",
+        "line": 250,
+        "learnLine": 545
+      },
+      {
+        "id": 302,
+        "name": "Bạo Vũ Lê Hoa",
+        "line": 303,
+        "learnLine": 559
+      },
+      {
+        "id": 303,
+        "name": "Độc Thích Cốt",
+        "line": 304,
+        "learnLine": 516
+      },
+      {
+        "id": 339,
+        "name": "Nhiếp Hồn Nguyệt ảnh",
+        "line": 340,
+        "learnLine": 558
+      },
+      {
+        "id": 341,
+        "name": "Tán Hoa Tiêu",
+        "line": 342,
+        "learnLine": 554
+      },
+      {
+        "id": 342,
+        "name": "Cửu Cung Phi Tinh",
+        "line": 343,
+        "learnLine": 560
+      },
+      {
+        "id": 343,
+        "name": "Xuyên Tâm Thích",
+        "line": 344,
+        "learnLine": 530
+      },
+      {
+        "id": 345,
+        "name": "Hàn Băng Thích",
+        "line": 346,
+        "learnLine": 535
+      },
+      {
+        "id": 347,
+        "name": "Địa Diệm Hỏa",
+        "line": 348,
+        "learnLine": 511
+      },
+      {
+        "id": 349,
+        "name": "Lôi Kích Thuật",
+        "line": 350,
+        "learnLine": 540
+      },
+      {
+        "id": 351,
+        "name": "Loạn Hoàn Kích",
+        "line": 352,
+        "learnLine": 563
+      }
+    ],
+    "scriptOnly": [
+      {
+        "id": 44,
+        "name": "Đường Môn Đao pháp",
+        "line": 45
+      },
+      {
+        "id": 46,
+        "name": "Đao Nhận cơ quan (##)",
+        "line": 47
+      },
+      {
+        "id": 49,
+        "name": "Địa Diệm cơ quan (##)",
+        "line": 50
+      },
+      {
+        "id": 51,
+        "name": "Thanh Mộc (##)",
+        "line": 52
+      },
+      {
+        "id": 52,
+        "name": "Âm Lôi Cơ quan (##)",
+        "line": 53
+      },
+      {
+        "id": 55,
+        "name": "Thối Độc Thuật",
+        "line": 56
+      },
+      {
+        "id": 56,
+        "name": "Hàn Sương Cơ quan (##)",
+        "line": 57
+      },
+      {
+        "id": 57,
+        "name": "Băng Phách Hàn Quang",
+        "line": 58
+      },
+      {
+        "id": 227,
+        "name": "Thiên La Địa Võng tiểu Phi Đao",
+        "line": 228
+      },
+      {
+        "id": 250,
+        "name": "Tiểu Lý Phi Đao",
+        "line": 251
+      },
+      {
+        "id": 301,
+        "name": "Truy Tinh Trục Điện",
+        "line": 302
+      },
+      {
+        "id": 304,
+        "name": "Độc Thích Cốt",
+        "line": 305
+      },
+      {
+        "id": 340,
+        "name": "Ngân Đao Xạ Nguyệt",
+        "line": 341
+      },
+      {
+        "id": 344,
+        "name": "Xuyên Tâm Thích",
+        "line": 345
+      },
+      {
+        "id": 346,
+        "name": "Hàn Băng Thích",
+        "line": 347
+      },
+      {
+        "id": 348,
+        "name": "Địa Diệm Hỏa",
+        "line": 349
+      },
+      {
+        "id": 350,
+        "name": "Lôi Kích Thuật",
+        "line": 351
+      },
+      {
+        "id": 352,
+        "name": "Loạn Hoàn Kích",
+        "line": 353
+      },
+      {
+        "id": 710,
+        "name": "Mê ảnh Tung",
+        "line": 712
+      },
+      {
+        "id": 938,
+        "name": "éĂÅÊÁữéầà¯ìểẳẳÄĩ",
+        "line": 938
+      },
+      {
+        "id": 1018,
+        "name": "ắứẫ±XºÅìểẳẳÄĩ",
+        "line": 1018
+      },
+      {
+        "id": 1069,
+        "name": "Vô ảnh Xuyên",
+        "line": 1070
+      },
+      {
+        "id": 1070,
+        "name": "Thiết Liên Tứ Sát",
+        "line": 1071
+      },
+      {
+        "id": 1071,
+        "name": "Càn Khôn Nhất Trịch",
+        "line": 1072
+      },
+      {
+        "id": 1097,
+        "name": "Truy Tâm Tỏa Mệnh",
+        "line": 1098
+      },
+      {
+        "id": 1098,
+        "name": "Thiết Sa Xạ Tinh",
+        "line": 1099
+      },
+      {
+        "id": 1099,
+        "name": "ầơÀÔềằệÀ2",
+        "line": 1100
+      },
+      {
+        "id": 1100,
+        "name": "ầơÀÔềằệÀ3",
+        "line": 1101
+      },
+      {
+        "id": 1110,
+        "name": "Tích Lịch Loạn Hoàn Kích",
+        "line": 1111
+      },
+      {
+        "id": 1113,
+        "name": "Tích Lịch Loạn Hoàn Hãm Tĩnh",
+        "line": 1114
+      },
+      {
+        "id": 1132,
+        "name": "ằỉÁƯãẫùÚ",
+        "line": 1133
+      },
+      {
+        "id": 1133,
+        "name": "ằỉÁƯãẫùÚìểẳẳÄĩ",
+        "line": 1134
+      },
+      {
+        "id": 1136,
+        "name": "ệĩẫớảăàóãẫùÚ",
+        "line": 1137
+      },
+      {
+        "id": 1158,
+        "name": "ẻịể°´ânpc",
+        "line": 1159
+      },
+      {
+        "id": 1159,
+        "name": "èỳÁôậÄẫ±npc",
+        "line": 1160
+      },
+      {
+        "id": 1160,
+        "name": "ầơÀÔềằệÀnpc",
+        "line": 1161
+      }
+    ]
+  },
+  {
+    "key": "wudu",
+    "name": "Ngũ Độc Giáo",
+    "learned": [
+      {
+        "id": 60,
+        "name": "Ngũ Độc Đao pháp",
+        "line": 61,
+        "learnLine": 583
+      },
+      {
+        "id": 62,
+        "name": "Ngũ Độc Chưởng Pháp",
+        "line": 63,
+        "learnLine": 580
+      },
+      {
+        "id": 63,
+        "name": "Độc Sa chưởng",
+        "line": 64,
+        "learnLine": 572
+      },
+      {
+        "id": 64,
+        "name": "Băng Lam Huyền Tinh",
+        "line": 65,
+        "learnLine": 605
+      },
+      {
+        "id": 65,
+        "name": "Huyết Đao Độc Sát",
+        "line": 66,
+        "learnLine": 575
+      },
+      {
+        "id": 66,
+        "name": "Tạp Nan Dược Kinh",
+        "line": 67,
+        "learnLine": 594
+      },
+      {
+        "id": 67,
+        "name": "Cửu Thiên Cuồng Lôi",
+        "line": 68,
+        "learnLine": 586
+      },
+      {
+        "id": 68,
+        "name": "U Minh Khô Lâu",
+        "line": 69,
+        "learnLine": 599
+      },
+      {
+        "id": 69,
+        "name": "Vô Hình Độc",
+        "line": 70,
+        "learnLine": 608
+      },
+      {
+        "id": 70,
+        "name": "Xích Diệm Thực Thiên",
+        "line": 71,
+        "learnLine": 591
+      },
+      {
+        "id": 71,
+        "name": "Thiên Cương Địa Sát",
+        "line": 72,
+        "learnLine": 626
+      },
+      {
+        "id": 72,
+        "name": "Xuyên Tâm Độc Thích",
+        "line": 73,
+        "learnLine": 621
+      },
+      {
+        "id": 73,
+        "name": "Vạn Độc Thực Tâm",
+        "line": 74,
+        "learnLine": 616
+      },
+      {
+        "id": 74,
+        "name": "Chu Cáp Thanh Minh",
+        "line": 75,
+        "learnLine": 632
+      },
+      {
+        "id": 75,
+        "name": "Ngũ Độc Kỳ Kinh",
+        "line": 76,
+        "learnLine": 629
+      },
+      {
+        "id": 353,
+        "name": "Âm Phong Thực Cốt",
+        "line": 354,
+        "learnLine": 636
+      },
+      {
+        "id": 355,
+        "name": "Huyền Âm Trảm",
+        "line": 356,
+        "learnLine": 637
+      },
+      {
+        "id": 356,
+        "name": "Xuyên Y Phá Giáp",
+        "line": 357,
+        "learnLine": 613
+      },
+      {
+        "id": 384,
+        "name": "Bách Độc Xuyên Tâm",
+        "line": 385,
+        "learnLine": 602
+      },
+      {
+        "id": 390,
+        "name": "Đoạn Cân Hủ Cốt",
+        "line": 391,
+        "learnLine": 640
+      }
+    ],
+    "scriptOnly": [
+      {
+        "id": 61,
+        "name": "Ngũ Độc Bổng pháp (##)",
+        "line": 62
+      },
+      {
+        "id": 76,
+        "name": "Di Hoa Tiếp Ngọc",
+        "line": 77
+      },
+      {
+        "id": 195,
+        "name": "Thiên Cương Địa Sát",
+        "line": 196
+      },
+      {
+        "id": 203,
+        "name": "Vô Hình Độc",
+        "line": 204
+      },
+      {
+        "id": 354,
+        "name": "Thiên Cương Độc Thủ",
+        "line": 355
+      },
+      {
+        "id": 383,
+        "name": "Tinh Không Phá",
+        "line": 384
+      },
+      {
+        "id": 388,
+        "name": "Truy Phong Độc Cát",
+        "line": 389
+      },
+      {
+        "id": 711,
+        "name": "Hấp Tinh Yểm",
+        "line": 713
+      },
+      {
+        "id": 719,
+        "name": "Hấp Tinh Yểm_Quyết Chú",
+        "line": 721
+      },
+      {
+        "id": 1066,
+        "name": "Hình Tiêu Cốt Lập",
+        "line": 1067
+      },
+      {
+        "id": 1067,
+        "name": "U Hồn Phệ ảnh",
+        "line": 1068
+      },
+      {
+        "id": 1068,
+        "name": "ểÄằờấẫể°2",
+        "line": 1069
+      },
+      {
+        "id": 1094,
+        "name": "éẻẽỳạầÁẪậºƯ",
+        "line": 1095
+      },
+      {
+        "id": 1095,
+        "name": "Hồn ảnh Tùng Sanh",
+        "line": 1096
+      },
+      {
+        "id": 1096,
+        "name": "éẻẽỳạầÁẪậºƯ2",
+        "line": 1097
+      },
+      {
+        "id": 1156,
+        "name": "éẻẽỳạầÁÂnpc",
+        "line": 1157
+      },
+      {
+        "id": 1157,
+        "name": "ểÄằờấẫể°npc",
+        "line": 1158
+      },
+      {
+        "id": 1175,
+        "name": "2012ẹèằă1",
+        "line": 1176
+      },
+      {
+        "id": 1176,
+        "name": "2012ẹèằă2",
+        "line": 1177
+      },
+      {
+        "id": 1177,
+        "name": "2012ẹèằă3",
+        "line": 1178
+      },
+      {
+        "id": 1232,
+        "name": "Hồn ảnh Tùng Sanh",
+        "line": 1230
+      }
+    ]
+  },
+  {
+    "key": "emei",
+    "name": "Nga My",
+    "learned": [
+      {
+        "id": 77,
+        "name": "Nga Mi Kiếm pháp",
+        "line": 78,
+        "learnLine": 657
+      },
+      {
+        "id": 79,
+        "name": "Nga Mi Chưởng pháp",
+        "line": 80,
+        "learnLine": 660
+      },
+      {
+        "id": 80,
+        "name": "Phiêu Tuyết Xuyên Vân",
+        "line": 81,
+        "learnLine": 652
+      },
+      {
+        "id": 82,
+        "name": "Tứ Tượng Đồng Quy",
+        "line": 83,
+        "learnLine": 673
+      },
+      {
+        "id": 85,
+        "name": "Nhất Diệp Tri Thu",
+        "line": 86,
+        "learnLine": 649
+      },
+      {
+        "id": 86,
+        "name": "Lưu Thủy",
+        "line": 87,
+        "learnLine": 681
+      },
+      {
+        "id": 88,
+        "name": "Bất Diệt Bất Tuyệt",
+        "line": 89,
+        "learnLine": 691
+      },
+      {
+        "id": 89,
+        "name": "Mộng Điệp",
+        "line": 90,
+        "learnLine": 676
+      },
+      {
+        "id": 91,
+        "name": "Phật Quang Phổ Chiếu",
+        "line": 92,
+        "learnLine": 697
+      },
+      {
+        "id": 92,
+        "name": "Phật Tâm Từ Hữu",
+        "line": 93,
+        "learnLine": 686
+      },
+      {
+        "id": 93,
+        "name": "Từ Hàng Phổ D",
+        "line": 94,
+        "learnLine": 665
+      },
+      {
+        "id": 252,
+        "name": "Phật Pháp Vô Biên",
+        "line": 253,
+        "learnLine": 694
+      },
+      {
+        "id": 282,
+        "name": "Thanh Âm Phạn Xướng",
+        "line": 283,
+        "learnLine": 700
+      },
+      {
+        "id": 328,
+        "name": "Tam Nga Tề Tuyết",
+        "line": 329,
+        "learnLine": 704
+      },
+      {
+        "id": 332,
+        "name": "Phổ Độ Chúng Sinh",
+        "line": 333,
+        "learnLine": 708
+      },
+      {
+        "id": 380,
+        "name": "Phong Sương Toái ảnh",
+        "line": 381,
+        "learnLine": 705
+      },
+      {
+        "id": 385,
+        "name": "Thôi Song Vọng Nguyệt",
+        "line": 386,
+        "learnLine": 670
+      }
+    ],
+    "scriptOnly": [
+      {
+        "id": 78,
+        "name": "Tiếp Dẫn Kiếm pháp (##)",
+        "line": 79
+      },
+      {
+        "id": 81,
+        "name": "Thu Phong Diệp",
+        "line": 82
+      },
+      {
+        "id": 83,
+        "name": "Vọng Nguyệt",
+        "line": 84
+      },
+      {
+        "id": 84,
+        "name": "Phong Vũ Phiêu Hương",
+        "line": 85
+      },
+      {
+        "id": 87,
+        "name": "Băng Tâm Quyết",
+        "line": 88
+      },
+      {
+        "id": 94,
+        "name": "Từ Hàng Phổ Độ11",
+        "line": 95
+      },
+      {
+        "id": 205,
+        "name": "Vọng Nguyệt",
+        "line": 206
+      },
+      {
+        "id": 206,
+        "name": "Lưu Thủy",
+        "line": 207
+      },
+      {
+        "id": 207,
+        "name": "Mộng Điệp",
+        "line": 208
+      },
+      {
+        "id": 208,
+        "name": "Phật Tâm Từ Hữu",
+        "line": 209
+      },
+      {
+        "id": 212,
+        "name": "Thanh Tâm Phạn Âm",
+        "line": 213
+      },
+      {
+        "id": 243,
+        "name": "Tứ Tượng Đồng Quy",
+        "line": 244
+      },
+      {
+        "id": 246,
+        "name": "Bất Diệt Bất Tuyệt npc",
+        "line": 247
+      },
+      {
+        "id": 280,
+        "name": "Ba La Tâm Kinh",
+        "line": 281
+      },
+      {
+        "id": 281,
+        "name": "Ba La Tâm Kinh",
+        "line": 282
+      },
+      {
+        "id": 329,
+        "name": "Ngọc Tuyền Tẩy Trần",
+        "line": 330
+      },
+      {
+        "id": 330,
+        "name": "Thiên Phật Thiên Diệp",
+        "line": 331
+      },
+      {
+        "id": 331,
+        "name": "Kim Đỉnh Phật Quang",
+        "line": 332
+      },
+      {
+        "id": 333,
+        "name": "Phổ Độ Chúng Sinh",
+        "line": 334
+      },
+      {
+        "id": 334,
+        "name": "Thanh Âm Phạn Xướng 11",
+        "line": 335
+      },
+      {
+        "id": 335,
+        "name": "Thanh Âm Phạn Xướng",
+        "line": 336
+      },
+      {
+        "id": 712,
+        "name": "Bế Nguyệt Phất Trần",
+        "line": 714
+      },
+      {
+        "id": 718,
+        "name": "Kỹ năng phụ - Bế Nguyệt Phất Trần",
+        "line": 720
+      },
+      {
+        "id": 1061,
+        "name": "Kiếm Hoa Vãn Tinh",
+        "line": 1062
+      },
+      {
+        "id": 1062,
+        "name": "Băng Vũ Lạc Tinh",
+        "line": 1063
+      },
+      {
+        "id": 1089,
+        "name": "Kiếm Tâm Tĩnh Điển",
+        "line": 1090
+      },
+      {
+        "id": 1090,
+        "name": "ìẽẻÂ±ựằêẫậºƯ",
+        "line": 1091
+      },
+      {
+        "id": 1091,
+        "name": "Áữãỗằỉẹâ±ựệự",
+        "line": 1092
+      },
+      {
+        "id": 1114,
+        "name": "Ngọc Tuyền Tâm Kinh",
+        "line": 1115
+      },
+      {
+        "id": 1115,
+        "name": "Minh Tâm Kiến Tính",
+        "line": 1116
+      },
+      {
+        "id": 1142,
+        "name": "ệ±ẽò±ựÀõ",
+        "line": 1143
+      },
+      {
+        "id": 1145,
+        "name": "ệ±ẽò±ựÀõìểà¯",
+        "line": 1146
+      },
+      {
+        "id": 1152,
+        "name": "ẵÊằăÍỡắĐnpc",
+        "line": 1153
+      },
+      {
+        "id": 1153,
+        "name": "±ựểờỗúắĐnpc",
+        "line": 1154
+      },
+      {
+        "id": 1234,
+        "name": "Từ Hàng Phổ D",
+        "line": 1232
+      }
+    ]
+  },
+  {
+    "key": "cuiyan",
+    "name": "Thúy Yên Môn",
+    "learned": [
+      {
+        "id": 95,
+        "name": "Thúy Yên Đao pháp",
+        "line": 96,
+        "learnLine": 725
+      },
+      {
+        "id": 97,
+        "name": "Thúy Yên Song đao",
+        "line": 98,
+        "learnLine": 728
+      },
+      {
+        "id": 99,
+        "name": "Phong Hoa Tuyết Nguyệt",
+        "line": 100,
+        "learnLine": 717
+      },
+      {
+        "id": 100,
+        "name": "Hộ Thể Hàn Băng",
+        "line": 101,
+        "learnLine": 746
+      },
+      {
+        "id": 102,
+        "name": "Phong Quyển Tàn Tuyết",
+        "line": 103,
+        "learnLine": 720
+      },
+      {
+        "id": 105,
+        "name": "Vũ Đả Lê Hoa",
+        "line": 106,
+        "learnLine": 738
+      },
+      {
+        "id": 108,
+        "name": "Mục Dã Lưu Tinh",
+        "line": 109,
+        "learnLine": 756
+      },
+      {
+        "id": 109,
+        "name": "Tuyết ảnh",
+        "line": 110,
+        "learnLine": 751
+      },
+      {
+        "id": 111,
+        "name": "Bích Hải Triều Sinh",
+        "line": 112,
+        "learnLine": 762
+      },
+      {
+        "id": 113,
+        "name": "Phù Vân Tán Tuyết",
+        "line": 114,
+        "learnLine": 741
+      },
+      {
+        "id": 114,
+        "name": "Băng Cốt Tuyết Tâm",
+        "line": 115,
+        "learnLine": 759
+      },
+      {
+        "id": 269,
+        "name": "Băng Tâm Trái ảnh",
+        "line": 270,
+        "learnLine": 733
+      },
+      {
+        "id": 336,
+        "name": "Băng Tung Vô ảnh",
+        "line": 337,
+        "learnLine": 766
+      },
+      {
+        "id": 337,
+        "name": "Băng Tâm Tiên Tử",
+        "line": 338,
+        "learnLine": 767
+      }
+    ],
+    "scriptOnly": [
+      {
+        "id": 96,
+        "name": "Thúy Yên Kiếm pháp (##)",
+        "line": 97
+      },
+      {
+        "id": 98,
+        "name": "Bích Yên kiếm pháp (##)",
+        "line": 99
+      },
+      {
+        "id": 101,
+        "name": "Trị liệu thuật",
+        "line": 102
+      },
+      {
+        "id": 103,
+        "name": "Thiên Lý Băng Phong",
+        "line": 104
+      },
+      {
+        "id": 104,
+        "name": "Băng Hồn",
+        "line": 105
+      },
+      {
+        "id": 106,
+        "name": "Băng Tung Vụ ảnh 111",
+        "line": 107
+      },
+      {
+        "id": 107,
+        "name": "Nhiếp Tâm Thuật",
+        "line": 108
+      },
+      {
+        "id": 110,
+        "name": "Ngũ hành độn",
+        "line": 111
+      },
+      {
+        "id": 112,
+        "name": "Bích Hải Triều Sinhb",
+        "line": 113
+      },
+      {
+        "id": 189,
+        "name": "Vũ Đả Lê Hoa",
+        "line": 190
+      },
+      {
+        "id": 190,
+        "name": "Mục Dã Lưu Tinh",
+        "line": 191
+      },
+      {
+        "id": 251,
+        "name": "Pháo Hoa",
+        "line": 252
+      },
+      {
+        "id": 270,
+        "name": "Đạp Tuyết Vô Ngân",
+        "line": 271
+      },
+      {
+        "id": 338,
+        "name": "Phong Tuyết Băng Thiên",
+        "line": 339
+      },
+      {
+        "id": 381,
+        "name": "Băng Tâm Ngọc Lăng",
+        "line": 382
+      },
+      {
+        "id": 382,
+        "name": "Băng Tâm Tuyết Liên",
+        "line": 383
+      },
+      {
+        "id": 398,
+        "name": "Phong Quyển Tàn Tuyết (ảnh động)",
+        "line": 399
+      },
+      {
+        "id": 500,
+        "name": "Hiệu úy Vòng tròn",
+        "line": 501
+      },
+      {
+        "id": 501,
+        "name": "Thống Lĩnh Vòng tròn",
+        "line": 502
+      },
+      {
+        "id": 502,
+        "name": "Phó tướng Vòng tròn",
+        "line": 503
+      },
+      {
+        "id": 503,
+        "name": "Đại tướng Vòng tròn",
+        "line": 504
+      },
+      {
+        "id": 504,
+        "name": "Nguyên Soái Vòng tròn",
+        "line": 505
+      },
+      {
+        "id": 509,
+        "name": "Hoàn thành nhiệm vụ",
+        "line": 510
+      },
+      {
+        "id": 541,
+        "name": "Hoàn thành nhiệm vụ  Sát thủ",
+        "line": 543
+      },
+      {
+        "id": 548,
+        "name": "Vòng tròn  tăng đôi kinh nghiệm (hoàn thành nhiệm vụ sát thủ)",
+        "line": 550
+      },
+      {
+        "id": 662,
+        "name": "trạng thái nhiệm vụ ngẫu nhiên",
+        "line": 664
+      },
+      {
+        "id": 687,
+        "name": "Hoa",
+        "line": 689
+      },
+      {
+        "id": 713,
+        "name": "Ngự Tuyết ẩn",
+        "line": 715
+      },
+      {
+        "id": 764,
+        "name": "Câu hỏi Lễ tình nhân",
+        "line": 766
+      },
+      {
+        "id": 765,
+        "name": "Thanh diễn tiến Lễ Tình Nhân",
+        "line": 767
+      },
+      {
+        "id": 1063,
+        "name": "Băng Tước Hoạt Kỳ",
+        "line": 1064
+      },
+      {
+        "id": 1064,
+        "name": "Băng Ngưng Hàn Yên",
+        "line": 1065
+      },
+      {
+        "id": 1065,
+        "name": "Thủy Anh Man Tú",
+        "line": 1066
+      },
+      {
+        "id": 1092,
+        "name": "±ựẩáÂềẹâẫậºƯ",
+        "line": 1093
+      },
+      {
+        "id": 1093,
+        "name": "Khinh Sa Phù Thủy",
+        "line": 1094
+      },
+      {
+        "id": 1102,
+        "name": "ằăìễặđÁóáẵấụ",
+        "line": 1103
+      },
+      {
+        "id": 1154,
+        "name": "±ựẩáễẵệƯnpc",
+        "line": 1155
+      },
+      {
+        "id": 1155,
+        "name": "ậđể³Âỹéónpc",
+        "line": 1156
+      },
+      {
+        "id": 1172,
+        "name": "éÄéÍẹèằă",
+        "line": 1173
+      }
+    ]
+  },
+  {
+    "key": "gaibang",
+    "name": "Cái Bang",
+    "learned": [
+      {
+        "id": 115,
+        "name": "Cái Bang Bổng pháp",
+        "line": 116,
+        "learnLine": 853
+      },
+      {
+        "id": 116,
+        "name": "Cái Bang Chưởng Pháp",
+        "line": 117,
+        "learnLine": 850
+      },
+      {
+        "id": 119,
+        "name": "Diên Môn Thác Bát",
+        "line": 120,
+        "learnLine": 845
+      },
+      {
+        "id": 122,
+        "name": "Kiến Nhân Thần Thủ",
+        "line": 123,
+        "learnLine": 842
+      },
+      {
+        "id": 124,
+        "name": "Đả Cẩu bổng",
+        "line": 125,
+        "learnLine": 866
+      },
+      {
+        "id": 125,
+        "name": "Bổng Đả ác Cẩu",
+        "line": 126,
+        "learnLine": 879
+      },
+      {
+        "id": 128,
+        "name": "Kháng Long Hữu Hối",
+        "line": 129,
+        "learnLine": 876
+      },
+      {
+        "id": 129,
+        "name": "Hóa Hiểm Vi Di",
+        "line": 130,
+        "learnLine": 858
+      },
+      {
+        "id": 130,
+        "name": "Túy Điệp Cuồng Vũ",
+        "line": 131,
+        "learnLine": 884
+      },
+      {
+        "id": 274,
+        "name": "Giáng Long Chưởng",
+        "line": 275,
+        "learnLine": 863
+      },
+      {
+        "id": 277,
+        "name": "Hoạt Bất Lưu Thủ",
+        "line": 278,
+        "learnLine": 871
+      },
+      {
+        "id": 357,
+        "name": "Phi Long Tại Thiên",
+        "line": 358,
+        "learnLine": 891
+      },
+      {
+        "id": 359,
+        "name": "Thiên Hạ Vô Cẩu",
+        "line": 360,
+        "learnLine": 892
+      },
+      {
+        "id": 360,
+        "name": "Tiêu Diêu Công",
+        "line": 361,
+        "learnLine": 887
+      }
+    ],
+    "scriptOnly": [
+      {
+        "id": 117,
+        "name": "Đầu Thạch Vấn Lộ",
+        "line": 118
+      },
+      {
+        "id": 118,
+        "name": "Cô Mộc Độn Lôi",
+        "line": 119
+      },
+      {
+        "id": 120,
+        "name": "Bôn Lưu Đáo Hải",
+        "line": 121
+      },
+      {
+        "id": 121,
+        "name": "Diệu Thủ Không Không",
+        "line": 122
+      },
+      {
+        "id": 123,
+        "name": "Khuê Mộc Tinh Chiếu",
+        "line": 124
+      },
+      {
+        "id": 126,
+        "name": "Kim Ô ánh Tuyết",
+        "line": 127
+      },
+      {
+        "id": 127,
+        "name": "Hoạt Bất Lưu Thủ 11",
+        "line": 128
+      },
+      {
+        "id": 209,
+        "name": "Đả Cẩu bổng",
+        "line": 210
+      },
+      {
+        "id": 358,
+        "name": "Tiềm Long Tại Uyên",
+        "line": 359
+      },
+      {
+        "id": 389,
+        "name": "Long Chiến Ư Dã",
+        "line": 390
+      },
+      {
+        "id": 714,
+        "name": "Hỗn Thiên Khí Công",
+        "line": 716
+      },
+      {
+        "id": 720,
+        "name": "Hỗn Thiên Khí Công_Quyết Chú",
+        "line": 722
+      },
+      {
+        "id": 1072,
+        "name": "Ngũ Diệu Càn Khôn",
+        "line": 1073
+      },
+      {
+        "id": 1073,
+        "name": "Thời Thặng Lục Long",
+        "line": 1074
+      },
+      {
+        "id": 1074,
+        "name": "Bổng Huýnh Lược Địa",
+        "line": 1075
+      },
+      {
+        "id": 1101,
+        "name": "ấ±³ậÁựÁỳáẵấụ",
+        "line": 1102
+      },
+      {
+        "id": 1103,
+        "name": "Thời Thặng Lục Long Hỏa",
+        "line": 1104
+      },
+      {
+        "id": 1161,
+        "name": "ấ±³ậÁựÁỳnpc",
+        "line": 1162
+      },
+      {
+        "id": 1162,
+        "name": "°ụồÄÂểàỉnpc",
+        "line": 1163
+      }
+    ]
+  },
+  {
+    "key": "tianren",
+    "name": "Thiên Nhẫn Giáo",
+    "learned": [
+      {
+        "id": 131,
+        "name": "Thiên Nhẫn  Đao pháp",
+        "line": 132,
+        "learnLine": 785
+      },
+      {
+        "id": 132,
+        "name": "Thiên Nhẫn  Mâu pháp",
+        "line": 133,
+        "learnLine": 782
+      },
+      {
+        "id": 135,
+        "name": "Tàn Dương Như Huyết",
+        "line": 136,
+        "learnLine": 774
+      },
+      {
+        "id": 136,
+        "name": "Hỏa Liên Phần Hoa",
+        "line": 137,
+        "learnLine": 788
+      },
+      {
+        "id": 137,
+        "name": "ảo ảnh Phi Hồ",
+        "line": 138,
+        "learnLine": 793
+      },
+      {
+        "id": 138,
+        "name": "Thôi sơn  Điền Hải",
+        "line": 139,
+        "learnLine": 801
+      },
+      {
+        "id": 140,
+        "name": "Phi Hồng Vô Tích",
+        "line": 141,
+        "learnLine": 804
+      },
+      {
+        "id": 141,
+        "name": "Liệt Hỏa Tình Thiên",
+        "line": 142,
+        "learnLine": 798
+      },
+      {
+        "id": 142,
+        "name": "Thâu Thiên Hoán Nhật",
+        "line": 143,
+        "learnLine": 819
+      },
+      {
+        "id": 143,
+        "name": "Lịch Ma Đoạt Hồn",
+        "line": 144,
+        "learnLine": 814
+      },
+      {
+        "id": 145,
+        "name": "Đơn Chỉ Liệt Diệm",
+        "line": 146,
+        "learnLine": 777
+      },
+      {
+        "id": 148,
+        "name": "Ma Diệm Thất Sát",
+        "line": 149,
+        "learnLine": 825
+      },
+      {
+        "id": 150,
+        "name": "Thiên Ma Giải Thể",
+        "line": 151,
+        "learnLine": 822
+      },
+      {
+        "id": 361,
+        "name": "Vân Long Kích",
+        "line": 362,
+        "learnLine": 829
+      },
+      {
+        "id": 362,
+        "name": "Thiên Ngoại Lưu Tinh",
+        "line": 363,
+        "learnLine": 830
+      },
+      {
+        "id": 364,
+        "name": "Bi Tô Thanh Phong",
+        "line": 365,
+        "learnLine": 809
+      },
+      {
+        "id": 391,
+        "name": "Nhiếp Hồn Loạn Tâm",
+        "line": 392,
+        "learnLine": 833
+      }
+    ],
+    "scriptOnly": [
+      {
+        "id": 133,
+        "name": "Thiên Nhẫn  phủ pháp (##)",
+        "line": 134
+      },
+      {
+        "id": 134,
+        "name": "Thiên Nhẫn  Chùy pháp",
+        "line": 135
+      },
+      {
+        "id": 139,
+        "name": "Hỗn Thủy Mạc Ngư",
+        "line": 140
+      },
+      {
+        "id": 144,
+        "name": "Minh Tôn Bản Sinh (##)",
+        "line": 145
+      },
+      {
+        "id": 146,
+        "name": "Ngũ hành trận",
+        "line": 147
+      },
+      {
+        "id": 147,
+        "name": "Huyền Minh Hấp Tinh",
+        "line": 148
+      },
+      {
+        "id": 149,
+        "name": "Thực Cốt Huyết Nhận",
+        "line": 150
+      },
+      {
+        "id": 226,
+        "name": "Ngũ hành trận",
+        "line": 227
+      },
+      {
+        "id": 363,
+        "name": "Nghiệp Hỏa Phàn Thành",
+        "line": 364
+      },
+      {
+        "id": 378,
+        "name": "Phong Hỏa Liên Thiên",
+        "line": 379
+      },
+      {
+        "id": 379,
+        "name": "Ma Viêm Tại Thiên",
+        "line": 380
+      },
+      {
+        "id": 715,
+        "name": "Ma Âm Phệ Phách",
+        "line": 717
+      },
+      {
+        "id": 723,
+        "name": "Ma Âm Phệ Phách - Hoảng loạn",
+        "line": 725
+      },
+      {
+        "id": 876,
+        "name": "ÄĐềụấẫặầ_BOSSìăểÃ",
+        "line": 876
+      },
+      {
+        "id": 931,
+        "name": "èỡÍõÁữéầ_boss",
+        "line": 931
+      },
+      {
+        "id": 1075,
+        "name": "Giang Hải Nộ Lan",
+        "line": 1076
+      },
+      {
+        "id": 1076,
+        "name": "Tật Hỏa Liệu Nguyên",
+        "line": 1077
+      },
+      {
+        "id": 1104,
+        "name": "ẳ²ằðÁầễư2",
+        "line": 1105
+      },
+      {
+        "id": 1131,
+        "name": "Ma Âm Kích",
+        "line": 1132
+      },
+      {
+        "id": 1163,
+        "name": "ẵưºÊÅưÀẵnpc",
+        "line": 1164
+      },
+      {
+        "id": 1164,
+        "name": "ẳ²ằðÁầễưnpc",
+        "line": 1165
+      },
+      {
+        "id": 1236,
+        "name": "Ma Âm Phệ Phách",
+        "line": 1234
+      }
+    ]
+  },
+  {
+    "key": "wudang",
+    "name": "Võ Đang",
+    "learned": [
+      {
+        "id": 151,
+        "name": "Võ Đang Kiếm pháp",
+        "line": 152,
+        "learnLine": 910
+      },
+      {
+        "id": 152,
+        "name": "Võ Đang Quyền Pháp",
+        "line": 153,
+        "learnLine": 907
+      },
+      {
+        "id": 153,
+        "name": "Nộ Lôi Chỉ",
+        "line": 154,
+        "learnLine": 899
+      },
+      {
+        "id": 155,
+        "name": "Thương Hải Minh Nguyệt",
+        "line": 156,
+        "learnLine": 902
+      },
+      {
+        "id": 157,
+        "name": "Tọa Vọng Vô Ngã",
+        "line": 158,
+        "learnLine": 933
+      },
+      {
+        "id": 158,
+        "name": "Kiếm Phi Kinh Thiên",
+        "line": 159,
+        "learnLine": 923
+      },
+      {
+        "id": 159,
+        "name": "Thất Tinh Trận",
+        "line": 160,
+        "learnLine": 915
+      },
+      {
+        "id": 160,
+        "name": "Thế Vân Tung",
+        "line": 161,
+        "learnLine": 928
+      },
+      {
+        "id": 164,
+        "name": "Bác Cấp Nhi Phục",
+        "line": 165,
+        "learnLine": 920
+      },
+      {
+        "id": 165,
+        "name": "Vô Ngã Vô Kiếm",
+        "line": 166,
+        "learnLine": 938
+      },
+      {
+        "id": 166,
+        "name": "Thái Cực Thần Công",
+        "line": 167,
+        "learnLine": 941
+      },
+      {
+        "id": 267,
+        "name": "Tam Hoàn Thao Nguyệt",
+        "line": 268,
+        "learnLine": 944
+      },
+      {
+        "id": 365,
+        "name": "Thiên Địa Vô Cực",
+        "line": 366,
+        "learnLine": 948
+      },
+      {
+        "id": 368,
+        "name": "Nhân Kiếm Hợp Nhất",
+        "line": 369,
+        "learnLine": 949
+      }
+    ],
+    "scriptOnly": [
+      {
+        "id": 154,
+        "name": "Âm Dương Khí (##)",
+        "line": 155
+      },
+      {
+        "id": 156,
+        "name": "Thuần Dương Tâm pháp",
+        "line": 157
+      },
+      {
+        "id": 161,
+        "name": "Lưỡng Nghi Tâm pháp",
+        "line": 162
+      },
+      {
+        "id": 162,
+        "name": "Huyền Nhất Vô Tượng",
+        "line": 163
+      },
+      {
+        "id": 163,
+        "name": "Nhân Kiếm Hợp Nhất (##)",
+        "line": 164
+      },
+      {
+        "id": 193,
+        "name": "Kiếm Phi Kinh Thiên",
+        "line": 194
+      },
+      {
+        "id": 211,
+        "name": "Thất Tinh Trận",
+        "line": 212
+      },
+      {
+        "id": 215,
+        "name": "Nhân Kiếm Hợp Nhất",
+        "line": 216
+      },
+      {
+        "id": 268,
+        "name": "Tam Hoàn Thao Nguyệt",
+        "line": 269
+      },
+      {
+        "id": 366,
+        "name": "Thái Cực Vô ý",
+        "line": 367
+      },
+      {
+        "id": 367,
+        "name": "Kiếm Khí Tung Hoành",
+        "line": 368
+      },
+      {
+        "id": 369,
+        "name": "Minh Nguyệt Vô Tâm",
+        "line": 370
+      },
+      {
+        "id": 370,
+        "name": "Vạn Kiếm Tề Phát",
+        "line": 371
+      },
+      {
+        "id": 371,
+        "name": "Thái Cực Kiếm ý",
+        "line": 372
+      },
+      {
+        "id": 377,
+        "name": "Nộ Lôi Liên hoàn Kích",
+        "line": 378
+      },
+      {
+        "id": 716,
+        "name": "Xuất ứ Bất Nhiễm",
+        "line": 718
+      },
+      {
+        "id": 738,
+        "name": "Kỹ năng phụ - Xuất ứ Bất Nhiễm",
+        "line": 740
+      },
+      {
+        "id": 899,
+        "name": "³ửểÙ²ằẩắ_BOSSìăểÃ",
+        "line": 899
+      },
+      {
+        "id": 1078,
+        "name": "Tạo Hóa Thái Thanh",
+        "line": 1079
+      },
+      {
+        "id": 1079,
+        "name": "Kiếm Thùy Tinh Hà",
+        "line": 1080
+      },
+      {
+        "id": 1105,
+        "name": "Kiếm Vũ Diệu Nguyệt",
+        "line": 1106
+      },
+      {
+        "id": 1106,
+        "name": "ễỡằ¯èôầồẫậºƯ",
+        "line": 1107
+      },
+      {
+        "id": 1107,
+        "name": "Kiếm Minh Thương Khung",
+        "line": 1108
+      },
+      {
+        "id": 1165,
+        "name": "ễỡằ¯èôầồnpc",
+        "line": 1166
+      },
+      {
+        "id": 1166,
+        "name": "ẵÊ´ạéầºểnpc",
+        "line": 1167
+      }
+    ]
+  },
+  {
+    "key": "kunlun",
+    "name": "Côn Lôn",
+    "learned": [
+      {
+        "id": 90,
+        "name": "Mê Tung ảo ảnh",
+        "line": 91,
+        "learnLine": 1008
+      },
+      {
+        "id": 167,
+        "name": "Côn Lôn Đao pháp",
+        "line": 168,
+        "learnLine": 964
+      },
+      {
+        "id": 168,
+        "name": "Côn Lôn Kiếm pháp",
+        "line": 169,
+        "learnLine": 967
+      },
+      {
+        "id": 169,
+        "name": "Hô Phong Pháp",
+        "line": 170,
+        "learnLine": 956
+      },
+      {
+        "id": 171,
+        "name": "Thanh Phong phù",
+        "line": 172,
+        "learnLine": 973
+      },
+      {
+        "id": 172,
+        "name": "Thiên Tế Tấn Lôi",
+        "line": 173,
+        "learnLine": 986
+      },
+      {
+        "id": 173,
+        "name": "Thiên Thanh Địa Trọc",
+        "line": 174,
+        "learnLine": 992
+      },
+      {
+        "id": 174,
+        "name": "Ki Bán phù",
+        "line": 175,
+        "learnLine": 978
+      },
+      {
+        "id": 175,
+        "name": "Khi Hàn Ngạo Tuyết",
+        "line": 176,
+        "learnLine": 997
+      },
+      {
+        "id": 176,
+        "name": "Cuồng Phong Sậu Điện",
+        "line": 177,
+        "learnLine": 1005
+      },
+      {
+        "id": 178,
+        "name": "Nhất Khí Tam Thanh",
+        "line": 179,
+        "learnLine": 983
+      },
+      {
+        "id": 179,
+        "name": "Cuồng Lôi Chấn Địa",
+        "line": 180,
+        "learnLine": 959
+      },
+      {
+        "id": 181,
+        "name": "Khí Tâm phù",
+        "line": 182,
+        "learnLine": 1000
+      },
+      {
+        "id": 182,
+        "name": "Ngũ Lôi Chánh Pháp",
+        "line": 183,
+        "learnLine": 1016
+      },
+      {
+        "id": 275,
+        "name": "Sương Ngạo Côn Lôn",
+        "line": 276,
+        "learnLine": 1013
+      },
+      {
+        "id": 372,
+        "name": "Ngạo Tuyết Tiêu Phong",
+        "line": 373,
+        "learnLine": 1023
+      },
+      {
+        "id": 375,
+        "name": "Lôi động Cửu Thiên",
+        "line": 376,
+        "learnLine": 1024
+      },
+      {
+        "id": 392,
+        "name": "Thúc Phược Chú",
+        "line": 393,
+        "learnLine": 970
+      },
+      {
+        "id": 393,
+        "name": "Bắc Minh Đáo Hải",
+        "line": 394,
+        "learnLine": 989
+      },
+      {
+        "id": 394,
+        "name": "Túy Tiên Tá Cốt",
+        "line": 395,
+        "learnLine": 1027
+      },
+      {
+        "id": 630,
+        "name": "Huyền Thiên Vô Cực",
+        "line": 632,
+        "learnLine": 1019
+      }
+    ],
+    "scriptOnly": [
+      {
+        "id": 170,
+        "name": "Đại Lãng Thực Không",
+        "line": 171
+      },
+      {
+        "id": 177,
+        "name": "Bách Xuyên Nạp Hải",
+        "line": 178
+      },
+      {
+        "id": 180,
+        "name": "Độc Tê Tị Tà",
+        "line": 181
+      },
+      {
+        "id": 183,
+        "name": "Tuế Nguyệt Vô Tình phù",
+        "line": 184
+      },
+      {
+        "id": 184,
+        "name": "Kim Thiền Thoát Xác",
+        "line": 185
+      },
+      {
+        "id": 276,
+        "name": "Tuế Nguyệt Vô Tình",
+        "line": 277
+      },
+      {
+        "id": 373,
+        "name": "Khiếu Phong Tam Liên Kích",
+        "line": 374
+      },
+      {
+        "id": 374,
+        "name": "Vụ Tỏa Côn Lôn",
+        "line": 375
+      },
+      {
+        "id": 376,
+        "name": "Túy Tiên Tá Cốt 99",
+        "line": 377
+      },
+      {
+        "id": 386,
+        "name": "Ngự Phong thuật",
+        "line": 387
+      },
+      {
+        "id": 387,
+        "name": "Bình Địa Hám Lôi",
+        "line": 388
+      },
+      {
+        "id": 399,
+        "name": "Thiên Tế Tấn Lôi (ảnh động)",
+        "line": 400
+      },
+      {
+        "id": 400,
+        "name": "Kiếp Phú Tế Bần",
+        "line": 401
+      },
+      {
+        "id": 656,
+        "name": "Giảm tốc đoạt cờ (Tống Kim)",
+        "line": 658
+      },
+      {
+        "id": 704,
+        "name": "Thông minh lanh lợi",
+        "line": 706
+      },
+      {
+        "id": 717,
+        "name": "Lưỡng Nghi Chân Khí",
+        "line": 719
+      },
+      {
+        "id": 721,
+        "name": "Lưỡng Nghi Chân Khí_Ma Pháp Độn",
+        "line": 723
+      },
+      {
+        "id": 722,
+        "name": "Lưỡng Nghi Chân Khí_Gia Tốc",
+        "line": 724
+      },
+      {
+        "id": 1080,
+        "name": "Cửu Thiên Cương Phong",
+        "line": 1081
+      },
+      {
+        "id": 1081,
+        "name": "Thiên Lôi Chấn Nhạc",
+        "line": 1082
+      },
+      {
+        "id": 1108,
+        "name": "Phong Minh Ngọc Toái",
+        "line": 1109
+      },
+      {
+        "id": 1109,
+        "name": "Lôi Động Càn Khôn",
+        "line": 1110
+      },
+      {
+        "id": 1134,
+        "name": "ẩôặÁéĂẫÁàỗ",
+        "line": 1135
+      },
+      {
+        "id": 1137,
+        "name": "ằỉéýéýãỗonly",
+        "line": 1138
+      },
+      {
+        "id": 1138,
+        "name": "ằỉÁƯéĂẫÁàỗ",
+        "line": 1139
+      },
+      {
+        "id": 1143,
+        "name": "ằỉéýéýãỗ",
+        "line": 1144
+      },
+      {
+        "id": 1144,
+        "name": "ằỉéýéýãỗẫÁàỗ",
+        "line": 1145
+      },
+      {
+        "id": 1167,
+        "name": "ắÅèỡợáãỗnpc",
+        "line": 1168
+      },
+      {
+        "id": 1168,
+        "name": "èỡÀìếðễÀnpc",
+        "line": 1169
+      }
+    ]
+  },
+  {
+    "key": "huashan",
+    "name": "Hoa Sơn",
+    "learned": [],
+    "scriptOnly": []
+  },
+  {
+    "key": "wuhun",
+    "name": "Vũ Hồn Đường",
+    "learned": [],
+    "scriptOnly": []
+  },
+  {
+    "key": "xiaoyao",
+    "name": "Tiêu Dao",
+    "learned": [],
+    "scriptOnly": []
+  }
+]

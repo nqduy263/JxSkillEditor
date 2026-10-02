@@ -1,0 +1,24 @@
+{
+  "capturedAt": "2026-10-01T14:23:24.038Z",
+  "distro": "VLTK_Offline",
+  "serverRoot": "/home/jxser_bachkim_6.0/server1",
+  "clientExecutables": [
+    "E:/Game/VLTK/VLTK_DEV_V2/Client6.0/game.exe",
+    "E:/Game/VLTK/VLTK_DEV_V2/Client6.0/game_offline.exe"
+  ],
+  "processEvidence": "Read-only process inspection in this session; executable paths verified. No in-memory skill list read.",
+  "files": [
+    {
+      "remote": "/home/jxser_bachkim_6.0/server1/script/global/skills_table.lua",
+      "local": "SkillStudio/evidence/live_skills_table.lua",
+      "bytes": 45889,
+      "sha256": "4f8d9e3557b2d6e802558cae6804b4855effe511d901cc407526b32377b4533a"
+    },
+    {
+      "remote": "/home/jxser_bachkim_6.0/server1/settings/skills.txt",
+      "local": "SkillStudio/evidence/live_skills.txt",
+      "bytes": 578475,
+      "sha256": "02ae1f5dfe8b5f3647ead508fe27190e7eb34d893b3568114be5c641d7cf1d68"
+    }
+  ]
+}

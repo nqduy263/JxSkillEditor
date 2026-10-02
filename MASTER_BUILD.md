@@ -1,0 +1,196 @@
+# JX Skill Studio — MASTER BUILD
+
+## Cập nhật v0.4 Alpha — EXE portable, workspace, validator
+
+Host `JXSkillStudio.exe` dùng WinForms + WebView2, origin nội bộ và bridge typed allowlist. Bản Full self-contained win-x64 kèm WebView2 Fixed Runtime 154.0.4258.48; bản Lite có thể dùng Evergreen. `Data/` lưu workspace UTF-8 atomically, có previous/quarantine/recovery; snapshotId ngăn mở nhầm bộ nguồn.
+
+Mở changeset v0.3 chỉ áp dụng diff trước/sau đã khớp source. Validator kiểm required fields, duplicate 521, active references/cycles/depth, numeric Lua subset, formula hash/byte span, missing SPR, PNG/JPEG thử, TCVN3/Latin-1 và TSV control. Discovery chỉ đọc process path + skills header + WSL; chưa SSH, memory hoặc game writes. Tests: 45 demo, 25 workspace, native self-test/diagnostics/discovery. GUI layout chưa nghiệm thu.
+
+Xem `REVISION_04.md`, `native/RUNTIME.md`, `THIRD_PARTY.md`. .NET 8 hết hỗ trợ 10/11/2026; chuyển .NET 10 trước release dài hạn.
+
+## Lịch sử v0.3 — tạo mới, lựa chọn có giải thích, SPR thật
+
+Bản demo hiện tại: tạo skill từ đầu, khai báo Lua riêng, tạo đường đạn/tầng mới, dropdown có nguồn, preview frame SPR. Xem REVISION_03.md và HANDOFF.md. Các ước lượng bên dưới áp dụng cho sản phẩm Windows đầy đủ.
+
+- Tạo mới không phụ thuộc skill đang chọn. ID/name/faction riêng; gameplay và tài nguyên do người dùng khai báo. Model newSkill/newMissile và export v0.3 phân biệt insert với update.
+- Action, CharClass, SkillStyle, MslsGenerate, MisslesForm, MoveKind, FollowKind, trạng thái và liên kết có list + giải thích. Unknown được giữ nguyên mã. CharClass=3 là Mộc theo template client.
+- CharAnimId=14 không có mapping trong bảng NpcAction 0–13; không mặc định gán một animation. Gate trước sản xuất: xác minh enum engine và giới hạn của từng build.
+- Đã port read-only PACK/hash/UCL/SPR, đóng gói tài nguyên nạp khi chọn; 626/667 SPR, 28.567 frame. 41 tài nguyên chưa đọc được; lưu lỗi cụ thể.
+- Preview action ghép thân + đầu chuẩn nam/nữ và tư thế từ bảng vũ khí; chọn SPR có preview trước áp dụng, play/pause, hướng, scrub và tốc độ. Chưa là cast gameplay hay trang bị live.
+- P3 bổ sung tạo bảng mốc P1/P2/P3 mới, Lua key riêng, tạo SkillId cho tầng và MissleId cho đường đạn, kiểm liên kết/ID và insert-plan; backend phải sinh Lua 4 hoàn chỉnh, lệnh học, codec và rollback.
+- P4 còn lại: container chưa hỗ trợ, tài nguyên thiếu, render order/equipment/horse, xác minh units/Interval và hành vi engine.
+- 41 kiểm tra logic/UI-handler + 5 nhóm resource đã qua. Frame contact sheet đã được xem; chưa QA layout trình duyệt vì file:// bị policy chặn. Gói xuất vẫn deployable=false.
+
+## Lịch sử v0.2 — 01/10/2026, sau phản hồi dữ liệu skill
+
+Trạng thái mới nhất của demo và phạm vi nghiệm thu ở HANDOFF.md / REVISION_02.md; các ước lượng bên dưới vẫn dành cho sản phẩm Windows đầy đủ.
+
+- Nguồn tên chuyển sang Client6.0/settings/skills.txt raw bytes TCVN3, không dùng skills_full_db.json. Nhãn Attrib/EqtLimit đọc gamesetting.ini. Faction INI có 13 tên, không giả định tất cả đã bật.
+- Phân biệt 170 skill có AddMagic trong các hàm add_* của snapshot server WSL, 288 skill thuộc script môn phái chưa chứng minh được học, và nhóm nội bộ/chưa xác định. Không gộp tên có trong bảng tổng thành skill nhân vật.
+- Đã xác minh executable path của game.exe/game_offline.exe và cwd của jx_linux_y. Snapshot chỉ đọc, không xác minh nội dung RAM hoặc pack precedence.
+- Editor hiện có đầy đủ 113 cột skill, 57 cột missile: nhóm hiển thị, combat/cast, tầng/event, assets, raw. Có 20 cặp LvlSetting/LvlData.
+- Đã có parser token để tìm bảng SKILLS có byte span; evaluator bảng số P1/P2/P3 (floor/Link, nội suy và ngoại suy). Biểu thức/hàm ngoài subset giữ unknown; đây chưa là Lua 4 sandbox sản xuất.
+- Chuỗi tầng từ ChildSkillId và event bảng/Lua; phân biệt ID missile với ID skill theo profile tham khảo; giữ cờ event tắt, chặn vòng lặp/depth 8. Không gọi đây là cast engine đã nghiệm thu.
+- Thay SkillIcon bằng asset có sẵn hoặc đường dẫn SPR; tải PNG/JPEG là preview asset cần chuyển SPR. Missile/Lua là tài nguyên dùng chung, có diff và danh sách tác động.
+- P0 bổ sung gate bắt buộc: trùng ID 521, thiếu ID trong bảng học (Hoa Sơn), chênh nguồn live/local, xác minh thứ tự PAK và loose override. Cấm tự chọn last-wins làm quy tắc ghi game.
+- P3 bổ sung gate: clone template có ID không trùng catalog; tạo lệnh học, profile ID limit và clone tài nguyên dùng chung vẫn là việc backend cần làm. JSON v0.2 luôn deployable=false.
+
+## Phương án sản phẩm đầy đủ
+
+Ngày: 01/10/2026 · Phiên bản phương án: 0.1 · Mục tiêu đầu tiên: JX Linux 6.0 + Client6.0 trong workspace này.
+
+## 1. Phạm vi và định nghĩa hoàn thành
+
+Xây dựng phần mềm Windows portable tạo và chỉnh sửa skill, quản lý tất cả môn phái tìm thấy trong bản dữ liệu, kết nối server qua SSH/SFTP hoặc WSL và nhận diện client Windows qua tiến trình/thư mục. Không giả định các server cùng một schema.
+
+Ba mức sản phẩm:
+
+1. **Demo hiện tại (v0.3):** danh mục từ bảng client, tạo/sửa skill và tài nguyên draft, danh sách có nguồn, giải mã PAK/SPR snapshot, preview animation và xuất JSON. Chưa có SSH/backend ghi game, thực thi Lua 4 đầy đủ hoặc cast engine.
+2. **MVP:** snapshot dữ liệu thật; đọc PAK/SPR; preview frame; editor schema và công thức; xuất patch đồng bộ server/client; kiểm tra và rollback tại staging.
+3. **V1:** SSH tự khám phá có profile, sandbox Lua 4, dependency graph, preview cast có tài nguyên nhân vật, triển khai có nhật ký và nghiệm thu game thật.
+
+“Y như trong game” chia thành: nội dung tooltip, số liệu theo cấp/ngữ cảnh nhân vật, hình ảnh/font/layout, animation tài nguyên, và hành vi engine. Chỉ gắn nhãn Đã đối chiếu game khi có bằng chứng cho từng phiên bản và ngữ cảnh; không suy từ việc mở được SPR.
+
+## 2. Kiến trúc đề xuất
+
+```text
+Windows host C# + WPF
+  ├─ WebView2 UI: danh mục / editor / tooltip / timeline / diff
+  ├─ Discovery: process path, local roots, WSL, saved SSH endpoints
+  ├─ Connectors: LocalFs | WSL | SSH/SFTP
+  ├─ Snapshot store + manifest SHA-256 + catalog SQLite
+  ├─ JX6 adapter: TSV/INI raw bytes, Lua syntax tree, PAK index, SPR frames
+  ├─ Resolver: skill → Lua settings → missile/event/child → assets
+  ├─ Preview: tooltip evaluator + sprite timeline + context model
+  ├─ Validator: references, encoding, IDs, cycles, schema, engine limits
+  └─ Patch coordinator: plan → stage → backup → apply → verify → recover
+Isolated worker: untrusted PAK/SPR and Lua evaluation with timeout/memory limits
+Optional x86 helper: only for build-specific runtime integration
+```
+
+UI không được gọi shell trực tiếp. Bridge typed message, allowlist lệnh, schema input, request ID, cancellation và log đã che bí mật. Chỉ load UI nội bộ; chặn navigation ngoài, remote scripts và DevTools trong release. Worker giao tiếp qua named pipe có ACL người dùng hiện tại. Chọn x64 cho host; client game x86 không bắt buộc host x86 khi chỉ đọc file.
+
+### Lựa chọn công nghệ
+
+| Phương án | Điểm mạnh | Hạn chế | Quyết định |
+|---|---|---|---|
+| C# WPF + WebView2 Fixed Runtime | Tái sử dụng C#, giao diện tương tự web tool; runtime đi cùng ZIP | Dung lượng lớn hơn; cần cập nhật runtime định kỳ | Đề xuất V1 |
+| C# WPF thuần | Không cần WebView2; thuận lợi native Windows | Tốn công dựng timeline/skin kiểu web | Dự phòng nếu ưu tiên dung lượng |
+| Giữ WinForms .NET Framework 4.7.2 | Nhanh tận dụng TBJXStudio | Phụ thuộc framework máy đích; UI cũ và code ghép chặt | Dùng làm tham chiếu parser, không mặc định sản phẩm mới |
+| Electron/Tauri | UI web thuận lợi | Thêm runtime hoặc cầu nối khác; không tự giải quyết parser JX | Chưa chọn |
+
+Dùng .NET phiên bản được hỗ trợ tại lúc khởi tạo release; máy khảo sát có SDK 8.0.425. Pin NuGet và runtime trong lockfile, không suy SDK hiện có là lựa chọn dài hạn. SSH.NET là ứng viên, phải test thuật toán SSH trên CentOS cũ. Portable = giải nén thư mục ZIP và chạy không installer/admin; không bắt buộc một EXE. Có profiles/data/cache/logs/backups cạnh EXE, kiểm tra quyền ghi và dung lượng trước thao tác.
+
+## 3. Tự khám phá và kết nối
+
+1. Đọc profile đã lưu; kiểm tra endpoint và SSH host fingerprint đã tin cậy.
+2. Local client: liệt kê ứng viên tiến trình và executable path; xác minh config, settings, data PAK; nhiều client thì cho chọn. Nếu thiếu quyền xem path, cho chọn thư mục.
+3. WSL: liệt kê distro; xác minh candidate root bằng schema/settings và đường dẫn tiến trình jx_linux_y. Thông tin VLTK_Offline trong bộ nhớ là gợi ý, không là kết quả live.
+4. SSH: host/port/key do profile cung cấp. Lần đầu cần xác nhận fingerprint; tự kết nối các lần sau nếu khớp. Không thể tự tìm mật khẩu. Quét LAN là tùy chọn trên dải người dùng chọn, có giới hạn concurrency/timeout/cancel; port game 5622/6666 không phải cổng SSH.
+5. Kết nối bằng tài khoản ít quyền, SFTP đọc snapshot trước; không chạy script server lúc scan. Không đọc secrets từ process memory. Remote Windows client cần SSH được cấu hình hoặc companion riêng, không có SSH mặc định.
+6. Tách trạng thái: discovered / authenticated / readable / writable / running / version-supported. Chạy game không đồng nghĩa editor có thể ghi hay reload.
+
+Khóa riêng không sao chép vào ZIP; secret lưu bằng Windows credential storage/DPAPI hoặc hỏi mỗi phiên. Xuất profile loại bỏ secrets. Chuyển máy phải xác thực lại; ghi rõ giới hạn này của portable.
+
+## 4. Mô hình dữ liệu và nguồn
+
+SkillKey = versionProfile + sourceRoot + SkillId. Không dùng tên làm khóa. Mỗi giá trị có sourcePath, row/column hoặc byte span, hash, parserVersion và confidence (raw / resolved / evaluated / verified-in-game / unknown).
+
+Entity: Skill, SkillLevelSetting, Missile, SkillEvent, SkillDependency, FactionBranch, AssetRef, SpriteFrame, CharacterContext, TooltipToken, Snapshot, ChangeSet, DeploymentJournal.
+
+Nguồn thực tế tại workspace:
+
+- `Client6.0/settings/skills.txt`: header có SkillId, SkillIcon, PreCastSpr, CharAnimId, WaitTime, TimePerCast, LvlSetScript, SkillDesc; không có cột ScriptFile/MissleId như ví dụ khái quát trong bộ nhớ.
+- `Client6.0/settings/missles.txt`: MissleId, LifeTime, Speed, DmgRange, AnimFile1…4 và các biến thể B, âm thanh.
+- `server1/settings/skills.txt`, `server1/settings/missles.txt`, `script/skill/*.lua`: phải đọc và đối chiếu bằng adapter đúng profile; không liên kết missile bằng chỉ số cột đoán sẵn.
+- `settings/faction`, cây học skill, nhiệm vụ mở skill, Lua include: xác minh môn phái/nhánh; skill NPC, GM, hidden và custom vào nhóm riêng.
+- PAK: từ thứ tự nạp thực tế/config và loose overrides; không mặc định file ngoài luôn thắng. Bản sao `skills1`, `skill-goc`, `skill2` không mặc định active.
+
+Import phải giữ nguyên raw bytes, header, cột lạ, comment, newline, thứ tự và ô rỗng. Unicode chỉ là lớp hiển thị. TCVN3 là bảng mã chữ cần ánh xạ riêng, Latin-1 là cách giữ byte 1:1, không phải converter tiếng Việt. Export kiểm tra decode/encode round trip; thay đổi tên không biểu diễn được phải báo lỗi. Client giữ CRLF; tên đường dẫn GBK/Mojibake theo đúng profile, giữ cả rawPathBytes và displayPath.
+
+## 5. Chức năng màn hình
+
+| Màn hình | Chức năng | Điều kiện |
+|---|---|---|
+| Kết nối | Discover local/WSL, SSH profiles, fingerprint, chọn active roots, scan progress | Đọc trước |
+| Thư viện | Tất cả môn phái/nhánh, NPC/GM/custom/unmapped, tìm ID/tên, filter active/passive | Nguồn và coverage rõ |
+| Editor | General, targeting, cost, range, cast, weapons/horse, flags; raw schema view | Không bỏ cột chưa biết |
+| Theo cấp | Bảng cấp, đồ thị, công thức, context, linked support | Unknown nếu cần native API |
+| Tooltip | Original text / formatted / evaluated / game reference | Không giả định pixel-perfect |
+| Animation | Icon SPR, precast, character action, missile, impact, sound, hướng, scrub/play | Asset-missing rõ |
+| Dependencies | Event, child skill, missile, effect/state, Lua include, reverse references | Phát hiện vòng lặp |
+| Tạo skill | Khai báo từ đầu: ID riêng, môn phái/nhánh, action/target, bảng cấp riêng, tầng/missile mới, icon/SPR chọn có preview | ID/schema/references theo profile; không kế thừa ngầm |
+| Đồng bộ | Server vs client diff, impacted files, staged patch, conflicts | Snapshot mới |
+| Lịch sử | Backup, journal, export report, rollback | Hash trước/sau |
+
+Giữ tick raw và đơn vị đổi riêng; profile hiện tại có 18 tick/giây nhưng không mặc định mọi cột đều cùng đơn vị. Cast phụ thuộc CharAnimId, equipment, horse, attack speed, action timing và engine; preview 2D chỉ mô phỏng phần đã giải được.
+
+## 6. Lua và tài nguyên
+
+Không thực thi Lua đọc từ server trong host. Parser token/AST giữ comment/byte span; sửa tối thiểu vùng AST. Parser regex hiện có chỉ là tham khảo. Evaluator Lua 4 worker: API whitelist và stub có loại dữ liệu rõ, không file/network/OS, instruction budget, memory cap, timeout; kết quả thiếu native context là unknown. Chuẩn cú pháp phải qua Lua 4 tương ứng, không qua Lua 5 rồi coi là hợp lệ.
+
+PAK có hashed path: không bảo đảm phục hồi tất cả tên file từ hash. Xây candidate dictionary từ references; entry chưa xác định vẫn catalog theo ID/hash. Decoder kiểm tra bounds, kích thước giải nén, palette, alpha, frame offset, direction; chống allocation cực lớn và compression bomb. Cache theo container hash+entry hash+decoder version. Không sửa trực tiếp PAK trong MVP; xuất patch/loose override chỉ khi đã chứng minh precedence, nếu không tạo container patch theo format đã nghiệm thu.
+
+## 7. Quy trình ghi và rollback
+
+`Draft → Validated → Planned → Staged → BackedUp → Applying → Verified → Activated`.
+
+- Manifest tất cả file server/client, base/new SHA-256, raw encoding/newline, dependencies, profile/build hashes, phương án reload/restart, backup path và disk requirement.
+- Trước ghi re-read hash; mismatch thì Conflict, không overwrite. Khóa workflow theo root; phát hiện editor khác bằng hash.
+- Backup `.bak_yyyyMMdd_HHmmss` trước từng script/config; backup PAK nguyên bản nếu thay container. Xác minh backup hash và quyền restore.
+- Stage upload tên tạm, verify hash; rename từng file có journal. Hai máy không có atomic transaction toàn cục: cần maintenance hoặc giữ activation tới khi đủ hai phía. Mất mạng giữa chừng chuyển RecoveryRequired, không báo thành công.
+- Activate riêng theo capability đã kiểm chứng; không mặc định hot reload skills. Nếu phải restart, trình bày downtime và hướng dẫn đúng runbook. Không tự tắt server trong scan/import.
+- Rollback cũng kiểm tra current hash; nếu có thay đổi sau deploy thì tạo conflict và hướng dẫn phục hồi có chọn lọc. Khôi phục file không đồng nghĩa runtime đã rollback; verify reload/restart và game riêng.
+
+## 8. Kế hoạch thực hiện và nghiệm thu
+
+Ước lượng cho 1 lập trình viên toàn thời gian + người vận hành hỗ trợ đối chiếu game. Ngày công là ước lượng kỹ thuật, chưa là cam kết lịch.
+
+| Giai đoạn | Công việc | Ngày công | Cổng nghiệm thu |
+|---|---|---:|---|
+| P0 khảo sát | Fingerprint active build, schema, pack precedence, profile, corpus, license audit | 4–6 | Chọn được active roots; toàn bộ file nguồn có hash; báo cáo unknown |
+| P1 nền tảng | Solution, worker IPC, snapshot, byte-preserving TSV/INI, converter | 6–9 | Import/export không sửa byte khi không edit; round trip tên/path |
+| P2 catalog/resources | Faction graph, Lua refs, PAK UCL, SPR frames, search/cache | 8–12 | Mọi row được import hoặc có lỗi chỉ rõ; không mất skill chưa phân phái |
+| P3 editor | Form schema/enum, tạo ID từ đầu, thêm tầng/missile/Lua, undo, diff, validate, patch export | 8–12 | Edit đúng span; dependency invalid chặn export triển khai |
+| P4 preview | Tooltip tokens, level context, timeline, direction, character assembly | 8–15 | Bộ mẫu gồm mỗi phái, passive/buff, child/event và missing asset |
+| P5 connections | SSH/SFTP, WSL, discovery, secrets, host keys, cancel/retry | 5–8 | Sai key/host hash/mất mạng xử lý đúng; không có secret trong log |
+| P6 deploy/recovery | Backups, journal, conflict, two-root stage, rollback | 6–10 | Fault injection từng bước; phục hồi sau kill app và đứt SSH |
+| P7 release | Game comparison, clean VM portable, DPI, perf, packaging | 5–8 | Release hash, no-admin/offline launch, evidence game |
+
+Tổng 50–80 ngày công, khoảng 10–16 tuần làm việc; thêm 20–30% dự phòng nếu pack/cast chưa giải được. MVP đọc/chỉnh/xuất patch ưu tiên sau P0–P3 và phần preview cơ bản: khoảng 5–8 tuần. Các việc SSH và preview có thể đổi thứ tự theo độ rủi ro; không cần SSH để chứng minh parser.
+
+Backlog ưu tiên: B01 active-profile detection; B02 raw parser; B03 TCVN3/path codecs; B04 snapshot/hashes; B05 catalog/factions; B06 resource resolver; B07 SPR player; B08 AST edits; B09 formula evaluator; B10 editor/undo/create-from-empty; B11 diff/validator; B12 SSH/WSL; B13 journal deploy/rollback; B14 game capture evidence; B15 release. B06 phụ thuộc B01/B04/B05; B09 phụ thuộc B08; B13 phụ thuộc B04/B11/B12; không bật ghi trước B13.
+
+### Kiểm thử có ý nghĩa
+
+- Corpus thật có bytes >127, ô trống, duplicate IDs, script Chinese paths, CRLF/LF, header reordered và schema lạ. So sánh byte đầu ra, không chỉ text.
+- SPR/PAK: golden images, frames/directions/alpha, truncation, unsupported compression, oversize dimensions, corrupt offsets; decoder fail kín và không crash UI.
+- Lua: constant/table/function/include/native context/cycles; cùng input so với kết quả engine trên staging, không tự bịa fallback 0.
+- Gameplay: ít nhất một nhánh mỗi phái cộng melee/ranged/AOE/passive/aura/child/event/horse; test level 1/mid/max và các context đã nêu. Mỗi kết quả có screenshot/video, IDs, hashes và reviewer.
+- Deploy: conflict, disk full, permission denied, lost SSH, process kill, one-side apply, rollback conflict. Không “success” nếu read-back/activation thiếu.
+- Performance mục tiêu cần đo: catalog filter <150ms với 10.000 rows, warm open <5s trên SSD tham chiếu, UI không block >100ms; cold scan báo tiến độ/cancel và memory bounded. Không tuyên bố đã đạt.
+- UI: 1280×720, 1920×1080, DPI 100/125/150/200%, bàn phím, reduced motion, text contrast ≥4.5:1, không chỉ dùng màu báo trạng thái.
+
+## 9. Đóng gói và thiết kế
+
+ZIP: exe host, worker, fixed WebView2 runtime, ui, adapters, schemas, profiles mẫu không secret, LICENSES/SBOM, README, SHA256SUMS. CI build từ tag/lockfile; release self-contained, không trimming trước khi test reflection/UI. Ký mã nếu có certificate, không coi chữ ký là yêu cầu để thử nội bộ. Không đóng gói tài nguyên game có bản quyền vào bản phân phối công khai.
+
+Theme đề xuất **Obsidian Jade**: nền #091411, panel #10231D, jade #6DD9AD, gold #D8B77B, text #E6ECE7, muted #A5B6AC. Gần web tool xanh lục hiện tại nhưng giảm glow và nhiễu. Alternative **Midnight Bronze**: nền #10151E, panel #192231, bronze #D8B77B. Font Segoe UI, monospace cho ID/byte; nút 3D gradient nhẹ, viền sáng trên, bóng đáy 3px, pressed dịch 2px; disable/keyboard focus rõ. Bố cục: sidebar ngắn, thư viện trái, editor giữa, tooltip/preview phải, footer trạng thái. Responsive chuyển thành stack ở màn hẹp; app thật cho resize/dock panels.
+
+## 10. Nguồn kỹ thuật chính thức
+
+- .NET self-contained/single-file: https://learn.microsoft.com/en-us/dotnet/core/deploying/single-file/overview
+- WebView2 distribution: https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution
+- SSH.NET: https://github.com/sshnet/SSH.NET
+
+WebView2 Fixed Runtime đi cùng thư mục là lựa chọn portable, cần quy trình cập nhật bản vá. Khóa dependency tại P0; tài liệu chính thức không thay thế kiểm thử JX riêng.
+
+## Build 0.5.0
+
+Chạy native/build-portable.ps1; gói mới ở releases/JXSkillStudio-0.5.0-win-x64. Xem REVISION_05.md.
+
+
+## Build và phát hành 0.6.0
+
+Mã nguồn được xuất bản tại https://github.com/nqduy263/JxSkillEditor. Build bằng native/build-portable.ps1, đóng ZIP Full với thư mục gốc JXSkillStudio-0.6.0-win-x64, gắn vào GitHub Release tag v0.6.0. Các bản sau dùng tên asset tương ứng để trình cập nhật nhận diện. Xem REVISION_06.md.
+

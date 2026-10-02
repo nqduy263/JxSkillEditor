@@ -1,0 +1,22 @@
+# Build output and downloaded runtimes
+.build-home/
+.downloads/
+.http-cache/
+.packages/
+.runtime/
+releases/
+native/SkillStudio.App/bin/
+native/SkillStudio.App/obj/
+
+# Local workspace, backups, diagnostics and test fixtures
+Data/
+.updates/
+.test-updater-*/
+*.bak
+*.bak_*
+*.log
+diagnostics.json
+self-tests.json
+discovery.json
+native-test-data/
+evidence/native-discovery.json

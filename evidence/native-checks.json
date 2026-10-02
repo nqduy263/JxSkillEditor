@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-01T22:50:16.5541844+07:00",
+  "passed": 9,
+  "checks": [
+    "Autosave preserves UTF-8 workspace bytes",
+    "Atomic replacement keeps previous workspace",
+    "Corrupt autosave recovers prior version",
+    "Corrupt bytes are quarantined without replacing good backup",
+    "Invalid workspace never overwrites saved data",
+    "Missing current file recovers previous after interrupted quarantine/write",
+    "Workspace reader rejects malformed UTF-8 instead of replacing bytes",
+    "Bridge trusts only the exact local application origin",
+    "Atomic writes leave no partial temp files"
+  ],
+  "fixtureRoot": "E:\\Game\\VLTK\\VLTK_DEV_V2\\SkillStudio\\evidence\\native-test-data\\20261001_155016_494",
+  "guiTested": false
+}

@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-02T04:16:41.241Z",
+  "passed": 25,
+  "checks": [
+    "Workspace roundtrip preserves new independent skill, missile, curve and selection",
+    "Different source snapshot refuses restore",
+    "Duplicate and colliding insert IDs cannot corrupt catalog",
+    "ID-field mismatch and missing schema columns are rejected",
+    "Malformed, oversized and prototype-polluting files fail without mutation",
+    "v0.3 import applies verified diffs and ignores stale untouched full draft",
+    "v0.3 conflicting before value refuses restore",
+    "v0.4 changeset reopens embedded verified workspace",
+    "Shared Lua verifies hash, prior bytes and byte span; users are recomputed",
+    "False insert/update metadata cannot mask a missing Lua definition",
+    "Bounded PNG survives workspace import; SVG and mislabeled bytes are rejected",
+    "Completed numeric draft has no schema/reference errors and remains undeployable",
+    "Blank new skill explains required fields; no fake defaults make it pass",
+    "Missing active and inactive links are distinguished",
+    "Active cycles through skill and missile ResponseSkill are detected",
+    "Lua event missing only at later level is checked",
+    "Invalid numeric column cannot skip validation by corrupting MaxLevel",
+    "TSV control bytes, unsupported characters and unsafe paths are reported",
+    "Action 14 stays unmapped warning; not replaced with invented animation",
+    "Source duplicate 521 blocks review eligibility even though catalog has one ID",
+    "Unsafe Lua text is never executed and receives a validation error",
+    "Autosave serializes in-flight writes and flush waits for newest revision",
+    "Failed autosave retains dirty state and can retry without losing edits",
+    "Autosave cannot overwrite recovery data before initialization",
+    "Typed bridge correlates responses, propagates failures and handles closing event"
+  ],
+  "method": "Actual client snapshot + pure workspace/validation scenarios + serialized persistence + native bridge message mock",
+  "guiTested": false
+}

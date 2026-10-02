@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-02T04:04:29.094Z",
+  "ready": 626,
+  "unavailable": 41,
+  "frames": 28567,
+  "animated": 612,
+  "actionResources": 144,
+  "checks": [
+    "All packaged SPR payloads match source SHA256 and decode every frame",
+    "Inconsistent direction headers use explicit raw-frame mode without losing frames",
+    "Every generated male/female action reference resolves to real SPR",
+    "Action and missile samples contain distinct animated pixel frames",
+    "Invalid signature, truncated data and oversized frame count fail closed"
+  ],
+  "contactSheet": [
+    {
+      "path": "\\spr\\npcres\\man\\MA_BD_001_MG02.spr",
+      "headPath": "\\spr\\npcres\\man\\MA_HD_001_MG02.spr",
+      "container": "spr.pak",
+      "direction": 0,
+      "frameIndexes": [
+        0,
+        3,
+        6,
+        9
+      ]
+    },
+    {
+      "path": "\\spr\\skill\\sl\\ÎÞÏòÕ¶.spr",
+      "container": "skills.pak",
+      "direction": 0,
+      "frameIndexes": [
+        0,
+        2,
+        4,
+        6
+      ]
+    }
+  ],
+  "limitations": [
+    "Static frame QA is not browser layout QA",
+    "Character body/head sample only; no live equipment composition",
+    "PAK precedence and cast timing unverified in live client"
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "generatedAt": "2026-10-01T15:03:15.993Z",
+  "policy": "Snapshot: ưu tiên loose, sau đó PAK đầu tiên trong package.ini. Chưa xác minh thứ tự engine đang chạy; giữ danh sách mọi PAK ứng viên.",
+  "files": [
+    {
+      "path": "Client6.0/settings/skills.txt",
+      "sha256": "d9b19692f54a42794b2c8bff0df7a31318b1d2b59d11d4860b87cfb7dd1bab64"
+    },
+    {
+      "path": "Client6.0/settings/missles.txt",
+      "sha256": "6c5e1720905278e09e7dc7fc8786b6062b07edf2f9ffd2113aec86a5566d7b4a"
+    },
+    {
+      "path": "Client6.0/settings/skilltemplate.txt",
+      "sha256": "7b44e58640b17cef901bf7ba0db61527746d37ccf57dc77aa007416c0b943567"
+    },
+    {
+      "path": "Client6.0/settings/missletemplate.txt",
+      "sha256": "db515c30c9f17a3350e4e559fb4333465f070f3acbf5ffa8c11cd2efed396986"
+    },
+    {
+      "path": "Client6.0/settings/npcres/npc¶¯×÷±í.txt",
+      "sha256": "1cf4a824b424e7330a08d929fabe01ef642cb0cdfd47d8c0d7c778ab59b5f99e"
+    },
+    {
+      "path": "Client6.0/settings/npcres/ÈËÎïÀàÐÍ.txt",
+      "sha256": "c0c1b78810f1bd918b292605402da2cb6ea3bb42eac12442d8e1a217cc2635d2"
+    },
+    {
+      "path": "Client6.0/settings/npcres/ÄÐÖ÷½ÇÎ´ÆïÂí¹ØÁª±í.txt",
+      "sha256": "8d3269e5f91e93d862f16296380cb41961fe3a81eb892a96aa3fb25f9ff16755"
+    },
+    {
+      "path": "Client6.0/settings/npcres/ÄÐÖ÷½ÇÇûÌå.txt",
+      "sha256": "bea02b2b6cc71b8252c8f6d189a7f7cbc9222382e48e07e3d04d7a59b4866150"
+    },
+    {
+      "path": "Client6.0/settings/npcres/ÄÐÖ÷½ÇÍ·²¿.txt",
+      "sha256": "722a301cd0fd57e24738b961356e7b1645962ba5db4c7d6ec4c4229f8e142fae"
+    },
+    {
+      "path": "Client6.0/settings/npcres/Å®Ö÷½ÇÎ´ÆïÂí¹ØÁª±í.txt",
+      "sha256": "8d3269e5f91e93d862f16296380cb41961fe3a81eb892a96aa3fb25f9ff16755"
+    },
+    {
+      "path": "Client6.0/settings/npcres/Å®Ö÷½ÇÇûÌå.txt",
+      "sha256": "039e21695087009db3738df12816656639cef0cd684d387d32d0f18ba5c9b319"
+    },
+    {
+      "path": "Client6.0/settings/npcres/Å®Ö÷½ÇÍ·²¿.txt",
+      "sha256": "0b8bf86dfe6e9e0ad5481a7c78d04fdd48a63ac64c9f01dff59b03b54f520668"
+    },
+    {
+      "path": "Client6.0/settings/npcres/×´Ì¬Í¼ÐÎ¶ÔÕÕ±í.txt",
+      "sha256": "a56404b715bdcb6025b650ce52863356f26fbf7a42967cc6a84620c427956d1a"
+    },
+    {
+      "path": "Client6.0/package.ini",
+      "sha256": "711d400c52b70834dcad1118d396d0e11df9e65fad6c0f426953d71ca7bb0cd7"
+    }
+  ],
+  "packErrors": [],
+  "total": 667,
+  "ready": 626,
+  "gzipBytes": 116114622,
+  "unavailable": [
+    {
+      "path": "\\spr\\skill\\ÌìÈÌ\\mag_tr_09_ÍµÌì»»ÈÕ.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\ÌìÈÌ\\mag_tr_09_ÎüÐÇ´ó·¨.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\²¹³ä\\born01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\À¥ÂØ\\kl_17_Ä§·¨Ê©·Å.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\À¥ÂØ\\kl_18_Ä§·¨Ê©·Å.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\Ø¤°ï\\mag_bz_tu1.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\´äÑÌ\\mag_cy_09.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\²¹³ä\\BZ_é¢.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\¶ëáÒ\\em_±ùÐÄèóÒô.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\²¹³ä\\mag_npc_¶ÌÃ«.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\special\\skill_heart.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\others\\Ñ©Çò.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\others\\Ñ©Çò±¬Õ¨.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\mid_autumn\\caidiedeng.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\mid_autumn\\jinxiadeng.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\mid_autumn\\yingyuedeng.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\mid_autumn\\zhaoludeng.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\bm\\Äàöú.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\bm\\¹êÃü.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\bm\\Áéºü.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\bm\\¼¦È®.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\partner\\Í¬°éÆÕ·À.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\partner\\Í¬°é¶¾·À.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\partner\\Í¬°é±ù·À.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\partner\\Í¬°é»ð·À.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\partner\\Í¬°éÀ×·À.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\partner\\Í¶Ê¯¶¾.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\partner\\Í¶Ê¯±ù.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\partner\\Í¶Ê¯»ð.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\partner\\ÇàÄ¾¹¦.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\partner\\skill_qianrenzhan.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\partner\\skill_zhanshouzhe.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\special\\Õ¨µ¯ÈË±êÊ¾.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\others\\Æß½£¹â»·.spr",
+      "reason": "Unsupported frame container"
+    },
+    {
+      "path": "\\spr\\skill\\em\\±ÕÔÂ·÷³¾.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "spr\\skill\\others\\vipez.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\ºÚÉñ×°\\ºÚÉñ.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\songjin\\zhanchangyinghao.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill\\others\\jueshigaoshouvn.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\danhieukidfp\\vip1\\dangchogao21.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\danhieukidfp\\vip1\\vs16.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    }
+  ],
+  "directionWarnings": [
+    {
+      "path": "\\spr\\skill\\1502\\tw\\sl_150_daotian_zd.spr",
+      "warning": "Số frame không chia hết số hướng trong header; đang xem toàn bộ frame gốc, chưa tách hướng."
+    }
+  ],
+  "action14": {
+    "count": 137,
+    "meaning": "Not mapped by NpcAction table; no-animation inference unverified"
+  }
+}
