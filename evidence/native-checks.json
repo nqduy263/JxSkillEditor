@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-01T22:50:16.5541844+07:00",
-  "passed": 9,
+  "checkedAt": "2026-10-02T11:22:52.5493805+07:00",
+  "passed": 13,
   "checks": [
     "Autosave preserves UTF-8 workspace bytes",
     "Atomic replacement keeps previous workspace",
@@ -10,8 +10,12 @@
     "Missing current file recovers previous after interrupted quarantine/write",
     "Workspace reader rejects malformed UTF-8 instead of replacing bytes",
     "Bridge trusts only the exact local application origin",
+    "Updater finds newer signed-digest release",
+    "Updater keeps current version when no newer release exists",
+    "Updater rejects asset outside official GitHub repository",
+    "Updater refuses releases without SHA-256 digest",
     "Atomic writes leave no partial temp files"
   ],
-  "fixtureRoot": "E:\\Game\\VLTK\\VLTK_DEV_V2\\SkillStudio\\evidence\\native-test-data\\20261001_155016_494",
+  "fixtureRoot": "E:\\Game\\VLTK\\VLTK_DEV_V2\\SkillStudio\\evidence\\native-test-data\\20261002_042252_484",
   "guiTested": false
 }
