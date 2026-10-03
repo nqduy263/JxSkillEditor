@@ -17,8 +17,9 @@ foreach ($item in $items) {
 try { Wait-Process -Id $ProcessId -Timeout 120 -ErrorAction Stop } catch {
     if (Get-Process -Id $ProcessId -ErrorAction SilentlyContinue) { throw 'Application did not exit within 120 seconds' }
 }
-$backup = Join-Path $updates ('backup-' + (Get-Date -Format 'yyyyMMdd-HHmmss'))
-$failed = Join-Path $updates ('failed-' + (Get-Date -Format 'yyyyMMdd-HHmmss'))
+$runId = (Get-Date -Format 'yyyyMMdd-HHmmss-fff') + '-' + [guid]::NewGuid().ToString('N').Substring(0, 8)
+$backup = Join-Path $updates ('backup-' + $runId)
+$failed = Join-Path $updates ('failed-' + $runId)
 New-Item -ItemType Directory -Path $backup -Force | Out-Null
 $installed = @()
 try {
