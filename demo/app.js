@@ -4,7 +4,7 @@
  const originals=new Map(D.skills.map(s=>[s.id,s])),missiles=new Map(D.missiles.map(s=>[s.id,s]));
  const drafts=new Map(),missileDrafts=new Map(),formulaDrafts=new Map(),assetDrafts=new Map();
  let workspaceLoaded=false,lastContent='',manualSavedContent='',pendingWorkspace=null,validation=null;
- let selected=4,limit=240,activeTab='general',missileId=null,createKind='skill',creationParent=null,resourceSave=null;
+ let selected=4,limit=80,activeTab='general',missileId=null,createKind='skill',creationParent=null,resourceSave=null;
  const animation=window.JXAnimation.player($('animation-preview')),actionAnimation=window.JXAnimation.player($('action-preview')),resourceAnimation=window.JXAnimation.player($('resource-preview'));
  let castStages=[],overlaySkill=null;
  const baseline=s=>s.isNew?Object.fromEntries(D.headers.map(k=>[k,''])):originals.get(s.id).fields;
@@ -161,7 +161,7 @@
  $('undo-all').onclick=()=>{for(const [id,s]of originals)if(s.isNew)originals.delete(id);drafts.clear();missileDrafts.clear();formulaDrafts.clear();assetDrafts.clear();if(!originals.has(selected))selected=4;renderList();renderEditor();status('Đã hoàn tác toàn bộ draft trong phiên');};
  $('export').onclick=exportAll;$('export-all').onclick=exportAll;
  $('level').onchange=()=>{$('level').value=level();renderDamage();renderLayers();renderMissile();renderPreview();};$('all-slots').onchange=renderDamage;
- $('search').oninput=()=>{limit=240;renderList();};$('faction').onchange=()=>{limit=240;renderList();};$('scope').onchange=()=>{limit=240;renderList();};$('raw-filter').oninput=renderRaw;$('icon-search').oninput=renderAssets;
+ $('search').oninput=()=>{limit=80;renderList();};$('faction').onchange=()=>{limit=80;renderList();};$('scope').onchange=()=>{limit=80;renderList();};$('raw-filter').oninput=renderRaw;$('icon-search').oninput=renderAssets;
  $('missile-select').onchange=()=>{missileId=Number($('missile-select').value);renderMissileFields();};
  $('icon-file').onchange=async()=>{const file=$('icon-file').files[0];if(!file)return;if(file.size>2*1024*1024||!['image/png','image/jpeg'].includes(file.type)){status('Chỉ nhận PNG/JPEG tối đa 2 MB');return;}const target=selected,reader=new FileReader();reader.onload=()=>{assetDrafts.set(target,{name:file.name,mime:file.type,preview:reader.result});if(selected===target){renderHeader();renderPreview();}renderList();renderRelease();status('Ảnh thử đã đổi · chưa chuyển SPR');};reader.readAsDataURL(file);};
  $('theme').onchange=()=>$('studio').classList.toggle('bronze',$('theme').value==='bronze');
@@ -183,7 +183,7 @@
  function applyWorkspace(state){
   workspaceLoaded=false;for(const [id,s]of originals)if(s.isNew)originals.delete(id);drafts.clear();missileDrafts.clear();formulaDrafts.clear();assetDrafts.clear();
   for(const s of state.skills){if(s.isNew)originals.set(s.id,clone(s));drafts.set(s.id,s);}for(const m of state.missiles)missileDrafts.set(m.id,m);for(const f of state.formulas)formulaDrafts.set(W.formulaKey(f),f);for(const a of state.assets){const {skillId,...asset}=a;assetDrafts.set(skillId,asset);}
-  selected=state.selection;missileId=null;limit=240;const v=state.settings;
+  selected=state.selection;missileId=null;limit=80;const v=state.settings;
   for(const [id,key]of [['theme','theme'],['level','level'],['search','query'],['faction','faction'],['scope','scope']])$(id).value=v[key];
   $('studio').classList.toggle('bronze',v.theme==='bronze');selectTab(v.tab);renderList();renderEditor();validation=null;$('validation-list').replaceChildren();$('validation-summary').textContent='Workspace vừa mở · bấm Kiểm tra dữ liệu.';
   workspaceLoaded=true;lastContent=contentKey();
