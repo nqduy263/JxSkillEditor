@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-10-03T06:40:49.2671278Z",
+  "checkedAt": "2026-10-03T06:47:33.8494367Z",
   "executable": "E:\\Game\\VLTK\\VLTK_DEV_V2\\SkillStudio\\releases\\JXSkillStudio-0.6.2-win-x64\\JXSkillStudio.exe",
-  "processId": 300,
-  "mainWindowHandle": 5445284,
+  "processId": 48268,
+  "mainWindowHandle": 1640990,
   "responding": true,
   "visualQa": "not-available-in-current-computer-use-session",
   "pass": true
