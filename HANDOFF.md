@@ -129,7 +129,7 @@ Chạy `releases/JXSkillStudio-0.6.2-win-x64/JXSkillStudio.exe` hoặc giải n�
 
 ## Tiếp tục sau 0.6.2 — P0/P1 read-only
 
-Ngày 03/10/2026, profile đang dùng được chốt bằng `tools/profile-audit.cjs` và kiểm bằng `tools/check-profile.cjs`. Kết quả nằm ở `evidence/profile-audit.json` và `evidence/profile-checks.json`; profile hiện tại ghi nhận 1.242 dòng skill client, 1.222 dòng skill server, 441 missile mỗi phía và 31 PAK có hash.
+Ngày 03/10/2026, profile đang dùng được chốt bằng `tools/profile-audit.cjs` và kiểm bằng `tools/check-profile.cjs`. Kết quả nằm ở `evidence/profile-audit.json` và `evidence/profile-checks.json`; profile hiện tại ghi nhận 1.248 dòng skill client, 1.228 dòng skill server, 453 missile mỗi phía và 31 PAK có hash.
 
 P1 đã thêm `tools/raw-tsv.cjs`: parser giữ raw byte/CRLF và byte span từng ô để chuẩn bị diff tối thiểu. `tools/check-raw-tsv.cjs` đạt 7/7 kiểm tra trên `Client6.0/settings/skills.txt`, gồm round-trip nguyên byte, duplicate 521 và chặn control byte/Unicode ngoài Latin-1. Kết quả ở `evidence/raw-tsv-checks.json`.
 

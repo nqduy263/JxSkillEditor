@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-03T10:40:27.2881166+07:00",
+  "checkedAt": "2026-10-03T10:59:14.2225432+07:00",
   "passed": 13,
   "checks": [
     "Autosave preserves UTF-8 workspace bytes",
@@ -16,6 +16,6 @@
     "Updater refuses releases without SHA-256 digest",
     "Atomic writes leave no partial temp files"
   ],
-  "fixtureRoot": "E:\\Game\\VLTK\\VLTK_DEV_V2\\SkillStudio\\evidence\\native-test-data\\20261003_034027_223",
+  "fixtureRoot": "E:\\Game\\VLTK\\VLTK_DEV_V2\\SkillStudio\\evidence\\native-test-data\\20261003_035914_140",
   "guiTested": false
 }

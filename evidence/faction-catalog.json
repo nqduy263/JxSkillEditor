@@ -2257,6 +2257,36 @@
         "id": 1166,
         "name": "ẵÊ´ạéầºểnpc",
         "line": 1167
+      },
+      {
+        "id": 1320,
+        "name": "Bắc Đẩu Huyền Khu Kiếm",
+        "line": 1238
+      },
+      {
+        "id": 1321,
+        "name": "Cửu Tiêu Phục Ma Quyền",
+        "line": 1241
+      },
+      {
+        "id": 1370,
+        "name": "Thất Tinh Trục ảnh",
+        "line": 1239
+      },
+      {
+        "id": 1371,
+        "name": "Huyền Khảm Bát Quái Trận",
+        "line": 1242
+      },
+      {
+        "id": 1390,
+        "name": "Thiên Cương Trảm Trận",
+        "line": 1240
+      },
+      {
+        "id": 1391,
+        "name": "Lưỡng Nghi Phá Kiếp Trảm",
+        "line": 1243
       }
     ]
   },
@@ -2536,13 +2566,45 @@
         "id": 1168,
         "name": "èỡÀìếðễÀnpc",
         "line": 1169
+      },
+      {
+        "id": 1322,
+        "name": "Cơng Phong Tởt Lôi Đao",
+        "line": 1244
+      },
+      {
+        "id": 1323,
+        "name": "Cửu Thiên Thần Lôi Kiởm",
+        "line": 1247
+      },
+      {
+        "id": 1373,
+        "name": "Thái Hư Lôi Trởn",
+        "line": 1248
+      },
+      {
+        "id": 1392,
+        "name": "Thiên Ma Phá Toái Trảm",
+        "line": 1246
+      },
+      {
+        "id": 1393,
+        "name": "Ngũ Lôi Hừa Kiởp Trảm",
+        "line": 1249
       }
     ]
   },
   {
     "key": "huashan",
     "name": "Hoa Sơn",
-    "learned": [],
+    "learned": [
+      {
+        "id": 1372,
+        "name": "Cuồng Phong Hãm Lôi Trởn",
+        "line": 1245,
+        "learnLine": 1038
+      }
+    ],
     "scriptOnly": []
   },
   {

@@ -1,15 +1,15 @@
 {
-  "snapshotId": "ab1d6ed422c67793b8451bf8e25a031ac739a07114e2f69964582167d2288702",
-  "generatedAt": "2026-10-01T15:36:57.458Z",
+  "snapshotId": "ebfafdd5df23dcbba0a657afb7ad8ac3a0891396ee3ba98c2e92e48d07b8c1ba",
+  "generatedAt": "2026-10-03T03:53:55.536Z",
   "scope": "Verified running client root; loose-file snapshot; learning references from captured running WSL server root. No in-memory skill list read.",
   "source": "Client6.0/settings/skills.txt",
   "coverage": {
-    "rawRows": 1236,
-    "rows": 1235,
+    "rawRows": 1248,
+    "rows": 1247,
     "icons": 978,
-    "learned": 170,
-    "script": 288,
-    "missiles": 441,
+    "learned": 171,
+    "script": 299,
+    "missiles": 453,
     "scripts": 227,
     "factions": 13
   },
@@ -26,13 +26,13 @@
   "files": [
     {
       "path": "Client6.0/settings/skills.txt",
-      "bytes": 579712,
-      "sha256": "d9b19692f54a42794b2c8bff0df7a31318b1d2b59d11d4860b87cfb7dd1bab64"
+      "bytes": 585672,
+      "sha256": "859eeeaaa4b231e554d0ea6469280d8ff504a9f428d1107b22f7f6c491750299"
     },
     {
       "path": "Client6.0/settings/missles.txt",
-      "bytes": 89787,
-      "sha256": "6c5e1720905278e09e7dc7fc8786b6062b07edf2f9ffd2113aec86a5566d7b4a"
+      "bytes": 91537,
+      "sha256": "630cffe08200f8fcfdb997937a2fc64343bf86997b5902a5d903b497f72bf571"
     },
     {
       "path": "SkillStudio/evidence/live_skills_table.lua",
@@ -106,8 +106,8 @@
     },
     {
       "path": "Client6.0/script/skill/kunlun.lua",
-      "bytes": 31928,
-      "sha256": "c0d746597e220311fc589e4d14b495f82374f74dbb562220840852a43c48218d"
+      "bytes": 35864,
+      "sha256": "1cb1bdae5cd1a10a32418135246a7023956b7e758adef2cd7eba8cb68f5dfdab"
     },
     {
       "path": "Client6.0/script/skill/cuiyan.lua",
@@ -126,8 +126,8 @@
     },
     {
       "path": "Client6.0/script/skill/wudang.lua",
-      "bytes": 27550,
-      "sha256": "9b9b5b1d55726d08de624b2acb0872734e1f4377d2253ab741ee00b0508197ec"
+      "bytes": 30402,
+      "sha256": "d0fc4d82ab9080af79e79d6fba2e33855c7b789739858c3e7906520c2a907027"
     },
     {
       "path": "Client6.0/script/skill/saolin/½ð¸Õ·üÄ§.lua",

@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-03T02:10:12.250Z",
+  "generatedAt": "2026-10-03T03:55:22.319Z",
   "policy": "Snapshot: ưu tiên loose, sau đó PAK đầu tiên trong package.ini. Chưa xác minh thứ tự engine đang chạy; giữ danh sách mọi PAK ứng viên.",
   "files": [
     {
       "path": "Client6.0/settings/skills.txt",
-      "sha256": "d9b19692f54a42794b2c8bff0df7a31318b1d2b59d11d4860b87cfb7dd1bab64"
+      "sha256": "859eeeaaa4b231e554d0ea6469280d8ff504a9f428d1107b22f7f6c491750299"
     },
     {
       "path": "Client6.0/settings/missles.txt",
-      "sha256": "6c5e1720905278e09e7dc7fc8786b6062b07edf2f9ffd2113aec86a5566d7b4a"
+      "sha256": "630cffe08200f8fcfdb997937a2fc64343bf86997b5902a5d903b497f72bf571"
     },
     {
       "path": "Client6.0/settings/skilltemplate.txt",
