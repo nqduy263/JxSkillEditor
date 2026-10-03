@@ -23,6 +23,7 @@
  function links(fields){const list=[];for(const [flag,id,label] of [['StartEvent','StartSkillId','Xuất chiêu'],['FlyEvent','FlySkillId','Đạn bay'],['CollideEvent','CollidSkillId','Va chạm'],['VanishedEvent','VanishedSkillId','Tan biến']])if(Number(fields[id])>0)list.push({id:Number(fields[id]),kind:'skill',field:id,label,enabled:Number(fields[flag])!==0});const child=childTarget(fields);if(child)list.push({...child,label:child.kind==='missile'?'Mẫu đường đạn':'Chiêu con',enabled:true});return list;}
  function filterSkills(skills,filters){const normalize=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').toLowerCase();const q=normalize(filters.query||'');return skills.filter(s=>(!filters.faction||s.faction===filters.faction)&&(!filters.scope||s.scope===filters.scope)&&(!q||normalize(s.fields.SkillName).includes(q)||String(s.id).includes(q)));}
  function diff(before,after){return Object.keys(after).filter(k=>before[k]!==after[k]).map(field=>({field,before:before[field]??'',after:after[field]}));}
+ function nextDraftId(ids,start=1){const used=new Set((ids||[]).map(Number).filter(id=>Number.isSafeInteger(id)&&id>0));let id=Number.isSafeInteger(start)&&start>0?start:1;while(used.has(id)){if(id===Number.MAX_SAFE_INTEGER)throw Error('Không còn ID draft an toàn trong miền số');id++;}return id;}
  function newSkill(data,{id,name,faction=''}){
   if(!Number.isSafeInteger(id)||id<=0||!name.trim())throw Error('ID dương và tên skill là bắt buộc');
   const fields=Object.fromEntries(data.headers.map(k=>[k,'']));
@@ -31,5 +32,5 @@
   const f=data.factions.find(f=>f.key===faction);return {id,line:null,fields,faction,factionName:f?.name||'Chưa phân phái',scope:'new',isNew:true,learn:null,icon:null,factionEvidence:'Môn phái do người tạo chọn; chưa có lệnh học',script:fields.LvlSetScript};
  }
  function newMissile(data,id,name){if(!Number.isSafeInteger(id)||id<=0||!name.trim())throw Error('ID dương và tên đường đạn là bắt buộc');return {id,line:null,isNew:true,fields:Object.assign(Object.fromEntries(data.missileHeaders.map(k=>[k,''])),{MissleId:String(id),MissleName:name.trim(),MoveKind:'0',FollowKind:'0',Speed:'0',LifeTime:'1',LoopPlay:'0',IsRangeDmg:'0'})};}
- return {parseLiteral,link,evaluate,slots,statLabels,propertyDefinition,childTarget,links,filterSkills,diff,newSkill,newMissile};
+ return {parseLiteral,link,evaluate,slots,statLabels,propertyDefinition,childTarget,links,filterSkills,diff,nextDraftId,newSkill,newMissile};
 });

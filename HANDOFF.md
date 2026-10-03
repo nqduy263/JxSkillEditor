@@ -133,6 +133,8 @@ Ngày 03/10/2026, profile đang dùng được chốt bằng `tools/profile-audi
 
 P1 đã thêm `tools/raw-tsv.cjs`: parser giữ raw byte/CRLF và byte span từng ô để chuẩn bị diff tối thiểu. `tools/check-raw-tsv.cjs` đạt 7/7 kiểm tra trên `Client6.0/settings/skills.txt`, gồm round-trip nguyên byte, duplicate 521 và chặn control byte/Unicode ngoài Latin-1. Kết quả ở `evidence/raw-tsv-checks.json`.
 
+Dialog tạo skill/đường đạn/tầng dùng `JXModel.nextDraftId` để tính cả catalog và các draft đã tạo trong phiên. ID này là đề xuất provisional; validator vẫn yêu cầu kiểm giới hạn engine trước khi xuất.
+
 Các lệnh tái lập:
 
 ```powershell

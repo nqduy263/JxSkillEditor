@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-03T03:34:23.391Z",
-  "passed": 48,
+  "checkedAt": "2026-10-03T03:46:43.978Z",
+  "passed": 49,
   "checks": [
     "Names come from client bytes",
     "Shaolin default excludes obsolete sword/spear/hammer rows",
@@ -9,6 +9,7 @@
     "Full schemas: 113 skill columns and 57 missile columns",
     "TCVN3 longest match and Vietnamese letters",
     "Interpolation/extrapolation mirrors numeric Link",
+    "Draft ID allocator skips source and IDs created in the current session",
     "Indexed Lua P1/P3 preserves missing P2",
     "Function/expressions fail as unknown, never execute",
     "Lua duplicate property picks final definition and records duplicate",
