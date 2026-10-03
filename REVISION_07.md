@@ -1,4 +1,4 @@
-# Revision 0.7 — giao diện nhận diện và release cập nhật
+# Revision 07 / App 0.6.1 — giao diện nhận diện và release cập nhật
 
 Ngày 03/10/2026. Bản `0.6.1` đồng bộ phiên bản trong native host, manifest, demo browser và build portable. Giao diện dùng logo `demo/icon.png`; EXE và cửa sổ Windows dùng `native/SkillStudio.App/app.ico`. Các nguồn icon kích thước 16–512 được giữ trong `resources/icons` để tái tạo hoặc thay đổi nhận diện sau này.
 
