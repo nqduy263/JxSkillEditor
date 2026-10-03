@@ -24,6 +24,8 @@ EXE tự lưu workspace v1 vào `Data/`, có Mở/Lưu workspace, import v0.3 đ
 
 Tái lập kiểm tra: `node SkillStudio/tools/profile-audit.cjs`, `node SkillStudio/tools/check-profile.cjs`, `node SkillStudio/tools/check-raw-tsv.cjs`, `node SkillStudio/tools/check-raw-lua.cjs`, `node SkillStudio/tools/check-raw-ini.cjs`, `node SkillStudio/tools/check-staged-patch.cjs`, `node SkillStudio/tools/check-apply-staged-patch.cjs`, `node SkillStudio/tools/check-demo.cjs`, `node SkillStudio/tools/check-workspace.cjs`, `node SkillStudio/tools/check-resources.cjs`, `pwsh -File SkillStudio/native/build-portable.ps1`.
 
+Nếu Git portable không tự tìm thấy HTTPS helper, chạy lệnh qua `pwsh -File SkillStudio/tools/git-https.ps1 push origin main`. Script tự tìm `git-remote-https.exe`, đặt `GIT_EXEC_PATH` cho đúng runtime và giữ nguyên credential helper của Git.
+
 ## Bản 0.5.0
 
 Preview skill tự hiện SPR đường đạn theo liên kết nguồn, có pha, chờ cast mô phỏng và interval xem thử. Xem REVISION_05.md.
