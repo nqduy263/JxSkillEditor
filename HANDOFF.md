@@ -135,12 +135,15 @@ P1 đã thêm `tools/raw-tsv.cjs`: parser giữ raw byte/CRLF và byte span từ
 
 Dialog tạo skill/đường đạn/tầng dùng `JXModel.nextDraftId` để tính cả catalog và các draft đã tạo trong phiên. ID này là đề xuất provisional; validator vẫn yêu cầu kiểm giới hạn engine trước khi xuất.
 
+P1 Lua span dùng `tools/raw-lua.cjs` và `tools/check-raw-lua.cjs`: kiểm 5/5 trên bảng `wudang_jianfa.addphysicsdamage_p`, thay literal trong buffer theo byte span, giữ comment/encoding và không chạy Lua. Artifact: `evidence/raw-lua-checks.json`.
+
 Các lệnh tái lập:
 
 ```powershell
 node tools/profile-audit.cjs
 node tools/check-profile.cjs
 node tools/check-raw-tsv.cjs
+node tools/check-raw-lua.cjs
 node tools/check-demo.cjs
 node tools/check-workspace.cjs
 node tools/check-resources.cjs

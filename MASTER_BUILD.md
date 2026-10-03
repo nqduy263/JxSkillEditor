@@ -6,6 +6,7 @@
 - **P0 gate đã đạt:** root và source hash đầy đủ; schema skill/missile là 113/57 cột; duplicate `SkillId=521` vẫn là cảnh báo; PAK precedence, giới hạn ID, action 14, timing live và license vẫn giữ `unknown/review`.
 - **P1 byte-preserving TSV đã bắt đầu:** `tools/raw-tsv.cjs` giữ byte span, ô rỗng, thứ tự và CRLF; `tools/check-raw-tsv.cjs` xác nhận round-trip không chỉnh sửa giữ nguyên byte và từ chối TAB/LF/CR/NUL hoặc Unicode không biểu diễn được trong Latin-1. Artifact: `evidence/raw-tsv-checks.json`.
 - **ID draft:** `JXModel.nextDraftId` và dialog tạo mới tính cả ID nguồn lẫn draft trong phiên, tránh đề xuất lại ID vừa tạo. Đây chỉ là đề xuất theo catalog; giới hạn ID của engine vẫn là cổng `unknown`.
+- **Lua byte span:** `tools/raw-lua.cjs` bọc parser token Lua hiện có để thay literal trong buffer theo `byteStart/byteEnd`; `tools/check-raw-lua.cjs` đạt 5/5 trên `Client6.0/script/skill/wudang.lua`, không thực thi Lua và giữ nguyên prefix/suffix.
 - Các bước này chỉ đọc snapshot và ghi evidence trong `SkillStudio`; chưa SSH, chưa đọc memory, chưa ghi Client/Server và changeset vẫn `deployable=false`.
 
 ## Cập nhật v0.4 Alpha — EXE portable, workspace, validator

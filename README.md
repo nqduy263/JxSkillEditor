@@ -22,7 +22,7 @@ Mở **demo/index.html** bằng Edge/Chrome, giữ nguyên toàn bộ thư mục
 
 EXE tự lưu workspace v1 vào `Data/`, có Mở/Lưu workspace, import v0.3 đã kiểm tra nguồn, validator liên kết/Lua/encoding/tài nguyên và discovery chỉ đọc process/WSL. SSH write, patch game và renderer live vẫn là phạm vi sau; preview cast hiện mô phỏng theo dữ liệu đã resolve và changeset luôn deployable=false. GUI thật chưa QA trong lượt này.
 
-Tái lập kiểm tra: `node SkillStudio/tools/profile-audit.cjs`, `node SkillStudio/tools/check-profile.cjs`, `node SkillStudio/tools/check-raw-tsv.cjs`, `node SkillStudio/tools/check-demo.cjs`, `node SkillStudio/tools/check-workspace.cjs`, `node SkillStudio/tools/check-resources.cjs`, `pwsh -File SkillStudio/native/build-portable.ps1`.
+Tái lập kiểm tra: `node SkillStudio/tools/profile-audit.cjs`, `node SkillStudio/tools/check-profile.cjs`, `node SkillStudio/tools/check-raw-tsv.cjs`, `node SkillStudio/tools/check-raw-lua.cjs`, `node SkillStudio/tools/check-demo.cjs`, `node SkillStudio/tools/check-workspace.cjs`, `node SkillStudio/tools/check-resources.cjs`, `pwsh -File SkillStudio/native/build-portable.ps1`.
 
 ## Bản 0.5.0
 

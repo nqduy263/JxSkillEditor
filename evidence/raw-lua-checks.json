@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-03T04:02:08.534Z",
+  "source": "Client6.0/script/skill/wudang.lua",
+  "bytes": 30402,
+  "tables": 25,
+  "fields": 167,
+  "passed": 5,
+  "checks": [
+    "Lua round-trip without edits is byte-identical",
+    "Token parser finds real skill tables and byte spans",
+    "In-memory literal replacement preserves prefix and suffix bytes",
+    "Comments and non-target tables remain present after a staged edit",
+    "Unsafe replacement bytes and missing fields fail before staging"
+  ],
+  "executesLua": false,
+  "writesToGame": false,
+  "output": "evidence/raw-lua-checks.json"
+}
