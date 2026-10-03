@@ -10,5 +10,8 @@ $helper = $candidates | Where-Object { Test-Path -LiteralPath $_ } | Select-Obje
 if (!$helper) { throw "git-remote-https.exe not found. Checked: $($candidates -join '; ')" }
 $env:GIT_EXEC_PATH = Split-Path -Parent $helper
 Write-Verbose "Using HTTPS remote helper: $helper"
-& $git @GitArgs
+$repo = $null
+try { $repo = (& $git -C (Split-Path -Parent $PSScriptRoot) rev-parse --show-toplevel 2>$null).Trim() } catch { }
+$invokeArgs = if ($repo) { @('-c', "safe.directory=$repo") + $GitArgs } else { $GitArgs }
+& $git @invokeArgs
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
