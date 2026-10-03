@@ -129,7 +129,7 @@ Chạy `releases/JXSkillStudio-0.6.2-win-x64/JXSkillStudio.exe` hoặc giải n�
 
 ## Tiếp tục sau 0.6.2 — P0/P1 read-only
 
-Ngày 03/10/2026, profile đang dùng được chốt bằng `tools/profile-audit.cjs` và kiểm bằng `tools/check-profile.cjs`. Kết quả nằm ở `evidence/profile-audit.json` và `evidence/profile-checks.json`; profile hiện tại ghi nhận 1.248 dòng skill client, 1.228 dòng skill server, 453 missile mỗi phía và 31 PAK có hash.
+Ngày 03/10/2026, profile đang dùng được chốt bằng `tools/profile-audit.cjs` và kiểm bằng `tools/check-profile.cjs`. Kết quả nằm ở `evidence/profile-audit.json` và `evidence/profile-checks.json`; profile `jx6-client6-8121c6020d56c86f` hiện ghi nhận 1.257 dòng skill client, 1.237 dòng skill server, 462 missile mỗi phía và 31 PAK có hash.
 
 P1 đã thêm `tools/raw-tsv.cjs`: parser giữ raw byte/CRLF và byte span từng ô để chuẩn bị diff tối thiểu. `tools/check-raw-tsv.cjs` đạt 7/7 kiểm tra trên `Client6.0/settings/skills.txt`, gồm round-trip nguyên byte, duplicate 521 và chặn control byte/Unicode ngoài Latin-1. Kết quả ở `evidence/raw-tsv-checks.json`.
 
@@ -139,6 +139,10 @@ P1 Lua span dùng `tools/raw-lua.cjs` và `tools/check-raw-lua.cjs`: kiểm 5/5 
 
 P1 INI span dùng `tools/raw-ini.cjs` và `tools/check-raw-ini.cjs`: kiểm 5/5 trên `gamesetting.ini` và `skilltemplate.txt`, giữ section/key/value, newline và giá trị có dấu `=`. Artifact: `evidence/raw-ini-checks.json`.
 
+Stage-only patch planner dùng `tools/staged-patch.cjs` và `tools/check-staged-patch.cjs`: kiểm 8/8 trên snapshot hiện hành, tạo kế hoạch thay ô TSV và span Lua có hash trước/sau, chặn duplicate ID, dòng mới, Lua mới và PNG chưa chuyển SPR. Planner không ghi Client/Server, không SSH và không thực thi Lua. Artifact: `evidence/staged-patch-checks.json`.
+
+Apply adapter dùng `tools/apply-staged-patch.cjs`; mặc định dry-run, còn chế độ ghi yêu cầu cờ rõ ràng và luôn backup/journal/read-back/rollback. Kiểm thử sandbox tại `tools/check-apply-staged-patch.cjs`; chưa cho phép deploy live.
+
 Các lệnh tái lập:
 
 ```powershell
@@ -147,6 +151,8 @@ node tools/check-profile.cjs
 node tools/check-raw-tsv.cjs
 node tools/check-raw-lua.cjs
 node tools/check-raw-ini.cjs
+node tools/check-staged-patch.cjs
+node tools/check-apply-staged-patch.cjs
 node tools/check-demo.cjs
 node tools/check-workspace.cjs
 node tools/check-resources.cjs

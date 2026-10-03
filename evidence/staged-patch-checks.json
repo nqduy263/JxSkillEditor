@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-03T05:30:19.513Z",
+  "passed": 8,
+  "checks": [
+    "TSV planner emits a minimal cell edit with profile precondition",
+    "TSV before mismatch is blocked and duplicate source ID never uses last-wins",
+    "New TSV rows are explicitly blocked for a profile adapter",
+    "Lua planner preserves byte span and requires the source hash",
+    "Lua staging rejects a missing source hash",
+    "Short TSV rows cannot insert bytes inside a line terminator",
+    "Path traversal and unsafe edit overlaps fail closed",
+    "Changeset planner returns stage-only manifest and blocked gates"
+  ],
+  "mode": "stage-only; in-memory edits; no game writes",
+  "writesToGame": false,
+  "sshConnections": false,
+  "executesLua": false,
+  "output": "evidence/staged-patch-checks.json"
+}

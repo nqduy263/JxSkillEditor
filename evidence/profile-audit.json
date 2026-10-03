@@ -1,7 +1,7 @@
 {
   "schema": "jx-skill-studio/profile-audit/v1",
-  "generatedAt": "2026-10-03T04:12:17.942Z",
-  "profileId": "jx6-client6-fe412a4dbf81f5e7",
+  "generatedAt": "2026-10-03T05:25:24.724Z",
+  "profileId": "jx6-client6-5fc2148c18a7745b",
   "target": {
     "client": "JX1 Client6.0",
     "server": "JX Linux 6.0",
@@ -36,9 +36,9 @@
       "role": "client skill table",
       "required": true,
       "exists": true,
-      "bytes": 585749,
-      "sha256": "34654010365a696089b078e31b863617115c534e0fe2a5ca357f1b478a29c89f",
-      "crlf": 1249,
+      "bytes": 595147,
+      "sha256": "8f69228ee1118fb695dd54766519fc0f189ce68a429cc1e5e074489bacd11e4d",
+      "crlf": 1267,
       "lf": 0
     },
     {
@@ -46,9 +46,9 @@
       "role": "client missile table",
       "required": true,
       "exists": true,
-      "bytes": 91538,
-      "sha256": "2b2ad61216f488a0189e188360530d844f6163b49e2f1c942e0525b4479a5396",
-      "crlf": 454,
+      "bytes": 94326,
+      "sha256": "d8ceb5c806ce833b2497437fd2fc2c9e166142b09f69f2c86772d689efd9ab42",
+      "crlf": 472,
       "lf": 0
     },
     {
@@ -136,9 +136,9 @@
       "role": "server skill table",
       "required": true,
       "exists": true,
-      "bytes": 573969,
-      "sha256": "029d8aea9c1ed674ac04670b1de79a4702c2a3832d434c66164b0f00b9eab669",
-      "crlf": 1229,
+      "bytes": 583583,
+      "sha256": "3239617ea09f3877acd72665acbba387f3029cc815b7b97b9a147b050c7dc7a8",
+      "crlf": 1247,
       "lf": 0
     },
     {
@@ -146,9 +146,9 @@
       "role": "server missile table",
       "required": true,
       "exists": true,
-      "bytes": 91538,
-      "sha256": "2b2ad61216f488a0189e188360530d844f6163b49e2f1c942e0525b4479a5396",
-      "crlf": 454,
+      "bytes": 94326,
+      "sha256": "d8ceb5c806ce833b2497437fd2fc2c9e166142b09f69f2c86772d689efd9ab42",
+      "crlf": 472,
       "lf": 0
     },
     {
@@ -302,8 +302,8 @@
         "LevelUpScript",
         "SkillDesc"
       ],
-      "rows": 1248,
-      "numericIds": 1248,
+      "rows": 1266,
+      "numericIds": 1266,
       "minId": 1,
       "maxId": 1500,
       "duplicates": [
@@ -435,8 +435,8 @@
         "LevelUpScript",
         "SkillDesc"
       ],
-      "rows": 1228,
-      "numericIds": 1228,
+      "rows": 1246,
+      "numericIds": 1246,
       "minId": 1,
       "maxId": 1500,
       "duplicates": [
@@ -512,8 +512,8 @@
         "BlueLum",
         "LightRadius"
       ],
-      "rows": 453,
-      "numericIds": 453,
+      "rows": 471,
+      "numericIds": 471,
       "minId": 1,
       "maxId": 1893,
       "duplicates": []
@@ -581,8 +581,8 @@
         "BlueLum",
         "LightRadius"
       ],
-      "rows": 453,
-      "numericIds": 453,
+      "rows": 471,
+      "numericIds": 471,
       "minId": 1,
       "maxId": 1893,
       "duplicates": []
@@ -847,7 +847,7 @@
     "path": "Server 6.0/server_moi/jxser_bachkim_6.0/server1/script/skill",
     "exists": true,
     "files": 517,
-    "contentIndexSha256": "38b603bac6c5144ba8ded425e9891b79ae95fced8c376499ce6302f1f321c891"
+    "contentIndexSha256": "89d44566c699b5bdce030c4bb0e3d4bf72a3ce55a0354b3e73f741b1fd7089ae"
   },
   "capturedSnapshot": {
     "capturedAt": "2026-10-03T02:54:16.546Z",

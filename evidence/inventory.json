@@ -1,15 +1,15 @@
 {
-  "snapshotId": "e1572e44cd75d19a00638c4e1d4ed68981b67a8409642fb4c81910ef2d92313a",
-  "generatedAt": "2026-10-03T04:14:20.359Z",
+  "snapshotId": "57c3abd27130b1ddd8b9c3ccc1f36cf62cf8eff594ee3e2745494984374a3c19",
+  "generatedAt": "2026-10-03T05:25:26.153Z",
   "scope": "Verified running client root; loose-file snapshot; learning references from captured running WSL server root. No in-memory skill list read.",
   "source": "Client6.0/settings/skills.txt",
   "coverage": {
-    "rawRows": 1248,
-    "rows": 1247,
+    "rawRows": 1266,
+    "rows": 1265,
     "icons": 978,
-    "learned": 171,
-    "script": 299,
-    "missiles": 453,
+    "learned": 175,
+    "script": 313,
+    "missiles": 471,
     "scripts": 227,
     "factions": 13
   },
@@ -26,13 +26,13 @@
   "files": [
     {
       "path": "Client6.0/settings/skills.txt",
-      "bytes": 585749,
-      "sha256": "34654010365a696089b078e31b863617115c534e0fe2a5ca357f1b478a29c89f"
+      "bytes": 595147,
+      "sha256": "8f69228ee1118fb695dd54766519fc0f189ce68a429cc1e5e074489bacd11e4d"
     },
     {
       "path": "Client6.0/settings/missles.txt",
-      "bytes": 91538,
-      "sha256": "2b2ad61216f488a0189e188360530d844f6163b49e2f1c942e0525b4479a5396"
+      "bytes": 94326,
+      "sha256": "d8ceb5c806ce833b2497437fd2fc2c9e166142b09f69f2c86772d689efd9ab42"
     },
     {
       "path": "SkillStudio/evidence/live_skills_table.lua",
@@ -71,8 +71,8 @@
     },
     {
       "path": "Client6.0/script/skill/shaolin.lua",
-      "bytes": 32215,
-      "sha256": "4f78a2d37bba1419f85260f55e66850fa69298fbc609a40aed1f7d58b256528d"
+      "bytes": 37892,
+      "sha256": "24e6a8d361c635f55f425b4c08ea8be07d029b5992c10461fcf95985e2077396"
     },
     {
       "path": "Client6.0/script/skill/skill.lua",
@@ -81,8 +81,8 @@
     },
     {
       "path": "Client6.0/script/skill/tianwang.lua",
-      "bytes": 43402,
-      "sha256": "e3da3ff847523e08a9a40ae03eb112fe3f914952cf2fbd7bbddda45d9e0548d5"
+      "bytes": 49449,
+      "sha256": "afd5b98cc3e7410b3655f74fb3bb04504daa6c70587bbcc5aef77cf18ee15809"
     },
     {
       "path": "Client6.0/script/skill/tangmen.lua",

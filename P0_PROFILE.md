@@ -24,7 +24,7 @@ Kết quả đầy đủ nằm ở [evidence/profile-audit.json](evidence/profil
 - Client có `settings/skills.txt`, `settings/missles.txt`, `package.ini`, template enum, faction và npcres.
 - Server local có bảng skill/missile và thư mục Lua skill.
 - `package.ini` hiện liệt kê 31 PAK theo thứ tự khai báo; report lưu tồn tại, kích thước và SHA-256 từng PAK.
-- Profile hiện tại ghi nhận bảng client 1.248 dòng, 1.247 ID; bảng server 1.228 dòng; `missles.txt` có 453 dòng ở mỗi phía. Các con số này là fingerprint của snapshot đang dùng và phải chạy lại audit khi nguồn đổi.
+- Profile hiện tại `jx6-client6-8121c6020d56c86f` ghi nhận bảng client 1.257 dòng, 1.256 ID; bảng server 1.237 dòng; `missles.txt` có 462 dòng ở mỗi phía. Các con số này là fingerprint của snapshot đang dùng và phải chạy lại audit khi nguồn đổi.
 - Evidence WSL được chụp lại trong cùng lượt audit; hash và thời điểm nằm trong `capturedSnapshot`.
 
 ## Cổng còn mở

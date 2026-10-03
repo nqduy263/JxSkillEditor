@@ -250,6 +250,41 @@
         "id": 1201,
         "name": "ẻÔÍểằÔãă",
         "line": 1202
+      },
+      {
+        "id": 1301,
+        "name": "Ma Ha Bát Nhã Đao",
+        "line": 1250
+      },
+      {
+        "id": 1302,
+        "name": "Vi Đà Phục Ma Côn",
+        "line": 1253
+      },
+      {
+        "id": 1303,
+        "name": "Long Thần Bát Nhã Quyấn",
+        "line": 1256
+      },
+      {
+        "id": 1352,
+        "name": "Kim Cang Trởn Địa Trởn",
+        "line": 1254
+      },
+      {
+        "id": 1353,
+        "name": "Bát Nhã Kim Cang Chưùng",
+        "line": 1257
+      },
+      {
+        "id": 1381,
+        "name": "Vô Lưùng Trảm Ma KÙnh",
+        "line": 1252
+      },
+      {
+        "id": 1383,
+        "name": "Đại Lực Phá Kiởp Trảm",
+        "line": 1258
       }
     ]
   },
@@ -532,6 +567,41 @@
         "id": 1151,
         "name": "°ễÍừửẫẵðnpc",
         "line": 1152
+      },
+      {
+        "id": 1304,
+        "name": "Bá Vưùng Tạ Giáp",
+        "line": 1259
+      },
+      {
+        "id": 1305,
+        "name": "Toái Cồt Đoạt Mởnh",
+        "line": 1262
+      },
+      {
+        "id": 1306,
+        "name": "Cửu Long Trầm Chu",
+        "line": 1265
+      },
+      {
+        "id": 1356,
+        "name": "Hào Hựng Phá Lãng Trởn",
+        "line": 1266
+      },
+      {
+        "id": 1384,
+        "name": "Liởt Diởm Thởu Giáp KÙnh",
+        "line": 1261
+      },
+      {
+        "id": 1385,
+        "name": "Cửu Trưùng Khai Thiên KÙnh",
+        "line": 1264
+      },
+      {
+        "id": 1386,
+        "name": "Thiên Đao Tạ Giáp KÙnh",
+        "line": 1267
       }
     ]
   },
@@ -2599,10 +2669,34 @@
     "name": "Hoa Sơn",
     "learned": [
       {
+        "id": 1351,
+        "name": "Tam Giùi Quy Thiấn Trởn",
+        "line": 1251,
+        "learnLine": 1059
+      },
+      {
+        "id": 1354,
+        "name": "Kim Cang Trởn Hớn Trởn",
+        "line": 1260,
+        "learnLine": 1067
+      },
+      {
+        "id": 1355,
+        "name": "Bát Hoang Liởt Địa Trởn",
+        "line": 1263,
+        "learnLine": 1075
+      },
+      {
         "id": 1372,
         "name": "Cuồng Phong Hãm Lôi Trởn",
         "line": 1245,
         "learnLine": 1038
+      },
+      {
+        "id": 1382,
+        "name": "Phục Ma Cửu Trưùng KÙnh",
+        "line": 1255,
+        "learnLine": 1094
       }
     ],
     "scriptOnly": []

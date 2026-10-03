@@ -2,12 +2,14 @@
 
 ## Trạng thái triển khai P0/P1 — 03/10/2026
 
-- **P0 profile audit đã chạy:** `tools/profile-audit.cjs` tạo manifest/hash cho các root đang dùng, 31 PAK, bảng skill/missile, enum và snapshot WSL. Artifact: `evidence/profile-audit.json` (profile hiện tại `jx6-client6-150d9cf4f9893186`).
+- **P0 profile audit đã chạy:** `tools/profile-audit.cjs` tạo manifest/hash cho các root đang dùng, 31 PAK, bảng skill/missile, enum và snapshot WSL. Artifact: `evidence/profile-audit.json` (profile hiện tại `jx6-client6-8121c6020d56c86f`).
 - **P0 gate đã đạt:** root và source hash đầy đủ; schema skill/missile là 113/57 cột; duplicate `SkillId=521` vẫn là cảnh báo; PAK precedence, giới hạn ID, action 14, timing live và license vẫn giữ `unknown/review`.
 - **P1 byte-preserving TSV đã bắt đầu:** `tools/raw-tsv.cjs` giữ byte span, ô rỗng, thứ tự và CRLF; `tools/check-raw-tsv.cjs` xác nhận round-trip không chỉnh sửa giữ nguyên byte và từ chối TAB/LF/CR/NUL hoặc Unicode không biểu diễn được trong Latin-1. Artifact: `evidence/raw-tsv-checks.json`.
 - **ID draft:** `JXModel.nextDraftId` và dialog tạo mới tính cả ID nguồn lẫn draft trong phiên, tránh đề xuất lại ID vừa tạo. Đây chỉ là đề xuất theo catalog; giới hạn ID của engine vẫn là cổng `unknown`.
 - **Lua byte span:** `tools/raw-lua.cjs` bọc parser token Lua hiện có để thay literal trong buffer theo `byteStart/byteEnd`; `tools/check-raw-lua.cjs` đạt 5/5 trên `Client6.0/script/skill/wudang.lua`, không thực thi Lua và giữ nguyên prefix/suffix.
 - **INI byte span:** `tools/raw-ini.cjs` đọc section/key/value của `gamesetting.ini` và `skilltemplate.txt` mà giữ raw bytes, comment, dấu `=` trong value và newline; `tools/check-raw-ini.cjs` đạt 5/5.
+- **Stage-only patch planner:** `tools/staged-patch.cjs` tạo manifest byte-edit tối thiểu cho TSV/Lua sau khi kiểm `snapshotId`, profile hash, `before` span và duplicate ID. `tools/check-staged-patch.cjs` đạt 8/8; planner chỉ trả kế hoạch trong bộ nhớ, yêu cầu backup/journal/read-back cho bước apply và giữ `deployable=false`.
+- **Apply adapter có kiểm soát:** `tools/apply-staged-patch.cjs` hỗ trợ dry-run mặc định; khi được gọi rõ ràng sẽ tạo backup, journal, ghi atomically, đọc lại hash và rollback nếu lỗi. Adapter từ chối precondition cũ, đường dẫn thoát root và manifest còn blocked. Kiểm tra tại `tools/check-apply-staged-patch.cjs`; chưa bật deploy lên game/SSH.
 - Các bước này chỉ đọc snapshot và ghi evidence trong `SkillStudio`; chưa SSH, chưa đọc memory, chưa ghi Client/Server và changeset vẫn `deployable=false`.
 
 ## Cập nhật v0.4 Alpha — EXE portable, workspace, validator
