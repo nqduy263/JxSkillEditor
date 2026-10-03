@@ -254,37 +254,37 @@
       {
         "id": 1301,
         "name": "Ma Ha Bát Nhã Đao",
-        "line": 1250
+        "line": 1248
       },
       {
         "id": 1302,
         "name": "Vi Đà Phục Ma Côn",
-        "line": 1253
+        "line": 1251
       },
       {
         "id": 1303,
         "name": "Long Thần Bát Nhã Quyấn",
-        "line": 1256
+        "line": 1254
       },
       {
         "id": 1352,
         "name": "Kim Cang Trởn Địa Trởn",
-        "line": 1254
+        "line": 1252
       },
       {
         "id": 1353,
         "name": "Bát Nhã Kim Cang Chưùng",
-        "line": 1257
+        "line": 1255
       },
       {
         "id": 1381,
         "name": "Vô Lưùng Trảm Ma KÙnh",
-        "line": 1252
+        "line": 1250
       },
       {
         "id": 1383,
         "name": "Đại Lực Phá Kiởp Trảm",
-        "line": 1258
+        "line": 1256
       }
     ]
   },
@@ -571,37 +571,37 @@
       {
         "id": 1304,
         "name": "Bá Vưùng Tạ Giáp",
-        "line": 1259
+        "line": 1257
       },
       {
         "id": 1305,
         "name": "Toái Cồt Đoạt Mởnh",
-        "line": 1262
+        "line": 1260
       },
       {
         "id": 1306,
         "name": "Cửu Long Trầm Chu",
-        "line": 1265
+        "line": 1263
       },
       {
         "id": 1356,
         "name": "Hào Hựng Phá Lãng Trởn",
-        "line": 1266
+        "line": 1264
       },
       {
         "id": 1384,
         "name": "Liởt Diởm Thởu Giáp KÙnh",
-        "line": 1261
+        "line": 1259
       },
       {
         "id": 1385,
         "name": "Cửu Trưùng Khai Thiên KÙnh",
-        "line": 1264
+        "line": 1262
       },
       {
         "id": 1386,
         "name": "Thiên Đao Tạ Giáp KÙnh",
-        "line": 1267
+        "line": 1265
       }
     ]
   },
@@ -902,47 +902,47 @@
       {
         "id": 1307,
         "name": "Vô ảnh Truy Hụn Đao",
-        "line": 1268
+        "line": 1266
       },
       {
         "id": 1308,
-        "name": "Bạo Vũ Hoa Lờ",
-        "line": 1271
+        "name": "Khổng Tước Linh Tiễn",
+        "line": 1269
       },
       {
         "id": 1309,
         "name": "Loạn Hoàn Trưn Địạ",
-        "line": 1274
+        "line": 1272
       },
       {
         "id": 1310,
         "name": "Càn Khụn Cỹu Cung Tinh",
-        "line": 1277
+        "line": 1275
       },
       {
         "id": 1357,
         "name": "Ngõn Đao Xạ Nguyởt Trưn",
-        "line": 1269
+        "line": 1267
       },
       {
         "id": 1359,
         "name": "Tam Giởi HỳĐa Lụi Trưn",
-        "line": 1275
+        "line": 1273
       },
       {
         "id": 1387,
         "name": "Nhiởp Hụn Nguyởt ảnh KÙnh",
-        "line": 1270
+        "line": 1268
       },
       {
         "id": 1388,
-        "name": "Thiởt Liờn Tứ Sát KÙnh",
-        "line": 1273
+        "name": "Khổng Tước Thần Cơ KÙnh",
+        "line": 1271
       },
       {
         "id": 1389,
         "name": "Loạn Hoàn Tuyởt Diởt KÙnh",
-        "line": 1276
+        "line": 1274
       },
       {
         "id": 1390,
@@ -1181,6 +1181,36 @@
         "id": 1232,
         "name": "Hồn ảnh Tùng Sanh",
         "line": 1230
+      },
+      {
+        "id": 1311,
+        "name": "U Minh Trảm Hồn Đao",
+        "line": 1277
+      },
+      {
+        "id": 1312,
+        "name": "Cửu U Bạch Cốt Chưởng",
+        "line": 1280
+      },
+      {
+        "id": 1361,
+        "name": "Huyừt Sát Độc Long Trận",
+        "line": 1278
+      },
+      {
+        "id": 1362,
+        "name": "Vạn Quỷ Phệ Hồn Trận",
+        "line": 1281
+      },
+      {
+        "id": 1391,
+        "name": "U Minh Diệt Phách Kình",
+        "line": 1279
+      },
+      {
+        "id": 1392,
+        "name": "Cửu U Hủ Cốt Kình",
+        "line": 1282
       }
     ]
   },
@@ -2397,11 +2427,6 @@
         "id": 1371,
         "name": "Huyền Khảm Bát Quái Trận",
         "line": 1242
-      },
-      {
-        "id": 1391,
-        "name": "Lưỡng Nghi Phá Kiếp Trảm",
-        "line": 1243
       }
     ]
   },
@@ -2685,27 +2710,22 @@
       {
         "id": 1322,
         "name": "Cơng Phong Tởt Lôi Đao",
-        "line": 1244
+        "line": 1243
       },
       {
         "id": 1323,
         "name": "Cửu Thiên Thần Lôi Kiởm",
-        "line": 1247
+        "line": 1245
       },
       {
         "id": 1373,
         "name": "Thái Hư Lôi Trởn",
-        "line": 1248
-      },
-      {
-        "id": 1392,
-        "name": "Thiên Ma Phá Toái Trảm",
         "line": 1246
       },
       {
         "id": 1393,
         "name": "Ngũ Lôi Hừa Kiởp Trảm",
-        "line": 1249
+        "line": 1247
       }
     ]
   },
@@ -2716,43 +2736,43 @@
       {
         "id": 1351,
         "name": "Tam Giùi Quy Thiấn Trởn",
-        "line": 1251,
+        "line": 1249,
         "learnLine": 1059
       },
       {
         "id": 1354,
         "name": "Kim Cang Trởn Hớn Trởn",
-        "line": 1260,
+        "line": 1258,
         "learnLine": 1067
       },
       {
         "id": 1355,
         "name": "Bát Hoang Liởt Địa Trởn",
-        "line": 1263,
+        "line": 1261,
         "learnLine": 1075
       },
       {
         "id": 1358,
-        "name": "Mạn Thiên Hoa Vũ Trưn",
-        "line": 1272,
+        "name": "Thiên Cơ Toái Vũ Trưn",
+        "line": 1270,
         "learnLine": 1083
       },
       {
         "id": 1360,
         "name": "Càn Khụn Nhát Trịởch Trưn",
-        "line": 1278,
+        "line": 1276,
         "learnLine": 1086
       },
       {
         "id": 1372,
         "name": "Cuồng Phong Hãm Lôi Trởn",
-        "line": 1245,
+        "line": 1244,
         "learnLine": 1038
       },
       {
         "id": 1382,
         "name": "Phục Ma Cửu Trưùng KÙnh",
-        "line": 1255,
+        "line": 1253,
         "learnLine": 1094
       }
     ],

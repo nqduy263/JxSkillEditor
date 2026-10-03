@@ -1,15 +1,15 @@
 {
-  "snapshotId": "2002165111d53d658715f4dcb0ad758f161689daddeb68909a8c36f057b54171",
-  "generatedAt": "2026-10-03T05:44:22.272Z",
+  "snapshotId": "984ec84365905cc5f8b998996cd41d7756eee2d0b32e031de36540ba66292ff4",
+  "generatedAt": "2026-10-03T06:04:28.584Z",
   "scope": "Verified running client root; loose-file snapshot; learning references from captured running WSL server root. No in-memory skill list read.",
   "source": "Client6.0/settings/skills.txt",
   "coverage": {
-    "rawRows": 1277,
-    "rows": 1276,
+    "rawRows": 1281,
+    "rows": 1280,
     "icons": 978,
     "learned": 177,
-    "script": 322,
-    "missiles": 482,
+    "script": 326,
+    "missiles": 486,
     "scripts": 227,
     "factions": 13
   },
@@ -26,13 +26,13 @@
   "files": [
     {
       "path": "Client6.0/settings/skills.txt",
-      "bytes": 600967,
-      "sha256": "0acd5d95168d7d50e84a8f30171ef3564cc44809647a13209356919a127e23f0"
+      "bytes": 604848,
+      "sha256": "48b81bf7768f9be0c0aecff852b15a4709e1dbe44b63981b44462c583b99c3c7"
     },
     {
       "path": "Client6.0/settings/missles.txt",
-      "bytes": 100568,
-      "sha256": "a0e88328263585be752b23d2737d66c0f6dc951c6fd873f38baf18f03aa3d52b"
+      "bytes": 101635,
+      "sha256": "41eb468e9ef4dcc7be272d84d4e765faa64406d3ef89a7cf0c7bed33971474f3"
     },
     {
       "path": "SkillStudio/evidence/live_skills_table.lua",
