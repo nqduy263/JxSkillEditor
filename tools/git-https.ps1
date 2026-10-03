@@ -11,7 +11,7 @@ if (!$helper) { throw "git-remote-https.exe not found. Checked: $($candidates -j
 $env:GIT_EXEC_PATH = Split-Path -Parent $helper
 Write-Verbose "Using HTTPS remote helper: $helper"
 $repo = $null
-try { $repo = (& $git -C (Split-Path -Parent $PSScriptRoot) rev-parse --show-toplevel 2>$null).Trim() } catch { }
+try { $repo = (& $git -c safe.directory=* -C (Split-Path -Parent $PSScriptRoot) rev-parse --show-toplevel 2>$null).Trim() } catch { }
 $invokeArgs = if ($repo) { @('-c', "safe.directory=$repo") + $GitArgs } else { $GitArgs }
 & $git @invokeArgs
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
