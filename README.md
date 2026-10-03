@@ -1,6 +1,6 @@
-# JX Skill Studio v0.6 Alpha
+# JX Skill Studio v0.6.1 Alpha
 
-Windows portable alpha: `releases/JXSkillStudio-0.6.0-win-x64/JXSkillStudio.exe`. Bản Full có runtime đi kèm; giải nén toàn bộ thư mục và chạy EXE.
+Windows portable alpha: `releases/JXSkillStudio-0.6.1-win-x64/JXSkillStudio.exe`. Bản Full có runtime đi kèm; giải nén toàn bộ thư mục và chạy EXE.
 
 Mở **demo/index.html** bằng Edge/Chrome, giữ nguyên toàn bộ thư mục demo (đặc biệt animations). Nếu đang mở bản cũ, reload trang.
 
@@ -32,4 +32,8 @@ Preview skill tự hiện SPR đường đạn theo liên kết nguồn, có pha
 ## Bản 0.6.0: cập nhật tự động
 
 Bản native kiểm tra GitHub release khi mở. Nếu có bản mới, chọn Yes để tải, xác minh SHA-256, cài vào thư mục portable và mở lại; chọn No để dùng bản cũ. Giữ thư mục có quyền ghi; Data/ được bảo toàn. Xem REVISION_06.md.
+
+## Bản 0.6.1: nhận diện ứng dụng
+
+Đổi logo trong giao diện và biểu tượng EXE, đồng bộ phiên bản native/web/demo lên 0.6.1. Gói này là release mới để bản 0.6.0 tự phát hiện và đề nghị cập nhật.
 

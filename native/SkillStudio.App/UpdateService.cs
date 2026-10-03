@@ -11,14 +11,14 @@ internal sealed record PreparedUpdate(Version Version, string StageDirectory);
 
 internal static class UpdateService
 {
-    internal const string CurrentVersion = "0.6.0";
+    internal const string CurrentVersion = "0.6.1";
     private const string Repository = "nqduy263/JxSkillEditor";
     private const long MaximumZipBytes = 1_500_000_000;
     private static readonly HttpClient Http = CreateClient();
 
     private static HttpClient CreateClient()
     {
-        var client = new HttpClient { Timeout = Timeout.InfiniteTimeSpan };
+        var client = new HttpClient { Timeout = TimeSpan.FromMinutes(20) };
         client.DefaultRequestHeaders.UserAgent.ParseAdd("JXSkillStudio/" + CurrentVersion);
         client.DefaultRequestHeaders.Accept.ParseAdd("application/vnd.github+json");
         return client;
@@ -64,55 +64,68 @@ internal static class UpdateService
         var unique = Guid.NewGuid().ToString("N");
         var archive = Path.Combine(updateRoot, "download-" + unique + ".zip");
         var stage = Path.Combine(updateRoot, "stage-" + unique);
-        using (var response = await Http.GetAsync(release.DownloadUrl, HttpCompletionOption.ResponseHeadersRead))
+        try
         {
-            response.EnsureSuccessStatusCode();
-            if (response.Content.Headers.ContentLength > MaximumZipBytes) throw new InvalidDataException("Gói cập nhật vượt giới hạn 1,5 GB.");
-            await using var source = await response.Content.ReadAsStreamAsync();
-            await using var target = new FileStream(archive, FileMode.CreateNew, FileAccess.Write, FileShare.None);
-            var buffer = new byte[128 * 1024]; long received = 0; int count;
-            while ((count = await source.ReadAsync(buffer)) > 0)
+            using var limit = new CancellationTokenSource(TimeSpan.FromMinutes(30));
+            using (var response = await Http.GetAsync(release.DownloadUrl, HttpCompletionOption.ResponseHeadersRead, limit.Token))
             {
-                received += count;
-                if (received > MaximumZipBytes) throw new InvalidDataException("Gói cập nhật vượt giới hạn 1,5 GB.");
-                await target.WriteAsync(buffer.AsMemory(0, count));
-                progress?.Invoke(received, response.Content.Headers.ContentLength);
+                response.EnsureSuccessStatusCode();
+                if (response.Content.Headers.ContentLength > MaximumZipBytes) throw new InvalidDataException("Gói cập nhật vượt giới hạn 1,5 GB.");
+                await using var source = await response.Content.ReadAsStreamAsync(limit.Token);
+                await using var target = new FileStream(archive, FileMode.CreateNew, FileAccess.Write, FileShare.None);
+                var buffer = new byte[128 * 1024]; long received = 0; int count;
+                while ((count = await source.ReadAsync(buffer.AsMemory(), limit.Token)) > 0)
+                {
+                    received += count;
+                    if (received > MaximumZipBytes) throw new InvalidDataException("Gói cập nhật vượt giới hạn 1,5 GB.");
+                    await target.WriteAsync(buffer.AsMemory(0, count), limit.Token);
+                    progress?.Invoke(received, response.Content.Headers.ContentLength);
+                }
             }
+            await using var hashInput = File.OpenRead(archive);
+            var actual = Convert.ToHexString(await SHA256.HashDataAsync(hashInput, limit.Token));
+            if (!actual.Equals(release.Sha256, StringComparison.OrdinalIgnoreCase)) throw new InvalidDataException("SHA-256 gói cập nhật không khớp GitHub release.");
+            var expectedFolder = $"JXSkillStudio-{release.Version}-win-x64";
+            using (var zip = ZipFile.OpenRead(archive))
+            {
+                if (zip.Entries.Count > 30_000) throw new InvalidDataException("Gói cập nhật có quá nhiều tệp.");
+                long expanded = 0;
+                foreach (var entry in zip.Entries)
+                {
+                    var name = entry.FullName.Replace('\\', '/');
+                    if (!name.StartsWith(expectedFolder + "/", StringComparison.Ordinal) ||
+                        name.Split('/').Any(part => part is "." or ".." or "Data" or ".updates" or ".git") ||
+                        name.Contains(':')) throw new InvalidDataException("Gói cập nhật chứa đường dẫn không hợp lệ.");
+                    expanded = checked(expanded + entry.Length);
+                    if (expanded > 3_000_000_000) throw new InvalidDataException("Dung lượng giải nén vượt giới hạn 3 GB.");
+                }
+            }
+            Directory.CreateDirectory(stage);
+            ZipFile.ExtractToDirectory(archive, stage);
+            var expected = Path.Combine(stage, expectedFolder);
+            if (!File.Exists(Path.Combine(expected, "JXSkillStudio.exe")) ||
+                !File.Exists(Path.Combine(expected, "ui", "index.html")) ||
+                !File.Exists(Path.Combine(expected, "runtime", "msedgewebview2.exe")) ||
+                !File.Exists(Path.Combine(expected, "updater.ps1")))
+                throw new InvalidDataException("Gói cập nhật thiếu EXE, UI, runtime hoặc updater.");
+            File.Delete(archive);
+            return new PreparedUpdate(release.Version, expected);
         }
-        await using var hashInput = File.OpenRead(archive);
-        var actual = Convert.ToHexString(await SHA256.HashDataAsync(hashInput));
-        if (!actual.Equals(release.Sha256, StringComparison.OrdinalIgnoreCase)) throw new InvalidDataException("SHA-256 gói cập nhật không khớp GitHub release.");
-        var expectedFolder = $"JXSkillStudio-{release.Version}-win-x64";
-        using (var zip = ZipFile.OpenRead(archive))
+        catch
         {
-            if (zip.Entries.Count > 30_000) throw new InvalidDataException("Gói cập nhật có quá nhiều tệp.");
-            long expanded = 0;
-            foreach (var entry in zip.Entries)
-            {
-                var name = entry.FullName.Replace('\\', '/');
-                if (!name.StartsWith(expectedFolder + "/", StringComparison.Ordinal) ||
-                    name.Split('/').Any(part => part is "." or ".." or "Data" or ".updates" or ".git") ||
-                    name.Contains(':')) throw new InvalidDataException("Gói cập nhật chứa đường dẫn không hợp lệ.");
-                expanded = checked(expanded + entry.Length);
-                if (expanded > 3_000_000_000) throw new InvalidDataException("Dung lượng giải nén vượt giới hạn 3 GB.");
-            }
+            try { if (File.Exists(archive)) File.Delete(archive); } catch { }
+            try { if (Directory.Exists(stage)) Directory.Delete(stage, true); } catch { }
+            throw;
         }
-        Directory.CreateDirectory(stage);
-        ZipFile.ExtractToDirectory(archive, stage);
-        var expected = Path.Combine(stage, expectedFolder);
-        if (!File.Exists(Path.Combine(expected, "JXSkillStudio.exe")) ||
-            !File.Exists(Path.Combine(expected, "ui", "index.html")) ||
-            !File.Exists(Path.Combine(expected, "runtime", "msedgewebview2.exe")) ||
-            !File.Exists(Path.Combine(expected, "updater.ps1")))
-            throw new InvalidDataException("Gói cập nhật thiếu EXE, UI, runtime hoặc updater.");
-        return new PreparedUpdate(release.Version, expected);
     }
 
     internal static void LaunchInstaller(PreparedUpdate update, string appDirectory, int processId)
     {
         var helper = Path.Combine(appDirectory, ".updates", "updater.ps1");
         File.Copy(Path.Combine(appDirectory, "updater.ps1"), helper, true);
-        var info = new ProcessStartInfo("powershell.exe") { UseShellExecute = false, CreateNoWindow = true, WorkingDirectory = appDirectory };
+        var powershell = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "WindowsPowerShell", "v1.0", "powershell.exe");
+        if (!File.Exists(powershell)) powershell = "powershell.exe";
+        var info = new ProcessStartInfo(powershell) { UseShellExecute = false, CreateNoWindow = true, WorkingDirectory = appDirectory };
         foreach (var arg in new[] { "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", helper,
             "-Stage", update.StageDirectory, "-Target", appDirectory, "-ProcessId", processId.ToString() }) info.ArgumentList.Add(arg);
         if (Process.Start(info) == null) throw new IOException("Không khởi động được updater.");

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-02T04:16:41.241Z",
+  "checkedAt": "2026-10-03T01:33:19.863Z",
   "passed": 25,
   "checks": [
     "Workspace roundtrip preserves new independent skill, missile, curve and selection",

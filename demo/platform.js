@@ -22,7 +22,7 @@
  function openFile(){
   if(native)return call('workspace.open');return new Promise((resolve,reject)=>{const input=document.createElement('input');input.type='file';input.accept='.jxworkspace,.json';input.oncancel=()=>resolve({canceled:true});input.onchange=async()=>{try{const file=input.files[0];if(!file){resolve({canceled:true});return;}if(file.size>32*1024*1024)throw Error('Tệp vượt 32 MB.');resolve({workspace:await file.text(),path:file.name});}catch(e){reject(e);}};input.click();});
  }
- root.JXPlatform={native,info:()=>native?call('host.info'):Promise.resolve({mode:'Demo trình duyệt',version:'0.6.0'}),readAutosave,writeAutosave,openFile,
+ root.JXPlatform={native,info:()=>native?call('host.info'):Promise.resolve({mode:'Demo trình duyệt',version:'0.6.1'}),readAutosave,writeAutosave,openFile,
   saveAs:payload=>native?call('workspace.saveAs',payload):Promise.resolve(download(payload,'SkillWorkspace.jxworkspace')),
   exportDraft:payload=>native?call('draft.export',payload):Promise.resolve(download(payload,'jx-skill-draft-v04.json')),
   scan:()=>native?call('discovery.scan'):Promise.reject(Error('Quét tiến trình/WSL có trong bản Windows EXE.')),

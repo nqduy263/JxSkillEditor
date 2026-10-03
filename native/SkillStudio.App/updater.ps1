@@ -31,6 +31,9 @@ try {
     $exe = Join-Path $targetPath 'JXSkillStudio.exe'
     if (!(Test-Path -LiteralPath $exe)) { throw 'Updated EXE missing' }
     if (!$NoLaunch) { Start-Process -FilePath $exe -WorkingDirectory $targetPath }
+    if (Test-Path -LiteralPath $stagePath) { Remove-Item -LiteralPath $stagePath -Recurse -Force }
+    $stageParent = Split-Path -Parent $stagePath
+    if ((Test-Path -LiteralPath $stageParent) -and !(Get-ChildItem -LiteralPath $stageParent -Force)) { Remove-Item -LiteralPath $stageParent -Force }
     ('Installed at ' + (Get-Date -Format o)) | Set-Content -LiteralPath (Join-Path $updates 'last-update.txt') -Encoding UTF8
 } catch {
     New-Item -ItemType Directory -Path $failed -Force | Out-Null

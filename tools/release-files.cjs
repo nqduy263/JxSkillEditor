@@ -4,6 +4,6 @@ function sourceFiles(root){
  function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>{
   if(excluded.has(e.name)||e.isSymbolicLink())return [];
   const full=path.join(dir,e.name);return e.isDirectory()?walk(full):[full];
- });}return walk(root).filter(p=>!p.endsWith('.zip')).sort();
+ });}return walk(root).filter(p=>!p.endsWith('.zip')&&!/\.bak(?:_|$)/i.test(path.basename(p))).sort();
 }
 module.exports={sourceFiles};

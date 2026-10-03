@@ -23,7 +23,7 @@ internal static class Program
             var fixedFolder = Path.Combine(AppContext.BaseDirectory, "runtime");
             try { version = CoreWebView2Environment.GetAvailableBrowserVersionString(File.Exists(Path.Combine(fixedFolder, "msedgewebview2.exe")) ? fixedFolder : null); }
             catch (Exception e) { error = e.Message; }
-            var report = new { appVersion = "0.6.0", architecture = System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture.ToString(), netRuntime = Environment.Version.ToString(), webViewVersion = version, error, uiPresent = File.Exists(Path.Combine(AppContext.BaseDirectory, "ui", "index.html")), fixedRuntime = File.Exists(Path.Combine(fixedFolder, "msedgewebview2.exe")), guiTested = false };
+            var report = new { appVersion = UpdateService.CurrentVersion, architecture = System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture.ToString(), netRuntime = Environment.Version.ToString(), webViewVersion = version, error, uiPresent = File.Exists(Path.Combine(AppContext.BaseDirectory, "ui", "index.html")), fixedRuntime = File.Exists(Path.Combine(fixedFolder, "msedgewebview2.exe")), guiTested = false };
             var index = Array.IndexOf(args, "--output");
             var output = index >= 0 && index + 1 < args.Length ? args[index + 1] : Path.Combine(AppContext.BaseDirectory, "diagnostics.json");
             WorkspaceStore.AtomicWrite(output, JsonSerializer.Serialize(report, new JsonSerializerOptions { WriteIndented = true }));

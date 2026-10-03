@@ -131,3 +131,7 @@ Preview hiệu ứng skill theo ChildSkillId và các tầng sự kiện; riêng
 
 Ứng dụng native đã có kiểm tra GitHub release khi mở, lựa chọn Yes/No, tải ZIP Full, xác minh digest SHA-256, lưu workspace, thay tệp ngoài tiến trình và mở lại. Xem REVISION_06.md cho điều kiện và giới hạn.
 
+## Cập nhật 0.6.1
+
+Đã đồng bộ logo/biểu tượng ứng dụng vào bản portable và phát hành thành phiên bản mới để kiểm tra đường nâng cấp từ 0.6.0. Tài nguyên biểu tượng được giữ trong `resources/icons`; bản web dùng `demo/icon.png`, native dùng `native/SkillStudio.App/app.ico`. Xem REVISION_07.md.
+

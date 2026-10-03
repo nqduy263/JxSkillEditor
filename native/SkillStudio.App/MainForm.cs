@@ -19,6 +19,13 @@ internal sealed class MainForm : Form
         Width = 1520; Height = 980; MinimumSize = new Size(960, 640);
         StartPosition = FormStartPosition.CenterScreen;
         BackColor = Color.FromArgb(9, 20, 17);
+        try
+        {
+            var iconPath = Path.Combine(AppContext.BaseDirectory, "app.ico");
+            if (File.Exists(iconPath)) Icon = new Icon(iconPath);
+            else Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
+        }
+        catch { }
         Controls.Add(browser);
         Shown += async (_, _) => await InitializeAsync();
         FormClosing += OnClosing;
@@ -27,7 +34,18 @@ internal sealed class MainForm : Form
         {
             closeTimer.Stop(); closePending = false;
             if (MessageBox.Show(this, "Chưa nhận được xác nhận lưu bản nháp. Đóng ứng dụng lúc này?", "JX Skill Studio", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            { closeReady = true; Close(); }
+            {
+                try
+                {
+                    if (preparedUpdate != null) UpdateService.LaunchInstaller(preparedUpdate, AppContext.BaseDirectory, Environment.ProcessId);
+                    closeReady = true; Close();
+                }
+                catch (Exception error)
+                {
+                    preparedUpdate = null;
+                    MessageBox.Show(this, "Không thể khởi động trình cập nhật: " + error.Message, "Cập nhật không thành công", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         };
     }
 

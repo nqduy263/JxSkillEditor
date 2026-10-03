@@ -93,3 +93,7 @@ Dùng releases/JXSkillStudio-0.5.0-win-x64/JXSkillStudio.exe. Preview mới có 
 
 Chạy bản Full từ thư mục có quyền ghi. Ứng dụng tự kiểm tra GitHub Release mới. Yes cài và mở lại; No dùng bản cũ. Workspace trong Data/ không bị thay. Nếu cập nhật lỗi, xem .updates/update-error.txt và backup. Xem REVISION_06.md.
 
+## Bàn giao 0.6.1
+
+Chạy `releases/JXSkillStudio-0.6.1-win-x64/JXSkillStudio.exe` hoặc giải nén ZIP Full tương ứng. Bản có logo giao diện và icon EXE mới; cơ chế tự cập nhật vẫn giữ workspace trong `Data/`. Bản 0.6.0 sẽ hỏi cập nhật khi mở sau khi GitHub Release v0.6.1 được công bố. Xem REVISION_07.md.
+

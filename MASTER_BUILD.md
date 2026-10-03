@@ -194,3 +194,7 @@ Chạy native/build-portable.ps1; gói mới ở releases/JXSkillStudio-0.5.0-wi
 
 Mã nguồn được xuất bản tại https://github.com/nqduy263/JxSkillEditor. Build bằng native/build-portable.ps1, đóng ZIP Full với thư mục gốc JXSkillStudio-0.6.0-win-x64, gắn vào GitHub Release tag v0.6.0. Các bản sau dùng tên asset tương ứng để trình cập nhật nhận diện. Xem REVISION_06.md.
 
+## Build và phát hành 0.6.1
+
+Bản 0.6.1 thêm logo giao diện và biểu tượng EXE. Chạy `native/build-portable.ps1`, đóng ZIP Full với thư mục gốc `JXSkillStudio-0.6.1-win-x64`, sau đó chạy `tools/publish-release.ps1 -Version 0.6.1` để tạo GitHub Release. Bản 0.6.0 sẽ nhận diện tag mới qua API release. Xem REVISION_07.md.
+
