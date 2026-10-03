@@ -14,6 +14,23 @@
  const skill=id=>drafts.get(id)||originals.get(id);
  const allSkills=()=>[...originals.keys()].map(skill);
  const status=text=>{$('status').textContent=text;};
+ const updateState=text=>{const el=$('update-state');if(el)el.textContent=text;};
+ function onUpdateEvent(name,data){
+  const d=data||{};
+  if(name==='host.updateChecking'){updateState('Đang kiểm tra cập nhật…');return;}
+  if(name==='host.updateAvailable'){updateState('Có bản '+(d.version||'mới')+' · đang hỏi xác nhận');return;}
+  if(name==='host.updateProgress'){
+   const received=Math.round(Number(d.received||0)/1000000),total=Number(d.total||0)>0?Math.round(Number(d.total)/1000000):0;
+   updateState(total?'Đang tải cập nhật · '+received+' / '+total+' MB':'Đang tải cập nhật · '+received+' MB');return;
+  }
+  if(name!=='host.updateStatus')return;
+  if(d.status==='up-to-date')updateState('Đã kiểm tra · bản '+(d.version||d.current||'hiện tại'));
+  else if(d.status==='declined')updateState('Đã bỏ qua bản '+(d.version||'mới'));
+  else if(d.status==='downloading')updateState('Đang tải bản '+(d.version||'mới')+'…');
+  else if(d.status==='ready')updateState('Đang khởi động bản '+(d.version||'mới')+'…');
+  else if(d.status==='failed')updateState('Cập nhật lỗi · '+(d.error||'hãy thử lại'));
+ }
+ P.onUpdate?.(onUpdateEvent);
  const clean=s=>String(s??'').replace(/<enter>/gi,'\n').replace(/<[^>]*>/g,'').replace(/^"|"$/g,'').trim();
  const node=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
  function makeButton(text,fn,cls='button'){const b=node('button',text,cls);b.type='button';b.onclick=fn;return b;}
@@ -34,12 +51,22 @@
   if(key==='PreCastSpr'||/^AnimFileB?\d$/.test(key))return resourceOptions();
   return C.enums[key]||null;
  }
- function previewAction(value=current().fields.CharAnimId){const a=C.actions.find(a=>a.value===String(value));if(!a?.code){actionAnimation.explain(a?.description||'Chưa chọn action; hãy chọn mã ở Cast & mục tiêu.','Action '+(value||'chưa khai báo'));return;}
-  const profile=C.profiles.find(p=>p.key===$('preview-character').value)||C.profiles[0],pose=profile.poses.find(p=>p.value===$('preview-pose').value)||profile.poses[0],mapped=pose.actions[String(value)];
-  if(mapped)actionAnimation.show(mapped.path,'Action '+value+' · '+a.label+' · '+mapped.mapped,{companions:[mapped.headPath]});else actionAnimation.explain('Không có mapping cho tư thế đang chọn.');
+ function resourceByPath(path){return C.resources.find(r=>r.path===path);}
+ function previewAction(value=current().fields.CharAnimId){
+  const actionId=String(value??''),a=C.actions.find(x=>x.value===actionId),timing=$('action-timing');
+  if(!a?.code){actionAnimation.explain(a?.description||'Chưa chọn action; hãy chọn mã ở Cast & mục tiêu.','Action '+(value||'chưa khai báo'));if(timing)timing.textContent='';return;}
+  const profile=C.profiles.find(p=>p.key===$('preview-character').value)||C.profiles[0],pose=profile?.poses.find(p=>p.value===$('preview-pose').value)||profile?.poses[0],mapped=pose?.actions?.[actionId];
+  if(!mapped){actionAnimation.explain('Không có mapping cho tư thế đang chọn.');if(timing)timing.textContent='';return;}
+  const layers=mapped.layers?.length?mapped.layers:[{name:'Body',path:mapped.path,label:'Thân'},{name:'Head',path:mapped.headPath,label:'Đầu'}].filter(x=>x.path);
+  const main=layers.find(x=>x.path===mapped.path)||layers[0],mainResource=resourceByPath(main?.path),readyLayers=layers.filter(x=>x.path&&resourceByPath(x.path)?.status==='ready'),companions=readyLayers.filter(x=>x.path!==main?.path).map(x=>x.path);
+  let overlayLabel='';
+  if($('action-cast-overlay')?.checked){const stage=castStages[Number($('cast-stage')?.value)],effect=stage?.resource?.status==='ready'?stage:null;if(effect?.path&&!companions.includes(effect.path)&&effect.path!==main?.path){companions.push(effect.path);overlayLabel=' · ghép '+effect.label;}}
+  const requested=Number($('action-interval')?.value)||0,interval=requested>0?Math.max(16,requested):0;
+  if(mainResource?.status==='ready'&&main?.path)actionAnimation.show(main.path,'Action '+value+' · '+a.label+' · '+mapped.mapped,{companions,intervalMs:interval});else actionAnimation.explain(mainResource?.reason||'Chưa giải mã được SPR thân '+(main?.path||''),'Action '+value+' · '+a.label);
+  if(timing){const header=mainResource?.interval||0,used=interval||header||0,missing=Math.max(0,layers.length-readyLayers.length),labels=readyLayers.map(x=>x.label||x.name).join(', ')||'chưa có lớp sẵn sàng';timing.textContent='Composite '+readyLayers.length+'/'+layers.length+' lớp · '+labels+' · '+(header?'header '+header+' ms/frame':'header chưa rõ')+(interval?' · override '+used+' ms/frame':' · đang dùng '+used+' ms/frame')+(missing?' · thiếu '+missing+' lớp chưa giải mã':'')+overlayLabel+'.';}
  }
  function previewCast(){const resolved=window.JXCast.resolve(selected,skill,id=>missileDrafts.get(id)||missiles.get(id),C.resources);castStages=resolved.stages;const select=$('cast-stage'),previous=select.value;select.replaceChildren();for(let i=0;i<castStages.length;i++){const o=node('option',castStages[i].label);o.value=String(i);select.append(o);}select.value=Number(previous)<castStages.length?previous:'0';if(!select.value&&castStages.length)select.value='0';$('cast-warning').textContent=resolved.warnings.join(' · ')||(!castStages.length?'Skill không có SPR hiệu ứng trực tiếp trong liên kết đã resolve.':'');showCastStage();}
- function showCastStage(){const stage=castStages[Number($('cast-stage').value)],f=current().fields;if(!stage){animation.explain('Không có SPR hiệu ứng trực tiếp cho skill này. Xem action nhân vật ở khung trên.');$('cast-timing').textContent='';return;}const interval=Number($('cast-interval').value)||0,header=stage.resource?.interval||0,t=window.JXCast.timing(f,stage.missile,stage.resource,interval);$('cast-timing').textContent='Mô phỏng: WaitTime '+(f.WaitTime||0)+' tick ≈ '+t.waitMs+' ms · TimePerCast '+(f.TimePerCast||0)+' tick ≈ '+t.castMs+' ms · LifeTime '+(stage.missile?.fields.LifeTime||0)+' tick ≈ '+t.lifeMs+' ms · SPR '+(header||'chưa rõ')+' ms/frame'+(interval?' · đang xem '+t.frameIntervalMs+' ms/frame':'')+'. Tick giả định 18/s; chưa đối chiếu engine live.';if(stage.resource?.status==='ready')animation.show(stage.path,stage.label,{intervalMs:interval,autoplayDelayMs:t.waitMs});else animation.explain(stage.resource?.reason||'Chưa giải mã được SPR '+stage.path,stage.label);}
+ function showCastStage(){const stage=castStages[Number($('cast-stage').value)],f=current().fields;if(!stage){animation.explain('Không có SPR hiệu ứng trực tiếp cho skill này. Xem action nhân vật ở khung trên.');$('cast-timing').textContent='';previewAction();return;}const interval=Number($('cast-interval').value)||0,header=stage.resource?.interval||0,t=window.JXCast.timing(f,stage.missile,stage.resource,interval);$('cast-timing').textContent='Mô phỏng: WaitTime '+(f.WaitTime||0)+' tick ≈ '+t.waitMs+' ms · TimePerCast '+(f.TimePerCast||0)+' tick ≈ '+t.castMs+' ms · LifeTime '+(stage.missile?.fields.LifeTime||0)+' tick ≈ '+t.lifeMs+' ms · SPR '+(header||'chưa rõ')+' ms/frame'+(interval?' · đang xem '+t.frameIntervalMs+' ms/frame':'')+'. Tick giả định 18/s; chưa đối chiếu engine live.';if(stage.resource?.status==='ready')animation.show(stage.path,stage.label,{intervalMs:interval,autoplayDelayMs:t.waitMs});else animation.explain(stage.resource?.reason||'Chưa giải mã được SPR '+stage.path,stage.label);previewAction();}
  function previewSkill(id){const ref=skill(Number(id));if(!ref){animation.explain('Không có tầng liên kết.');return;}const target=M.childTarget(ref.fields),m=target?.kind==='missile'?(missileDrafts.get(target.id)||missiles.get(target.id)):null;
   const raw=m&&Object.entries(m.fields).find(([k,v])=>/^AnimFileB?\d$/.test(k)&&v)?.[1];
   if(raw)animation.show(raw,'Tầng #'+id+' · SPR đường đạn trực tiếp');else previewAction(ref.fields.CharAnimId);
@@ -69,7 +96,7 @@
  }
  function renderGroup(group){const el=$('fields-'+group.key);el.replaceChildren(...group.fields.filter(k=>D.headers.includes(k)).map(k=>fieldControl(k,current().fields[k],v=>editSkill(k,v))));}
  function renderHeader(){const s=current();drawIcon($('selected-icon'),s);$('skill-title').textContent=s.fields.SkillName;$('skill-meta').textContent='SKILL #'+s.id+' / '+factionText(s);$('skill-type').textContent=clean(D.settings.SkillAttrib[s.fields.Attrib]||s.fields.Property);$('source-warning').textContent=s.scope==='learned'?'Tên từ client · lệnh học trong snapshot server WSL đang chạy':s.scope==='new'?'Draft mới · chưa có lệnh học / chưa kiểm tra giới hạn ID':'Dòng gốc / tầng hoặc skill mở rộng · chưa chứng minh hiển thị trong bảng skill nhân vật';}
- function renderEditor(){renderHeader();for(const g of S.groups)renderGroup(g);renderDamage();renderLayers();renderMissile();renderAssets();renderRaw();renderPreview();renderDiff();previewAction();previewCast();}
+ function renderEditor(){renderHeader();for(const g of S.groups)renderGroup(g);renderDamage();renderLayers();renderMissile();renderAssets();renderRaw();renderPreview();renderDiff();previewCast();previewAction();}
  function formulaKey(script,key,property){return JSON.stringify([script,key,property]);}
  function definition(fields,slot){const found=M.propertyDefinition(D,fields,slot.property,slot.key),key=formulaKey(fields.LvlSetScript,slot.key,slot.property),draft=formulaDrafts.get(key);return {...found,script:found.script||(draft?{path:fields.LvlSetScript,evaluator:'floor-link'}:null),raw:draft?.after??found.definition?.raw,editKey:key,draft};}
  function level(){return Math.max(1,Math.min(1000,Number($('level').value)||1));}
@@ -129,7 +156,7 @@
  $('resource-apply').onclick=()=>{const value=$('resource-select').value;if(value&&resourceSave)resourceSave(value);$('resource-dialog').close();resourceAnimation.stop();};
  function renderPoses(){const p=C.profiles.find(p=>p.key===$('preview-character').value)||C.profiles[0];$('preview-pose').replaceChildren();for(const pose of p.poses){const o=node('option',pose.label);o.value=pose.value;$('preview-pose').append(o);}$('preview-pose').value='0';}
  for(const p of C.profiles){const o=node('option',p.label);o.value=p.key;$('preview-character').append(o);}$('preview-character').value=C.profiles[0].key;renderPoses();
- $('preview-character').onchange=()=>{renderPoses();previewAction();};$('preview-pose').onchange=()=>previewAction();$('cast-stage').onchange=()=>showCastStage();$('cast-interval').oninput=()=>{animation.setIntervalMs($('cast-interval').value);showCastStage();};
+ $('preview-character').onchange=()=>{renderPoses();previewAction();};$('preview-pose').onchange=()=>previewAction();$('action-cast-overlay').onchange=()=>previewAction();$('action-interval').oninput=()=>previewAction();$('cast-stage').onchange=()=>showCastStage();$('cast-interval').oninput=()=>{showCastStage();};
  $('undo').onclick=()=>{const s=current();assetDrafts.delete(selected);drafts.delete(selected);if(s.isNew){originals.delete(selected);for(const [id,other]of drafts){for(const link of M.links(other.fields).filter(x=>x.kind==='skill'&&x.id===selected)){other.fields[link.field]=originals.get(id)?.isNew?'0':originals.get(id)?.fields[link.field]||'0';const flag={StartSkillId:'StartEvent',FlySkillId:'FlyEvent',CollidSkillId:'CollideEvent',VanishedSkillId:'VanishedEvent'}[link.field];if(flag)other.fields[flag]=originals.get(id)?.isNew?'0':originals.get(id)?.fields[flag]||'0';}}for(const [key,f]of formulaDrafts)if(f.isNew&&!allSkills().some(x=>x.fields.LvlSetScript===f.script&&M.slots(x.fields).some(slot=>slot.property===f.property&&slot.key===f.key)))formulaDrafts.delete(key);selected=4;}renderList();renderEditor();status('Đã hoàn tác skill. Lua/missile dùng chung giữ ở changeset riêng.');};
  $('undo-all').onclick=()=>{for(const [id,s]of originals)if(s.isNew)originals.delete(id);drafts.clear();missileDrafts.clear();formulaDrafts.clear();assetDrafts.clear();if(!originals.has(selected))selected=4;renderList();renderEditor();status('Đã hoàn tác toàn bộ draft trong phiên');};
  $('export').onclick=exportAll;$('export-all').onclick=exportAll;
@@ -138,6 +165,7 @@
  $('missile-select').onchange=()=>{missileId=Number($('missile-select').value);renderMissileFields();};
  $('icon-file').onchange=async()=>{const file=$('icon-file').files[0];if(!file)return;if(file.size>2*1024*1024||!['image/png','image/jpeg'].includes(file.type)){status('Chỉ nhận PNG/JPEG tối đa 2 MB');return;}const target=selected,reader=new FileReader();reader.onload=()=>{assetDrafts.set(target,{name:file.name,mime:file.type,preview:reader.result});if(selected===target){renderHeader();renderPreview();}renderList();renderRelease();status('Ảnh thử đã đổi · chưa chuyển SPR');};reader.readAsDataURL(file);};
  $('theme').onchange=()=>$('studio').classList.toggle('bronze',$('theme').value==='bronze');
+ $('update-check').onclick=async()=>{const b=$('update-check');b.disabled=true;updateState('Đang kiểm tra cập nhật…');try{const result=await P.checkForUpdates();if(result?.status==='browser-demo')updateState('Bản demo trình duyệt · dùng EXE để cập nhật');else if(result?.status==='up-to-date')updateState('Đã kiểm tra · bản '+(result.version||'hiện tại'));}catch(e){updateState('Cập nhật lỗi · '+e.message);status(e.message);}finally{b.disabled=false;}};
  $('ssh-check').onclick=()=>{const host=$('ssh-host').value.trim(),user=$('ssh-user').value.trim(),port=Number($('ssh-port').value);$('ssh-result').textContent=host&&user&&Number.isInteger(port)&&port>0&&port<=65535?'Form hợp lệ · chưa kết nối SSH hoặc xác minh fingerprint.':'Điền host, tài khoản và port 1–65535.';};
  document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>{document.querySelectorAll('.page').forEach(p=>p.hidden=p.id!=='page-'+b.dataset.page);document.querySelectorAll('[data-page]').forEach(x=>x.classList.toggle('selected',x===b));renderRelease();});
  function selectTab(tab){activeTab=tab;document.querySelectorAll('.tabpanel').forEach(p=>p.hidden=p.id!=='tab-'+activeTab);document.querySelectorAll('[data-tab]').forEach(x=>{x.classList.toggle('active',x.dataset.tab===tab);x.setAttribute('aria-selected',String(x.dataset.tab===tab));});}

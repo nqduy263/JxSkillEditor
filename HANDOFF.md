@@ -48,12 +48,12 @@ Mặc định “Có lệnh học môn phái”: 170 skill có AddMagic trong sn
 - evidence/inventory.json, faction-catalog.json: hash bảng nguồn, tên client và phân loại.
 - evidence/live-source.json: lần quan sát process/root và snapshot WSL.
 - evidence/resource-inventory.json: hash nguồn enum, coverage, thiếu tài nguyên, header bất thường.
-- evidence/resource-checks.json: 626 SPR / 28.567 frame; kiểm payload và decoder.
-- evidence/demo-checks.json: 41 kiểm tra logic/UI handler.
-- evidence/animation-contact-sheet.png: mẫu frame ghép thân/đầu + missile #136, không phải ảnh chụp UI.
+- evidence/resource-checks.json: 3.550 SPR ready / 429 unavailable, 307.186 frame; kiểm payload, decoder và composite layer references.
+- evidence/demo-checks.json: 48 kiểm tra logic/UI handler.
+- evidence/animation-contact-sheet.png: mẫu frame ghép nhiều lớp action + missile #136, không phải ảnh chụp UI.
 - REVISION_03.md: giải thích mã action 14 và CharClass 3.
 
-Có 626/667 SPR đọc được. 40 path thiếu, 1 container chưa hỗ trợ; không thay bằng hiệu ứng giả. Action 0–13 dựa trên thứ tự bảng NpcAction; 14 chưa có mapping, giả thuyết không phát động tác chưa kiểm engine. Preview thân + đầu chuẩn 001; chưa ghép trang bị/ngựa live hoặc mô phỏng va chạm/timing.
+Có 3.550 SPR ready và 429 path unavailable trong snapshot; không thay bằng hiệu ứng giả. Action 0–13 dựa trên thứ tự bảng NpcAction; 14 chưa có mapping. Preview ghép các component sẵn có theo action/tư thế, hiện lớp thiếu và timing; chưa đối chiếu render order trang bị/ngựa live hoặc engine cast.
 
 PAK precedence, tooltip/cast trong game và giới hạn ID vẫn chưa nghiệm thu. Browser tích hợp đã chặn file:// ở lượt trước, nên chưa QA layout/font/download trên trình duyệt thật; không đi vòng policy. Cần nghiệm thu Edge/Chrome tại 1280×720 và 1920×1080, DPI 100/125/150%.
 
@@ -96,4 +96,34 @@ Chạy bản Full từ thư mục có quyền ghi. Ứng dụng tự kiểm tra 
 ## Bàn giao 0.6.1
 
 Chạy `releases/JXSkillStudio-0.6.1-win-x64/JXSkillStudio.exe` hoặc giải nén ZIP Full tương ứng. Bản có logo giao diện và icon EXE mới; cơ chế tự cập nhật vẫn giữ workspace trong `Data/`. Bản 0.6.0 sẽ hỏi cập nhật khi mở sau khi GitHub Release v0.6.1 được công bố. Xem REVISION_07.md.
+
+---
+
+## Bàn Giao Thẩm Định & Kế Hoạch Cho Người Mới (v0.6.2 → v0.7.0)
+
+Ngày: 03/10/2026.
+
+### 1. Trạng thái phần mềm bàn giao
+- **Phiên bản thực thi:** `releases/JXSkillStudio-0.6.2-win-x64/JXSkillStudio.exe` (release trước 0.6.1 vẫn giữ để rollback).
+- **Biểu tượng chính thức:** Concept 2 — Kim Long Hộ Kiếm & Ngũ Hành Skill đã được nhúng làm `ApplicationIcon` của file EXE, icon cửa sổ và logo giao diện.
+- **Dữ liệu hoạt động:** 1.236 dòng skill client, 441 missile, 3.550 SPR ready (307.186 frames), 51.940 tham chiếu component action, bảng công thức Lua và 170 skill có lệnh học server WSL.
+
+### 2. Kết quả rà soát cốt lõi
+- **Ưu điểm:** Tính trung thực dữ liệu gốc cao, sandbox an toàn, bộ đọc SPR thật trực quan, bộ kiểm tra lỗi (Validator) chuyên sâu ngăn văng server.
+- **Khuyết điểm:** Rào cản học thuật quá lớn (113 cột kỹ thuật, `LvlSetting`, `P1/P2/P3`), quy trình tạo chiêu phân mảnh qua 4 tab rời rạc, chưa có 1-click patch vào game, chưa có mô phỏng chiến đấu tương tác trực quan.
+- **Lỗi/Rủi ro:** Nguy cơ xung đột ID khi nhập thủ công, rủi ro lệch đồng bộ Client-Server, lỗi mã hóa đường dẫn SPR tiếng Trung/Unicode, và giới hạn mô phỏng đạn đa tia/chùm.
+
+### 3. Kế hoạch triển khai Easy Mode cho người mới
+- **P0 (v0.7.0):** Triển khai **Skill Creation Wizard 4 bước**, **Kho 10 Preset mẫu kinh điển**, và **Trình cấp phát ID an toàn (Auto-ID Allocator)**.
+- **P1 (v0.8.0):** Xây dựng **Virtual Combat Sandbox** có búp bê gỗ thử chiêu và popup nảy số sát thương.
+- **P2 (v0.9.0):** Xây dựng **1-Click Game Deployer** tự ghi file game cục bộ và tạo lệnh học GM test ngay.
+
+### 4. Tài liệu đi kèm
+- `MASTER_REPORT.md`: Báo cáo rà soát toàn diện ưu, khuyết, lỗi và giải pháp chi tiết.
+- `MASTER_BUILD.md`: Thiết kế kiến trúc Easy Studio, mô hình tự động hóa và roadmap kỹ thuật.
+- `resources/icons/`: Bộ tài nguyên icon gốc đa định dạng và đa kích thước.
+
+## Bàn giao 0.6.2
+
+Chạy `releases/JXSkillStudio-0.6.2-win-x64/JXSkillStudio.exe` hoặc giải nén ZIP Full tương ứng. Preview action đọc composite từ catalog SPR: thân, đầu, tóc, vai/áo, tay, vũ khí và phi phong theo action/tư thế; lớp nào thiếu nguồn sẽ hiện trong dòng timing thay vì giả ảnh. Bật `Ghép hiệu ứng cast đang chọn vào action` để xem nhân vật cùng effect, chỉnh `Interval action` và `Interval hiệu ứng` để khớp nhịp frame. `Kiểm tra cập nhật` kiểm tra thủ công; native host vẫn tự kiểm tra lúc mở và Yes/No sẽ tải, xác minh SHA-256, thay portable rồi mở lại. Bản cũ và `Data/` được giữ nguyên.
 

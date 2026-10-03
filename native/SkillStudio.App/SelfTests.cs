@@ -41,7 +41,7 @@ internal static class SelfTests
             var goodUrl = "https://github.com/nqduy263/JxSkillEditor/releases/download/v0.7.0/JXSkillStudio-0.7.0-win-x64-Full.zip";
             var goodDigest = "sha256:" + new string('A', 64);
             Check(UpdateService.ParseRelease(Release("0.7.0", goodUrl, goodDigest))?.Version == Version.Parse("0.7.0"), "Updater finds newer signed-digest release");
-            Check(UpdateService.ParseRelease(Release("0.6.1", goodUrl, goodDigest)) == null, "Updater keeps current version when no newer release exists");
+            Check(UpdateService.ParseRelease(Release("0.6.2", goodUrl, goodDigest)) == null, "Updater keeps current version when no newer release exists");
             bool badOrigin = false; try { UpdateService.ParseRelease(Release("0.7.0", goodUrl.Replace("github.com", "github.com.evil.test"), goodDigest)); } catch (InvalidDataException) { badOrigin = true; }
             Check(badOrigin, "Updater rejects asset outside official GitHub repository");
             bool badDigest = false; try { UpdateService.ParseRelease(Release("0.7.0", goodUrl, null)); } catch (InvalidDataException) { badDigest = true; }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T15:03:15.993Z",
+  "generatedAt": "2026-10-03T02:10:12.250Z",
   "policy": "Snapshot: ưu tiên loose, sau đó PAK đầu tiên trong package.ini. Chưa xác minh thứ tự engine đang chạy; giữ danh sách mọi PAK ứng viên.",
   "files": [
     {
@@ -35,8 +35,36 @@
       "sha256": "bea02b2b6cc71b8252c8f6d189a7f7cbc9222382e48e07e3d04d7a59b4866150"
     },
     {
+      "path": "Client6.0/settings/npcres/ÄÐÖ÷½Ç×óÊÖ.txt",
+      "sha256": "3f2b07f7c7e8c53e699ef4be551bc973f4356f4e3ad0e959bfad1d981673062a"
+    },
+    {
+      "path": "Client6.0/settings/npcres/ÄÐÖ÷½ÇÓÒÊÖ.txt",
+      "sha256": "95f3944b5504f23dd3203ee44d8965e76068a99b6332fb6b4b661e3d6bf97b4e"
+    },
+    {
+      "path": "Client6.0/settings/npcres/ÄÐÖ÷½Ç×óÊÖÎäÆ÷.txt",
+      "sha256": "f98561b3d73f1dbe60e7e67460035e7f9df024cd7ce7bccb3648217472b213ee"
+    },
+    {
+      "path": "Client6.0/settings/npcres/ÄÐÖ÷½ÇÓÒÊÖÎäÆ÷.txt",
+      "sha256": "ac6ddd1223507550982c1ee30a208a523afc4cdd6d712f78ffd63a07652d39f8"
+    },
+    {
+      "path": "Client6.0/settings/npcres/ÄÐÖ÷½Ç¼ç°ò.txt",
+      "sha256": "39e82017695585450f39cb4bfb56d43213a8fde0d01e0250b6205e81fd44827e"
+    },
+    {
       "path": "Client6.0/settings/npcres/ÄÐÖ÷½ÇÍ·²¿.txt",
       "sha256": "722a301cd0fd57e24738b961356e7b1645962ba5db4c7d6ec4c4229f8e142fae"
+    },
+    {
+      "path": "Client6.0/settings/npcres/ÄÐÖ÷½Ç·¢ÐÍ.txt",
+      "sha256": "8eba272a3ad67814f2e448e7be404bccc5b743332c7e976fd0d836a500e5f0b2"
+    },
+    {
+      "path": "Client6.0/settings/npcres/ÄÐÖ÷½ÇÅû·ç.txt",
+      "sha256": "cd3788f106f931d1efea41d9ad149c38688f0e258dea7c8db11461c726b87a90"
     },
     {
       "path": "Client6.0/settings/npcres/Å®Ö÷½ÇÎ´ÆïÂí¹ØÁª±í.txt",
@@ -47,8 +75,36 @@
       "sha256": "039e21695087009db3738df12816656639cef0cd684d387d32d0f18ba5c9b319"
     },
     {
+      "path": "Client6.0/settings/npcres/Å®Ö÷½Ç×óÊÖ.txt",
+      "sha256": "51bf00a1b3d1e22820366f5d0eb30c6704a7938508fa5597211c9e164def01e4"
+    },
+    {
+      "path": "Client6.0/settings/npcres/Å®Ö÷½ÇÓÒÊÖ.txt",
+      "sha256": "b48f8c9a544190a6a874fa913e19c01c9caabccd0cefae4b5c9812cb85250ff8"
+    },
+    {
+      "path": "Client6.0/settings/npcres/Å®Ö÷½Ç×óÊÖÎäÆ÷.txt",
+      "sha256": "09d4c34f4a8de7e1b398abe3318bdf6bf8341405ba4a716db15dce06fc190e47"
+    },
+    {
+      "path": "Client6.0/settings/npcres/Å®Ö÷½ÇÓÒÊÖÎäÆ÷.txt",
+      "sha256": "8001c86205b5b40218a76f463e70117b81b1eb976a5369410cca615d9951193a"
+    },
+    {
+      "path": "Client6.0/settings/npcres/Å®Ö÷½Ç¼ç°ò.txt",
+      "sha256": "e4156a0b8bca2aa2b86117fd5c4b1d26f926bacae77f895927af079f58cedf75"
+    },
+    {
       "path": "Client6.0/settings/npcres/Å®Ö÷½ÇÍ·²¿.txt",
       "sha256": "0b8bf86dfe6e9e0ad5481a7c78d04fdd48a63ac64c9f01dff59b03b54f520668"
+    },
+    {
+      "path": "Client6.0/settings/npcres/Å®Ö÷½Ç·¢ÐÍ.txt",
+      "sha256": "87db91473f27a7fa76d364c6e3fea1b649e9781e01fa951a1b10aad7f6d6d7f3"
+    },
+    {
+      "path": "Client6.0/settings/npcres/Å®Ö÷½ÇÅû·ç.txt",
+      "sha256": "2098f55d561b21e97e4cc261daa882f7e5a12817d725260808f5d74bdf977257"
     },
     {
       "path": "Client6.0/settings/npcres/×´Ì¬Í¼ÐÎ¶ÔÕÕ±í.txt",
@@ -60,10 +116,1562 @@
     }
   ],
   "packErrors": [],
-  "total": 667,
-  "ready": 626,
-  "gzipBytes": 116114622,
+  "total": 3979,
+  "ready": 3550,
+  "gzipBytes": 389868415,
   "unavailable": [
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_ST03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_ST03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_ST02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_ST02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_ST01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_ST01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_WK01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_WK01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_RN01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_RN01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_IJ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_IJ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_DE01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_DE01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_AT01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_AT01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_MG02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_MG02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_ST04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_ST04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_WK02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_WK02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_RN02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_RN02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_IJ02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_IJ02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_AT02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_AT02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_AT03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_AT03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_MG03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_MG03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_000_ST05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_ST05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_ST05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_000_WK03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_WK03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_WK03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_000_RN03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_RN03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_RN03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_000_IJ03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_IJ03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_IJ03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_007_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_000_AT04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_AT04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_AT04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_000_AT05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_AT05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_AT05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_000_MG04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_MG04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_MG04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_008_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_009_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_010_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_011_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_012_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_ST06.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_ST06.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_WK04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_WK04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_RN04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_RN04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_IJ04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_IJ04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_DE04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_DE04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_AT06.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_AT06.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_AT07.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_AT07.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_MG05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_MG05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_MG01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_MG01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_023_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_024_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_025_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_026_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_000_ST04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_031_ST04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_000_ST02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_031_ST02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_000_ST01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_031_ST01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_000_WK02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_031_WK02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_000_RN02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_031_RN02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_000_IJ02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_031_IJ02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_000_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_031_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_000_AT03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_031_AT03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_000_AT02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_031_AT02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_000_MG03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_031_MG03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_034_ST04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_034_ST02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_034_ST01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_034_WK02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_034_RN02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_034_IJ02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_034_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_034_AT03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_034_AT02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_034_MG03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_035_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_036_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_037_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_038_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_038_ST06.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_038_ST06.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_038_ST02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_038_ST02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_038_ST01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_038_ST01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_038_WK04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_038_WK04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_038_RN04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_038_RN04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_038_IJ04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_038_IJ04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_038_DE04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_038_DE04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_038_AT06.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_038_AT06.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_038_AT07.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_038_AT07.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_LW_038_MG05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\FM_RW_038_MG05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_000_DE03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_044_DE03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_SH_001_DE03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_HR_001_DE03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_045_DE03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_000_ST06.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_050_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_054_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_058_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_059_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_076_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_076_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_076_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_076_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_077_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_080_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_086_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_086_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_086_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_086_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_088_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_088_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_088_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_088_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_089_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_089_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_089_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_089_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_090_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_091_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_098_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_101_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_107_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_108_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_114_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_116_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_116_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_117_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_123_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_124_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_156_ST03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_156_ST03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_156_ST02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_156_ST02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_156_ST01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_156_ST01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_156_WK01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_156_WK01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_156_RN01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_156_RN01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_156_IJ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_156_IJ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_156_DE01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_156_DE01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_156_AT01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_156_AT01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_156_MG02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_156_MG02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_156_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_156_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_LW_156_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_156_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_ST03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_ST03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_ST02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_ST02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_ST01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_ST01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_WK01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_WK01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_RN01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_RN01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_IJ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_IJ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_DE01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_DE01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_AT01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_AT01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_MG02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_MG02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_ST04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_ST04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_WK02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_WK02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_RN02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_RN02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_IJ02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_IJ02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_000_DE03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_AT02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_AT02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_AT03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_AT03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_MG03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_MG03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_000_ST05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_ST05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_ST05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_000_WK03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_WK03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_WK03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_000_RN03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_RN03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_RN03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_000_IJ03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_IJ03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_IJ03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_007_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_000_AT04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_AT04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_AT04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_000_AT05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_AT05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_AT05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_000_MG04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_MG04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_MG04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_008_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_009_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_010_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_011_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_012_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_ST06.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_ST06.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_WK04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_WK04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_RN04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_RN04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_IJ04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_IJ04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_DE04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_DE04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_AT06.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_AT06.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_AT07.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_AT07.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_MG05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_MG05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_MG01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_MG01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_023_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_024_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_025_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_026_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_LW_000_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_RW_000_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_LW_000_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_RW_000_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_040_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_036_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_LW_000_ST05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_RW_037_ST05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_LW_000_ST02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_RW_037_ST02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_LW_000_ST01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_RW_037_ST01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_LW_000_WK03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_RW_037_WK03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_LW_000_RN03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_RW_037_RN03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_LW_000_IJ03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_RW_037_IJ03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_LW_000_DE03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_RW_037_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_LW_000_AT05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_RW_037_AT05.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_LW_000_AT04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_RW_037_AT04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_LW_000_MG04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\MA_RW_037_MG04.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_037_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_SH_001_DE03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_HR_001_DE03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_054_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_058_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_059_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_080_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_082_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_083_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_083_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_083_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_083_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_084_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_086_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_086_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_086_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_086_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_088_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_088_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_088_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_088_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_089_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_089_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_089_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_089_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_090_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_091_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_097_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_101_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_105_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_105_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_107_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_108_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_117_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_121_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_121_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_133_ST03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_133_ST02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_133_ST01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_133_WK01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_133_RN01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_133_IJ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_133_DE01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_133_AT01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_133_MG02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_133_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_133_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_123_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_124_DE02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_156_ST03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_156_ST03.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_156_ST02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_156_ST02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_156_ST01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_156_ST01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_156_WK01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_156_WK01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_156_RN01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_156_RN01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_156_IJ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_156_IJ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_156_DE01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_156_DE01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_156_AT01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_156_AT01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_156_MG02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_156_MG02.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_156_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_156_ZZ01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_LW_156_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\npcres\\woman\\FM_RW_156_JP01.spr",
+      "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
     {
       "path": "\\spr\\skill\\ÌìÈÌ\\mag_tr_09_ÍµÌì»»ÈÕ.spr",
       "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
@@ -230,6 +1838,14 @@
     }
   ],
   "directionWarnings": [
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_092_ST02.spr",
+      "warning": "Số frame không chia hết số hướng trong header; đang xem toàn bộ frame gốc, chưa tách hướng."
+    },
+    {
+      "path": "\\spr\\npcres\\man\\MA_RW_093_ST01.spr",
+      "warning": "Số frame không chia hết số hướng trong header; đang xem toàn bộ frame gốc, chưa tách hướng."
+    },
     {
       "path": "\\spr\\skill\\1502\\tw\\sl_150_daotian_zd.spr",
       "warning": "Số frame không chia hết số hướng trong header; đang xem toàn bộ frame gốc, chưa tách hướng."

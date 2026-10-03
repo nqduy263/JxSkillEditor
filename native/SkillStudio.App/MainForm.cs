@@ -1,3 +1,4 @@
+using System.Text;
 using System.Text.Json;
 using Microsoft.Web.WebView2.Core;
 using Microsoft.Web.WebView2.WinForms;
@@ -7,11 +8,16 @@ namespace JXSkillStudio;
 internal sealed class MainForm : Form
 {
     private const string Origin = "https://skillstudio.invalid";
-    private readonly WebView2 browser = new() { Dock = DockStyle.Fill, DefaultBackgroundColor = Color.FromArgb(9, 20, 17) };
+    private const int WebViewStartupTimeoutSeconds = 30;
+    private const long NativeLogLimitBytes = 512 * 1024;
+    private static readonly JsonSerializerOptions WebMessageJson = new() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+    private WebView2 browser = NewBrowser();
     private readonly WorkspaceStore store;
     private bool ready, closeReady, closePending, updateChecked;
     private PreparedUpdate? preparedUpdate;
+    private readonly SemaphoreSlim updateGate = new(1, 1);
     private readonly System.Windows.Forms.Timer closeTimer = new() { Interval = 6000 };
+    private static WebView2 NewBrowser() => new() { Dock = DockStyle.Fill, DefaultBackgroundColor = Color.FromArgb(9, 20, 17) };
     internal MainForm(WorkspaceStore store)
     {
         this.store = store;
@@ -29,7 +35,7 @@ internal sealed class MainForm : Form
         Controls.Add(browser);
         Shown += async (_, _) => await InitializeAsync();
         FormClosing += OnClosing;
-        FormClosed += (_, _) => { closeTimer.Dispose(); browser.Dispose(); };
+        FormClosed += (_, _) => { closeTimer.Dispose(); updateGate.Dispose(); browser.Dispose(); };
         closeTimer.Tick += (_, _) =>
         {
             closeTimer.Stop(); closePending = false;
@@ -51,31 +57,64 @@ internal sealed class MainForm : Form
 
     internal static bool IsUiOrigin(string value) => Uri.TryCreate(value, UriKind.Absolute, out var uri) && uri.Scheme == "https" && uri.Host == "skillstudio.invalid" && uri.Port == 443 && string.IsNullOrEmpty(uri.UserInfo);
 
-    private async Task CheckForUpdatesAsync()
+    private sealed record UpdateCheckResult(bool Available, bool Accepted, string Status, string? Version = null, string? Error = null);
+    private sealed record UpdateProgress(long Received, long? Total);
+
+    private async Task<UpdateCheckResult> CheckForUpdatesAsync(bool manual = false)
     {
+        await updateGate.WaitAsync();
         var accepted = false;
         try
         {
+            PostHostEvent("host.updateChecking", new { current = UpdateService.CurrentVersion });
             var release = await UpdateService.CheckAsync();
-            if (release == null || IsDisposed) return;
+            if (release == null || IsDisposed)
+            {
+                var result = new UpdateCheckResult(false, false, "up-to-date", UpdateService.CurrentVersion);
+                PostHostEvent("host.updateStatus", result);
+                return result;
+            }
+            PostHostEvent("host.updateAvailable", new { current = UpdateService.CurrentVersion, version = release.Version.ToString() });
             var answer = MessageBox.Show(this,
                 $"Đã có JX Skill Studio {release.Version}.\n\nYes: tải, cài vào thư mục portable hiện tại và mở lại bản mới. Workspace trong Data được giữ nguyên.\nNo: tiếp tục dùng bản {UpdateService.CurrentVersion}.",
                 "Có phiên bản mới", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (answer != DialogResult.Yes) return;
+            if (answer != DialogResult.Yes)
+            {
+                var result = new UpdateCheckResult(true, false, "declined", release.Version.ToString());
+                PostHostEvent("host.updateStatus", result);
+                return result;
+            }
             accepted = true;
+            PostHostEvent("host.updateStatus", new UpdateCheckResult(true, true, "downloading", release.Version.ToString()));
             Text = $"Đang tải bản {release.Version} · 0%";
-            var progress = new Progress<long>(value => Text = $"Đang tải bản {release.Version} · {value / 1_000_000} MB");
-            preparedUpdate = await UpdateService.DownloadAsync(release, AppContext.BaseDirectory, (received, _) => ((IProgress<long>)progress).Report(received));
+            var progress = new Progress<UpdateProgress>(value =>
+            {
+                Text = value.Total is > 0
+                    ? $"Đang tải bản {release.Version} · {value.Received / 1_000_000} / {value.Total.Value / 1_000_000} MB"
+                    : $"Đang tải bản {release.Version} · {value.Received / 1_000_000} MB";
+                PostHostEvent("host.updateProgress", value);
+            });
+            preparedUpdate = await UpdateService.DownloadAsync(release, AppContext.BaseDirectory,
+                (received, total) => ((IProgress<UpdateProgress>)progress).Report(new UpdateProgress(received, total)));
             Text = "Đã xác minh SHA-256 · đang lưu workspace và cập nhật";
+            PostHostEvent("host.updateStatus", new UpdateCheckResult(true, true, "ready", release.Version.ToString()));
             Close();
+            return new UpdateCheckResult(true, true, "ready", release.Version.ToString());
         }
         catch (Exception error)
         {
-            if (IsDisposed) return;
+            LogNative("update.check.failed", error);
+            if (IsDisposed) return new UpdateCheckResult(false, accepted, "failed", Error: error.Message);
             preparedUpdate = null;
             Text = "JX Skill Studio · " + UpdateService.CurrentVersion;
-            if (accepted) MessageBox.Show(this, "Không hoàn tất cập nhật: " + error.Message + "\n\nBạn có thể tiếp tục dùng bản hiện tại.",
+            PostHostEvent("host.updateStatus", new UpdateCheckResult(false, accepted, "failed", Error: error.Message));
+            if (accepted || manual) MessageBox.Show(this, "Không hoàn tất cập nhật: " + error.Message + "\n\nBạn có thể tiếp tục dùng bản hiện tại.",
                 "Cập nhật không thành công", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return new UpdateCheckResult(false, accepted, "failed", Error: error.Message);
+        }
+        finally
+        {
+            updateGate.Release();
         }
     }
 
@@ -86,8 +125,74 @@ internal sealed class MainForm : Form
             var ui = Path.Combine(AppContext.BaseDirectory, "ui");
             if (!File.Exists(Path.Combine(ui, "index.html"))) throw new FileNotFoundException("Thiếu ui/index.html; hãy giải nén toàn bộ gói ứng dụng.");
             var fixedPath = Path.Combine(AppContext.BaseDirectory, "runtime");
-            var environment = await CoreWebView2Environment.CreateAsync(File.Exists(Path.Combine(fixedPath, "msedgewebview2.exe")) ? fixedPath : null, Path.Combine(store.Root, "WebView2"));
-            await browser.EnsureCoreWebView2Async(environment);
+            var fixedRuntime = File.Exists(Path.Combine(fixedPath, "msedgewebview2.exe"));
+            var usingFixedRuntime = fixedRuntime;
+            CoreWebView2Environment environment;
+            try
+            {
+                environment = await CoreWebView2Environment.CreateAsync(fixedRuntime ? fixedPath : null, Path.Combine(store.Root, "WebView2"))
+                    .WaitAsync(TimeSpan.FromSeconds(WebViewStartupTimeoutSeconds));
+            }
+            catch (Exception error) when (fixedRuntime)
+            {
+                LogNative("webview.fixed-runtime.failed", error);
+                usingFixedRuntime = false;
+                try
+                {
+                    environment = await CoreWebView2Environment.CreateAsync(null, Path.Combine(store.Root, "WebView2"))
+                        .WaitAsync(TimeSpan.FromSeconds(WebViewStartupTimeoutSeconds));
+                }
+                catch (Exception systemError)
+                {
+                    LogNative("webview.system-environment.failed", systemError);
+                    var recoveryProfile = Path.Combine(store.Root, "WebView2-recovery");
+                    LogNative("webview.recovery-profile.retry");
+                    environment = await CoreWebView2Environment.CreateAsync(null, recoveryProfile)
+                        .WaitAsync(TimeSpan.FromSeconds(WebViewStartupTimeoutSeconds));
+                }
+            }
+            catch (Exception error)
+            {
+                LogNative("webview.system-environment.failed", error);
+                var recoveryProfile = Path.Combine(store.Root, "WebView2-recovery");
+                LogNative("webview.recovery-profile.retry");
+                environment = await CoreWebView2Environment.CreateAsync(null, recoveryProfile)
+                    .WaitAsync(TimeSpan.FromSeconds(WebViewStartupTimeoutSeconds));
+            }
+            try
+            {
+                await browser.EnsureCoreWebView2Async(environment).WaitAsync(TimeSpan.FromSeconds(WebViewStartupTimeoutSeconds));
+            }
+            catch (Exception error)
+            {
+                // A fixed runtime can be present but unusable (for example after a partial
+                // extraction). Dispose that control before retrying; WebView2 does not allow
+                // changing environments on an initialized control.
+                LogNative(usingFixedRuntime ? "webview.fixed-control.failed" : "webview.system-control.failed", error);
+                Controls.Remove(browser);
+                browser.Dispose();
+                browser = NewBrowser();
+                Controls.Add(browser);
+                try
+                {
+                    environment = await CoreWebView2Environment.CreateAsync(null, Path.Combine(store.Root, "WebView2"))
+                        .WaitAsync(TimeSpan.FromSeconds(WebViewStartupTimeoutSeconds));
+                    await browser.EnsureCoreWebView2Async(environment).WaitAsync(TimeSpan.FromSeconds(WebViewStartupTimeoutSeconds));
+                }
+                catch (Exception systemError)
+                {
+                    LogNative("webview.system-control.failed", systemError);
+                    Controls.Remove(browser);
+                    browser.Dispose();
+                    browser = NewBrowser();
+                    Controls.Add(browser);
+                    var recoveryProfile = Path.Combine(store.Root, "WebView2-recovery");
+                    LogNative("webview.recovery-profile.retry");
+                    environment = await CoreWebView2Environment.CreateAsync(null, recoveryProfile)
+                        .WaitAsync(TimeSpan.FromSeconds(WebViewStartupTimeoutSeconds));
+                    await browser.EnsureCoreWebView2Async(environment).WaitAsync(TimeSpan.FromSeconds(WebViewStartupTimeoutSeconds));
+                }
+            }
             var core = browser.CoreWebView2;
             core.Settings.AreHostObjectsAllowed = false;
             core.Settings.AreDevToolsEnabled = false;
@@ -112,6 +217,7 @@ internal sealed class MainForm : Form
         }
         catch (Exception e)
         {
+            LogNative("webview.startup.failed", e);
             var message = "Không mở được giao diện: " + e.Message + "\n\nGói Lite cần WebView2 Runtime. Gói Full dùng thư mục runtime đi kèm.";
             MessageBox.Show(this, message, "JX Skill Studio", MessageBoxButtons.OK, MessageBoxIcon.Error);
             closeReady = true; Close();
@@ -121,7 +227,7 @@ internal sealed class MainForm : Form
     private void Reply(string id, object? result, string? error = null)
     {
         if (!IsDisposed && browser.CoreWebView2 != null && IsUiOrigin(browser.CoreWebView2.Source))
-            browser.CoreWebView2.PostWebMessageAsJson(JsonSerializer.Serialize(new { id, ok = error == null, result, error }));
+            browser.CoreWebView2.PostWebMessageAsJson(JsonSerializer.Serialize(new { id, ok = error == null, result, error }, WebMessageJson));
     }
 
     private async void OnMessage(object? sender, CoreWebView2WebMessageReceivedEventArgs e)
@@ -145,6 +251,9 @@ internal sealed class MainForm : Form
                     ready = true;
                     result = new { version = UpdateService.CurrentVersion, mode = "Windows portable alpha", dataRoot = store.Root, webViewVersion = browser.CoreWebView2.Environment.BrowserVersionString, gameWriteEnabled = false };
                     if (!updateChecked) { updateChecked = true; BeginInvoke(new Action(async () => await CheckForUpdatesAsync())); }
+                    break;
+                case "host.checkForUpdates":
+                    result = await CheckForUpdatesAsync(manual: true);
                     break;
                 case "workspace.readAutosave": result = store.ReadAutosave(); break;
                 case "workspace.writeAutosave": result = await store.WriteAutosaveAsync(payload.GetRawText()); break;
@@ -208,5 +317,29 @@ internal sealed class MainForm : Form
         if (closePending) return;
         closePending = true; closeTimer.Start();
         browser.CoreWebView2.PostWebMessageAsJson("{\"event\":\"host.closing\"}");
+    }
+
+    private void PostHostEvent(string name, object? data)
+    {
+        try
+        {
+            if (!IsDisposed && browser.CoreWebView2 != null && IsUiOrigin(browser.CoreWebView2.Source))
+                browser.CoreWebView2.PostWebMessageAsJson(JsonSerializer.Serialize(new { @event = name, data }, WebMessageJson));
+        }
+        catch (Exception error) { LogNative("webview.event.failed", error); }
+    }
+
+    private void LogNative(string category, Exception? error = null)
+    {
+        try
+        {
+            Directory.CreateDirectory(store.Root);
+            var path = Path.Combine(store.Root, "native.log");
+            if (File.Exists(path) && new FileInfo(path).Length > NativeLogLimitBytes)
+                File.Move(path, path + "." + DateTime.UtcNow.ToString("yyyyMMdd_HHmmss_fff") + ".bak", true);
+            var line = $"{DateTimeOffset.Now:O}\t{category}\t{error?.GetType().Name}: {error?.Message}\r\n";
+            File.AppendAllText(path, line, Encoding.UTF8);
+        }
+        catch { }
     }
 }

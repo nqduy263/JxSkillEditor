@@ -36,7 +36,7 @@ try {
         elseif ([int]$reply.StatusCode -ne 404) { throw "Release lookup failed: $($reply.StatusCode)" }
     } finally { $lookup.Dispose(); if ($reply) { $reply.Dispose() } }
     if (!$release) {
-        $notes = "JX Skill Studio $Version portable Windows. Includes startup GitHub update check, SHA-256 verification, in-place update with Data preservation and automatic restart. See REVISION_07.md."
+        $notes = "JX Skill Studio $Version portable Windows. Includes composite action/effect preview, interval controls, startup GitHub update check, SHA-256 verification, in-place update with Data preservation and automatic restart. See REVISION_08.md."
         $release = SendJson 'POST' "$api/releases" @{ tag_name=$tag; target_commitish='main'; name="JX Skill Studio $Version"; body=$notes; draft=$false; prerelease=$false }
     }
     if ($release.tag_name -ne $tag) { throw 'Release tag mismatch' }

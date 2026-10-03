@@ -21,12 +21,43 @@ const actions=at.rows.map((r,i)=>({value:String(i),label:actionNames[i]||r.raw.N
 const users14=skills.rows.filter(r=>r.raw.CharAnimId==='14');
 actions.push({value:'14',label:'Không có dòng action tương ứng',code:null,description:'Bảng NpcAction chỉ có 0–13. Mã 14 xuất hiện ở '+users14.length+' dòng skill, gồm Thiếu Lâm Côn pháp. Khả năng là mã không phát động tác; chưa xác minh engine. Không gán một SPR khác làm preview.',source:actionSource+' + skills.txt'});enums.CharAnimId=actions;
 const characterSource='Client6.0/settings/npcres/ÈËÎïÀàÐÍ.txt',characters=readTable(characterSource).rows.slice(0,2),profiles=[];
-for(const row of characters){const c=row.raw,base='Client6.0/settings/npcres/',mapSource=base+c.WeaponActionTab1,mapping=readTable(mapSource),body=readTable(base+c.Body).rows[0].raw,head=readTable(base+c.Head).rows[0].raw;
- const profile={key:c.CharacterName,label:c.CharacterName==='MainMan'?'Nam · thân chuẩn 001':'Nữ · thân chuẩn 001',source:characterSource+':'+row.line,poses:[]};
- for(let i=0;i<mapping.rows.length;i++){const r=mapping.rows[i],pose={value:String(i),label:C.decode(r.raw.EqType),source:mapSource+':'+r.line,actions:{}};
-  for(const a of actions.filter(a=>a.code)){const mapped=r.raw[a.code],column=mapped==='JumpFly'?'Jump':mapped,file=body[column];if(file){const raw='\\'+c.ResFilePath+'\\'+file;const headPath=head[column]?'\\'+c.ResFilePath+'\\'+head[column]:null;pose.actions[a.value]={path:raw,headPath,mapped,column};if(headPath)add(headPath,'Action '+a.value+' / đầu chuẩn / '+profile.label);add(raw,'Action '+a.value+' / '+profile.label+' / '+pose.label);}}
+// A character action is a composed frame, not only the body SPR.  The client
+// keeps the same action order in the head, clothes, hands and weapon tables;
+// LeftHand uses Chinese column names, so resolve it by the shared column index
+// rather than by the translated header text.
+const componentNames=['Body','LeftHand','RightHead','LeftWeapon','RightWeapon','Shoulder','Head','Hair','Mantle'];
+const componentLabels={Body:'Thân',LeftHand:'Tay trái',RightHead:'Tay phải',LeftWeapon:'Vũ khí trái',RightWeapon:'Vũ khí phải',Shoulder:'Vai / áo',Head:'Đầu',Hair:'Tóc',Mantle:'Phi phong'};
+for(const row of characters){
+ const c=row.raw,base='Client6.0/settings/npcres/',mapSource=base+c.WeaponActionTab1,mapping=readTable(mapSource),components={};
+ for(const name of componentNames){try{components[name]=readTable(base+c[name]);}catch{components[name]=null;}}
+ const bodyTable=components.Body,profile={key:c.CharacterName,label:c.CharacterName==='MainMan'?'Nam · thân chuẩn 001':'Nữ · thân chuẩn 001',source:characterSource+':'+row.line,poses:[]};
+ for(let i=0;i<mapping.rows.length;i++){
+  const r=mapping.rows[i],pose={value:String(i),label:C.decode(r.raw.EqType),source:mapSource+':'+r.line,actions:{}};
+  for(const a of actions.filter(a=>a.code)){
+   const mapped=r.raw[a.code],column=mapped==='JumpFly'?'Jump':mapped,actionIndex=bodyTable?.headers.indexOf(column)??-1,layers=[];
+   for(const name of componentNames){
+    const table=components[name];if(!table)continue;
+    // Weapon rows follow the selected weapon/action pose. Other components
+    // use the first standard body/head/equipment entry (001), matching the
+    // default character rendered by the game client.
+    const selectedRow=(name==='LeftWeapon'||name==='RightWeapon')?table.rows[i]||table.rows[0]:table.rows[0];
+    if(!selectedRow)continue;
+    const header=actionIndex>=0?(table.headers[actionIndex]||column):column,file=selectedRow.raw[header]||selectedRow.raw[column];
+    if(!file||!file.toLowerCase().endsWith('.spr'))continue;
+    const raw='\\'+c.ResFilePath+'\\'+file;
+    layers.push({name,path:raw,label:componentLabels[name]||name});
+    add(raw,'Action '+a.value+' / '+(componentLabels[name]||name)+' / '+profile.label+' / '+pose.label);
+   }
+   const body=layers.find(x=>x.name==='Body')||layers[0];
+   if(body){
+    const companions=layers.filter(x=>x!==body);
+    const head=layers.find(x=>x.name==='Head');
+    pose.actions[a.value]={path:body.path,headPath:head?.path||null,layers,companions,mapped,column};
+   }
+  }
   profile.poses.push(pose);
- }profiles.push(profile);
+ }
+ profiles.push(profile);
 }
 for(const r of skills.rows){add(r.raw.PreCastSpr,'PreCastSpr #'+r.raw.SkillId+' '+C.decode(r.raw.SkillName));}
 for(const r of missiles.rows)for(const [key,raw]of Object.entries(r.raw))if(/^AnimFileB?\d$/.test(key))add(raw,key+' · missile #'+r.raw.MissleId+' '+C.decode(r.raw.MissleName));

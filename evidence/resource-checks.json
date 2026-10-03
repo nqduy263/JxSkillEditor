@@ -1,14 +1,17 @@
 {
-  "checkedAt": "2026-10-03T01:33:22.791Z",
-  "ready": 626,
-  "unavailable": 41,
-  "frames": 28567,
-  "animated": 612,
-  "actionResources": 144,
+  "checkedAt": "2026-10-03T02:30:53.351Z",
+  "ready": 3550,
+  "unavailable": 429,
+  "frames": 307186,
+  "animated": 3536,
+  "actionResources": 3456,
+  "actionLayerReferences": 51940,
+  "readyActionLayerReferences": 39023,
   "checks": [
     "All packaged SPR payloads match source SHA256 and decode every frame",
     "Inconsistent direction headers use explicit raw-frame mode without losing frames",
-    "Every generated male/female action reference resolves to real SPR",
+    "Every generated male/female action body reference resolves to real SPR",
+    "Composite action catalog covers body, head, hair, shoulder, both hands and weapons; optional missing layers are reported",
     "Action and missile samples contain distinct animated pixel frames",
     "Invalid signature, truncated data and oversized frame count fail closed"
   ],
@@ -16,6 +19,15 @@
     {
       "path": "\\spr\\npcres\\man\\MA_BD_001_MG02.spr",
       "headPath": "\\spr\\npcres\\man\\MA_HD_001_MG02.spr",
+      "layerPaths": [
+        "\\spr\\npcres\\man\\MA_BD_001_MG02.spr",
+        "\\spr\\npcres\\man\\MA_LH_001_MG02.spr",
+        "\\spr\\npcres\\man\\MA_RH_001_MG02.spr",
+        "\\spr\\npcres\\man\\MA_LW_000_MG02.spr",
+        "\\spr\\npcres\\man\\MA_RW_000_MG02.spr",
+        "\\spr\\npcres\\man\\MA_HD_001_MG02.spr",
+        "\\spr\\npcres\\man\\20100607001_MG02.spr"
+      ],
       "container": "spr.pak",
       "direction": 0,
       "frameIndexes": [
@@ -27,6 +39,7 @@
     },
     {
       "path": "\\spr\\skill\\sl\\ÎÞÏòÕ¶.spr",
+      "layerPaths": [],
       "container": "skills.pak",
       "direction": 0,
       "frameIndexes": [
@@ -39,7 +52,7 @@
   ],
   "limitations": [
     "Static frame QA is not browser layout QA",
-    "Character body/head sample only; no live equipment composition",
+    "Optional equipment SPR may be unavailable in the offline loose/PAK snapshot and is shown as missing",
     "PAK precedence and cast timing unverified in live client"
   ]
 }

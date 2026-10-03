@@ -15,8 +15,8 @@ Bản demo hiện tại: tạo skill từ đầu, khai báo Lua riêng, tạo đ
 - Tạo mới không phụ thuộc skill đang chọn. ID/name/faction riêng; gameplay và tài nguyên do người dùng khai báo. Model newSkill/newMissile và export v0.3 phân biệt insert với update.
 - Action, CharClass, SkillStyle, MslsGenerate, MisslesForm, MoveKind, FollowKind, trạng thái và liên kết có list + giải thích. Unknown được giữ nguyên mã. CharClass=3 là Mộc theo template client.
 - CharAnimId=14 không có mapping trong bảng NpcAction 0–13; không mặc định gán một animation. Gate trước sản xuất: xác minh enum engine và giới hạn của từng build.
-- Đã port read-only PACK/hash/UCL/SPR, đóng gói tài nguyên nạp khi chọn; 626/667 SPR, 28.567 frame. 41 tài nguyên chưa đọc được; lưu lỗi cụ thể.
-- Preview action ghép thân + đầu chuẩn nam/nữ và tư thế từ bảng vũ khí; chọn SPR có preview trước áp dụng, play/pause, hướng, scrub và tốc độ. Chưa là cast gameplay hay trang bị live.
+- Đã port read-only PACK/hash/UCL/SPR, đóng gói tài nguyên nạp khi chọn; snapshot 0.6.2 có 3.550 SPR ready, 429 unavailable và 307.186 frame. Resource inventory lưu lỗi cụ thể.
+- Preview action ghép composite theo mapping `npcres`: thân, đầu, tóc, vai/áo, hai tay, vũ khí và phi phong khi SPR có sẵn; chọn SPR có preview trước áp dụng, play/pause, hướng, scrub, tốc độ và interval. Có tùy chọn ghép effect cast và dòng timing. Đây vẫn là mô phỏng 2D, chưa phải cast gameplay/equipment live.
 - P3 bổ sung tạo bảng mốc P1/P2/P3 mới, Lua key riêng, tạo SkillId cho tầng và MissleId cho đường đạn, kiểm liên kết/ID và insert-plan; backend phải sinh Lua 4 hoàn chỉnh, lệnh học, codec và rollback.
 - P4 còn lại: container chưa hỗ trợ, tài nguyên thiếu, render order/equipment/horse, xác minh units/Interval và hành vi engine.
 - 41 kiểm tra logic/UI-handler + 5 nhóm resource đã qua. Frame contact sheet đã được xem; chưa QA layout trình duyệt vì file:// bị policy chặn. Gói xuất vẫn deployable=false.
@@ -197,4 +197,117 @@ Mã nguồn được xuất bản tại https://github.com/nqduy263/JxSkillEdito
 ## Build và phát hành 0.6.1
 
 Bản 0.6.1 thêm logo giao diện và biểu tượng EXE. Chạy `native/build-portable.ps1`, đóng ZIP Full với thư mục gốc `JXSkillStudio-0.6.1-win-x64`, sau đó chạy `tools/publish-release.ps1 -Version 0.6.1` để tạo GitHub Release. Bản 0.6.0 sẽ nhận diện tag mới qua API release. Xem REVISION_07.md.
+
+## Build và phát hành 0.6.2
+
+Bản 0.6.2 bổ sung composite action theo các bảng `npcres`: thân, đầu, tóc, vai/áo, hai tay, vũ khí và phi phong khi SPR có trong snapshot. Preview có tùy chọn ghép effect cast, hiển thị số lớp đã giải mã, mô phỏng WaitTime/TimePerCast/LifeTime và cho chỉnh interval riêng cho action/effect. Nút `Kiểm tra cập nhật` được giữ trong header; native host cũng tự kiểm tra khi khởi động và hỏi Yes/No trước khi tải. Chạy `node tools/build-resources.cjs`, các check, sau đó `native/build-portable.ps1`; gói mới nằm trong `releases/JXSkillStudio-0.6.2-win-x64` và không ghi đè `v0.6.1`. Xem REVISION_08.md.
+
+---
+
+## 11. Kiến trúc Easy Studio & Trợ lý tạo Skill cho người mới
+
+Mục tiêu cốt lõi: **Giúp một người dùng không biết lập trình, không hiểu cấu trúc mã hóa VLTK vẫn có thể tự tay tạo chiêu thức hoàn chỉnh trong vòng 2 phút.**
+
+Hệ thống bổ sung một lớp điều phối cấp cao (High-level Abstraction Layer) chạy song song với Pro Workbench hiện tại:
+
+```text
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          GIAO DIỆN NGƯỜI DÙNG (UI LAYER)                    │
+│      [⭐ EASY MODE: SKILL CREATION WIZARD]     [⚙ PRO MODE: 113 RAW COLUMNS] │
+└──────────────────────────────────────┬──────────────────────────────────────┘
+                                       │
+                ┌──────────────────────┴──────────────────────┐
+                ▼                                             ▼
+  ┌───────────────────────────┐                 ┌───────────────────────────┐
+  │   WIZARD 4 BƯỚC ĐƠN GIẢN  │                 │  VIRTUAL COMBAT SANDBOX   │
+  │ • Bước 1: Ý tưởng & Phái  │                 │ • Thử đòn trên Dummy Gỗ   │
+  │ • Bước 2: Động tác xuất đòn│ ──────────────> │ • Popup số sát thương     │
+  │ • Bước 3: Thư viện FX     │                 │ • Quỹ đạo chùm & góc quét │
+  │ • Bước 4: Kéo thanh Dame  │                 │ • Âm thanh va chạm        │
+  └─────────────┬─────────────┘                 └───────────────────────────┘
+                │
+                ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    ĐỘNG CƠ TỰ ĐỘNG HÓA (AUTO-SYNTHESIS ENGINE)              │
+│  ├─ Auto-ID Allocator: Tìm ID an toàn tiếp theo cho Skill và Missile        │
+│  ├─ Layer Synthesizer: Tự ghép Skill cha ──> Missile ──> Event Collide      │
+│  ├─ Damage Curve Generator: Chuyển thanh trượt Min/Max thành bảng Lua 4     │
+│  └─ TCVN3 Auto-Sanitizer: Tự làm sạch tên, mô tả và chuẩn hóa NFC           │
+└──────────────────────────────────────┬──────────────────────────────────────┘
+                                       │
+                                       ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                   CẦU NỐI CÀI ĐẶT 1-CLICK (LOCAL GAME DEPLOYER)             │
+│  ├─ Ghi đè file cục bộ: Client6.0/settings/skills.txt & missles.txt         │
+│  ├─ Sinh mã nguồn Lua: server1/script/skill/<skill_id>.lua                  │
+│  ├─ Tạo lệnh học tức thì: Thêm hàm AddMagic vào GM/NPC hỗ trợ thử nghiệm   │
+│  └─ Cơ chế an toàn: Backup tự động trước khi ghi và Rollback 1 chạm         │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### 11.1. Chi tiết thiết kế Wizard 4 bước
+1. **Bước 1 — Ý tưởng & Môn phái:**
+   - Người dùng nhập tên chiêu thức (VD: *Cửu Long Thần Chưởng*).
+   - Chọn môn phái trong danh sách 10 đại môn phái kinh điển. Hệ thống tự động gán ngũ hành tương sinh (Kim, Mộc, Thủy, Hỏa, Thổ) và vũ khí phù hợp.
+   - Chọn kiểu đánh: Cận chiến (Melee), Tầm xa (Ranged), Đánh lan diện rộng (AoE), Hỗ trợ/Hào quang (Aura/Buff), hoặc Bùa chú (Curse/Debuff).
+2. **Bước 2 — Động tác nhân vật (Action Gallery):**
+   - Danh sách động tác trực quan có nhãn tiếng Việt dễ hiểu (*Chém mạnh, Đâm kiếm, Vung bổng, Chưởng hai tay, Niệm bùa, Tụ khí...*).
+   - Khung xem trước động tác nhân vật tự động chạy hoạt họa SPR tương ứng.
+3. **Bước 3 — Thư viện hiệu ứng trực quan (Visual FX Gallery):**
+   - Phân loại toàn bộ 626 SPR theo hệ ngũ hành và hình thái trực quan:
+     - *Hệ Kim:* Kiếm khí vàng, đao chém hoàng kim, mưa ám khí, quầng sáng hộ thể.
+     - *Hệ Mộc:* Độc vụ xanh lá, phi tiêu bão vũ, dây gai gai góc cuộn đất.
+     - *Hệ Thủy:* Băng kiếm, mưa tuyết rơi, sóng nước thanh lam, hoa sen hộ thể.
+     - *Hệ Hỏa:* Rồng lửa cuộn, cột lửa bốc, cầu lửa nổ tung, lốc lửa xoay.
+     - *Hệ Thổ:* Cuồng lôi sét giật, đá nứt địa chấn, búa tạ rơi từ trời.
+   - Người dùng click vào là hiệu ứng phát sáng chuyển động ngay.
+4. **Bước 4 — Cân bằng sát thương bằng thanh trượt (Intuitive Sliders):**
+   - Thay thế việc viết code Lua phức tạp bằng các thanh kéo trực quan:
+     - Sát thương cơ bản: Kéo từ cấp 1 (VD: 120 điểm) đến cấp 20 (VD: 1.800 điểm).
+     - Thời gian hồi chiêu: 0.5s đến 10s.
+     - Tỷ lệ hiệu ứng phụ: Kéo % Làm chậm, Làm choáng, Bất tỉnh, Trúng độc.
+   - Hệ thống tự sinh công thức Lua hợp lệ 100% và điền đủ 20 ô thuộc tính `LvlSetting`/`LvlData`.
+
+### 11.2. Kho mẫu chiêu thức kinh điển (1-Click Presets)
+Tích hợp sẵn 10 Archetype mẫu:
+1. *Cận chiến đơn mục tiêu* (Đạt Ma Độ Giang / Tam Hoàn Cảo Nguyệt).
+2. *Kiếm khí tầm xa bắn xuyên thấu* (Vô Ngã Vô Kiếm / Thiên Ngoại Lưu Tinh).
+3. *Chưởng pháp phát nổ khi va chạm* (Phi Long Tại Thiên / Hàng Long Thập Bát Chưởng).
+4. *Mưa đòn rơi từ trên trời* (Lôi Động Cửu Thiên / Phong Sương Băng Ách).
+5. *Đạn nổ tỏa hình tròn 360 độ* (Băng Tâm Tiên Tử / Vạn Kiếm Quy Tông).
+6. *Hào quang bị động buff thuộc tính* (Tọa Vọng Vô Vi / Phật Quang Phổ Chiếu).
+7. *Bùa chú nguyền rủa diện rộng* (Đoạt Hồn Quyết / Đoạn Cốt Trảm).
+8. *Chiêu thức đặt bẫy nổ* (Cửu Cung Phi Tinh / Địa Lôi Môn).
+9. *Chiêu lướt nhanh áp sát* (Đoạn Hồn Thích / Ma Âm Phệ Phách).
+10. *Chiêu hộ thể hút sát thương* (Kim Chung Tráo / Nga Mi Hộ Thể).
+
+### 11.3. Đấu trường thử nghiệm ảo (Virtual Combat Sandbox)
+- Tích hợp một sàn đấu 2D Canvas có nhân vật người chơi đứng đối diện búp bê gỗ (Training Dummy).
+- Cho phép nhấn phím Space hoặc Click chuột để xuất chiêu:
+  - Nhân vật thực hiện động tác xuất đòn -> đường đạn bay ra -> phát nổ khi chạm búp bê.
+  - Búp bê rung giật phản hồi va chạm.
+  - Nhảy số sát thương nổi (*Floating Combat Text*: `-1.420`, `-3.200 Bạo Kích!`).
+  - Cho phép kiểm tra cảm giác xuất chiêu thực tế trước khi đưa vào game.
+
+### 11.4. Động cơ tự cấp phát ID an toàn (Auto-ID Allocator)
+- Quét toàn bộ `skills.txt` và `missles.txt`, tự tìm khoảng trống ID an toàn tiếp theo (VD: `Skill ID: 1236`, `Missile ID: 442`).
+- Triệt tiêu 100% nguy cơ trùng ID (ID Collision) hoặc vỡ mảng cấu trúc game.
+
+### 11.5. Cầu nối cài đặt vào Game 1-Click (Local Game Deployer)
+- Nút bấm **"Áp Dụng Vào Game"**:
+  - Tự động ghi đè file `skills.txt` và `missles.txt` trong thư mục Client6.0.
+  - Tự động sinh file script Lua vào thư mục Server `script/skill/`.
+  - Tự động tạo một script lệnh GM hoặc NPC hỗ trợ: *"Học ngay kỹ năng vừa tạo"* để vào game test thử tức thì.
+  - Tự động tạo bản sao lưu `.bak_yyyyMMdd_HHmmss` và nút Rollback 1 chạm.
+
+---
+
+## 12. Lộ trình phát triển mở rộng (Phased Roadmap v0.7 – v1.0)
+
+| Phiên bản | Trọng tâm công việc | Thời gian dự kiến | Tiêu chí hoàn thành |
+| :--- | :--- | :--- | :--- |
+| **v0.7.0** *(Easy Mode)* | • Triển khai **Skill Creation Wizard 4 bước**.<br>• Xây dựng **Visual FX Gallery** phân loại tiếng Việt theo ngũ hành.<br>• Tích hợp bộ **10 Preset mẫu kinh điển**.<br>• Tích hợp **Auto-ID Allocator** tự động tìm ID an toàn. | 2–3 tuần | Người dùng chưa biết gì có thể tạo 1 chiêu mới hoàn chỉnh dưới 2 phút trong giao diện mới. |
+| **v0.8.0** *(Sandbox)* | • Triển khai **Virtual Combat Sandbox** có búp bê tập võ.<br>• Mô phỏng đường đạn đa tia (hình quạt, chùm, xoay tròn).<br>• Hiệu ứng nảy số sát thương (Floating Combat Text) và âm thanh. | 2–3 tuần | Thử nghiệm trực quan cảm giác đánh trúng mục tiêu ngay trên phần mềm. |
+| **v0.9.0** *(Deployer)* | • Xây dựng module **1-Click Game Sync** ghi tệp client/server cục bộ.<br>• Trình sinh mã nguồn Lua chuẩn (`script/skill/*.lua`).<br>• Script GM tự động nạp skill cho nhân vật game offline. | 2 tuần | Bấm 1 nút là vào game offline có thể thi triển được chiêu thức mới tạo. |
+| **v1.0.0** *(Production)* | • Tối ưu hóa toàn diện, tài liệu hướng dẫn bằng hình ảnh/video.<br>• Hỗ trợ cấu hình tùy biến cho nhiều bản server (JX Linux 6.0, JX Win, JX 8.0). | 1–2 tuần | Bản phát hành chính thức ổn định, dễ tiếp cận nhất cho cộng đồng modder VLTK. |
 
