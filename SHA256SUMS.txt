@@ -718,4 +718,4 @@ d71a839ebbeffe36ef84add9b5c2d00fc0c7d2adbe7967d6fddbfeaa67af7436  tools/client-d
 f3469e03d7174f79dbc6d23719fdca8129762038a50774704418cf8e61415f38  tools/publish-release.ps1
 45e7f3d2fb5b4ad295ad63495d2522fc3fea94d68d1fcce0b36a26760e92e70c  tools/release-files.cjs
 5142c4c55627a4dcf790fcfbffd9ec5d31ebc4854ea2722442c7098be720a699  tools/snapshot-live.cjs
-e56b4d8dbcf3d0875247684213859f2e54de929d897f144d8abe4e8aeb0f09c8  JXSkillStudio-0.6.1-win-x64-Full.zip
+9b61cf8fb37eef441393688c8e44a4203bd9c5f05939a965e2b853d9a9f11912  JXSkillStudio-0.6.1-win-x64-Full.zip
