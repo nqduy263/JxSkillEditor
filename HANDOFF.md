@@ -127,3 +127,23 @@ Ngày: 03/10/2026.
 
 Chạy `releases/JXSkillStudio-0.6.2-win-x64/JXSkillStudio.exe` hoặc giải nén ZIP Full tương ứng. Preview action đọc composite từ catalog SPR: thân, đầu, tóc, vai/áo, tay, vũ khí và phi phong theo action/tư thế; lớp nào thiếu nguồn sẽ hiện trong dòng timing thay vì giả ảnh. Bật `Ghép hiệu ứng cast đang chọn vào action` để xem nhân vật cùng effect, chỉnh `Interval action` và `Interval hiệu ứng` để khớp nhịp frame. `Kiểm tra cập nhật` kiểm tra thủ công; native host vẫn tự kiểm tra lúc mở và Yes/No sẽ tải, xác minh SHA-256, thay portable rồi mở lại. Bản cũ và `Data/` được giữ nguyên.
 
+## Tiếp tục sau 0.6.2 — P0/P1 read-only
+
+Ngày 03/10/2026, profile đang dùng được chốt bằng `tools/profile-audit.cjs` và kiểm bằng `tools/check-profile.cjs`. Kết quả nằm ở `evidence/profile-audit.json` và `evidence/profile-checks.json`; profile hiện tại ghi nhận 1.242 dòng skill client, 1.222 dòng skill server, 441 missile mỗi phía và 31 PAK có hash.
+
+P1 đã thêm `tools/raw-tsv.cjs`: parser giữ raw byte/CRLF và byte span từng ô để chuẩn bị diff tối thiểu. `tools/check-raw-tsv.cjs` đạt 7/7 kiểm tra trên `Client6.0/settings/skills.txt`, gồm round-trip nguyên byte, duplicate 521 và chặn control byte/Unicode ngoài Latin-1. Kết quả ở `evidence/raw-tsv-checks.json`.
+
+Các lệnh tái lập:
+
+```powershell
+node tools/profile-audit.cjs
+node tools/check-profile.cjs
+node tools/check-raw-tsv.cjs
+node tools/check-demo.cjs
+node tools/check-workspace.cjs
+node tools/check-resources.cjs
+pwsh -File tools/check-updater.ps1
+```
+
+P0/P1 không ghi Client/Server, không kết nối SSH, không đọc memory và không thay đổi vòng đời service. PAK precedence, giới hạn ID, action 14 và cast timing live vẫn là cổng chưa nghiệm thu.
+

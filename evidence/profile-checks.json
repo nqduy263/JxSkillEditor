@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-03T03:34:10.559Z",
+  "profileId": "jx6-client6-150d9cf4f9893186",
+  "pass": true,
+  "checks": [
+    "profile schema and profileId are internally consistent",
+    "all required source hashes and 31 PAK hashes match the filesystem",
+    "client/server skill and missile schemas remain 113/57 columns",
+    "duplicate SkillId 521 is preserved as a warning",
+    "precedence, ID limits, action 14, cast timing and license remain explicit unknown/review gates",
+    "safety flags confirm read-only operation"
+  ],
+  "output": "evidence/profile-checks.json"
+}

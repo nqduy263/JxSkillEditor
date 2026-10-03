@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-03T03:37:06.432Z",
+  "source": "Client6.0/settings/skills.txt",
+  "bytes": 582768,
+  "rows": 1242,
+  "headers": 113,
+  "newline": {
+    "crlf": 1243,
+    "lf": 0,
+    "finalTerminator": "CRLF"
+  },
+  "passed": 7,
+  "checks": [
+    "Round-trip without edits is byte-identical",
+    "Client skill table keeps 113 headers and CRLF records",
+    "Every row exposes byte spans and raw one-byte cells",
+    "Duplicate SkillId 521 is visible without last-wins inference",
+    "Latin-1 keeps source bytes above ASCII intact",
+    "One-cell replacement changes only the requested span and keeps CRLF",
+    "Control bytes and non-Latin-1 input are rejected before staging"
+  ],
+  "writesToGame": false,
+  "output": "evidence/raw-tsv-checks.json"
+}
