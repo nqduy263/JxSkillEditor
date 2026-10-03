@@ -1,15 +1,15 @@
 {
-  "snapshotId": "57c3abd27130b1ddd8b9c3ccc1f36cf62cf8eff594ee3e2745494984374a3c19",
-  "generatedAt": "2026-10-03T05:25:26.153Z",
+  "snapshotId": "2002165111d53d658715f4dcb0ad758f161689daddeb68909a8c36f057b54171",
+  "generatedAt": "2026-10-03T05:44:22.272Z",
   "scope": "Verified running client root; loose-file snapshot; learning references from captured running WSL server root. No in-memory skill list read.",
   "source": "Client6.0/settings/skills.txt",
   "coverage": {
-    "rawRows": 1266,
-    "rows": 1265,
+    "rawRows": 1277,
+    "rows": 1276,
     "icons": 978,
-    "learned": 175,
-    "script": 313,
-    "missiles": 471,
+    "learned": 177,
+    "script": 322,
+    "missiles": 482,
     "scripts": 227,
     "factions": 13
   },
@@ -26,13 +26,13 @@
   "files": [
     {
       "path": "Client6.0/settings/skills.txt",
-      "bytes": 595147,
-      "sha256": "8f69228ee1118fb695dd54766519fc0f189ce68a429cc1e5e074489bacd11e4d"
+      "bytes": 600967,
+      "sha256": "0acd5d95168d7d50e84a8f30171ef3564cc44809647a13209356919a127e23f0"
     },
     {
       "path": "Client6.0/settings/missles.txt",
-      "bytes": 94326,
-      "sha256": "d8ceb5c806ce833b2497437fd2fc2c9e166142b09f69f2c86772d689efd9ab42"
+      "bytes": 100568,
+      "sha256": "a0e88328263585be752b23d2737d66c0f6dc951c6fd873f38baf18f03aa3d52b"
     },
     {
       "path": "SkillStudio/evidence/live_skills_table.lua",
@@ -86,8 +86,8 @@
     },
     {
       "path": "Client6.0/script/skill/tangmen.lua",
-      "bytes": 39012,
-      "sha256": "5a03e0cac78a363dba3f61756dbafe57805594e39a8d8be4b1c70fa14acd7ca2"
+      "bytes": 47855,
+      "sha256": "46d3d305fc4e3510a13a453e1189060d6612c34e06d478fd7fda35907f0faad3"
     },
     {
       "path": "Client6.0/script/skill/special/½ü³ÌÎïÀí¹¥»÷.lua",

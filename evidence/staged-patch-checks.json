@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-03T05:30:19.513Z",
+  "checkedAt": "2026-10-03T05:45:02.893Z",
   "passed": 8,
   "checks": [
     "TSV planner emits a minimal cell edit with profile precondition",

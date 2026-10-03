@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-03T05:26:01.613Z",
+  "generatedAt": "2026-10-03T05:44:52.970Z",
   "policy": "Snapshot: ưu tiên loose, sau đó PAK đầu tiên trong package.ini. Chưa xác minh thứ tự engine đang chạy; giữ danh sách mọi PAK ứng viên.",
   "files": [
     {
       "path": "Client6.0/settings/skills.txt",
-      "sha256": "8f69228ee1118fb695dd54766519fc0f189ce68a429cc1e5e074489bacd11e4d"
+      "sha256": "0acd5d95168d7d50e84a8f30171ef3564cc44809647a13209356919a127e23f0"
     },
     {
       "path": "Client6.0/settings/missles.txt",
-      "sha256": "d8ceb5c806ce833b2497437fd2fc2c9e166142b09f69f2c86772d689efd9ab42"
+      "sha256": "a0e88328263585be752b23d2737d66c0f6dc951c6fd873f38baf18f03aa3d52b"
     },
     {
       "path": "Client6.0/settings/skilltemplate.txt",
@@ -24,7 +24,7 @@
     },
     {
       "path": "Client6.0/settings/npcres/ÈËÎïÀàÐÍ.txt",
-      "sha256": "c0c1b78810f1bd918b292605402da2cb6ea3bb42eac12442d8e1a217cc2635d2"
+      "sha256": "e271457f0349d5fabd5bfcfea5deb7a33153aa6e7e841bacbc231687922f8f81"
     },
     {
       "path": "Client6.0/settings/npcres/ÄÐÖ÷½ÇÎ´ÆïÂí¹ØÁª±í.txt",
@@ -116,9 +116,9 @@
     }
   ],
   "packErrors": [],
-  "total": 3979,
-  "ready": 3550,
-  "gzipBytes": 389868415,
+  "total": 4020,
+  "ready": 3559,
+  "gzipBytes": 402103804,
   "unavailable": [
     {
       "path": "\\spr\\npcres\\man\\MA_SH_001_ST03.spr",
@@ -1739,6 +1739,134 @@
     {
       "path": "\\spr\\skill\\mid_autumn\\zhaoludeng.spr",
       "reason": "Không tìm thấy SPR ở loose hoặc PAK đã đọc"
+    },
+    {
+      "path": "\\spr\\skill110\\duong_mon\\tm_phitieu_t3_tieuphach.spr",
+      "reason": "RLE vượt hàng"
+    },
+    {
+      "path": "\\spr\\skill110\\kun_lun\\kl_dao_t1_phongloi.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\kun_lun\\kl_kiem_t1_thienphat.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thieu_lam\\sl_dao_t1_phatquang.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thieu_lam\\sl_dao_t2_quythien.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thieu_lam\\sl_dao_t3_tramma.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thieu_lam\\sl_con_t1_hoanhtaocong.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thieu_lam\\sl_con_t2_trandiacon.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thieu_lam\\sl_con_t3_phucmakinh.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thieu_lam\\sl_quyen_t1_kimlong.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thieu_lam\\sl_quyen_t2_phatchuong.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thieu_lam\\sl_quyen_t3_phakiep.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thien_vuong\\tw_thuong_t1_bavuong.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thien_vuong\\tw_thuong_t2_tranhon.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thien_vuong\\tw_thuong_t3_thaugiap.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thien_vuong\\tw_chuy_t1_toaicot.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thien_vuong\\tw_chuy_t2_lietdia.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thien_vuong\\tw_chuy_t3_khaitien.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thien_vuong\\tw_dao_t1_cuulong.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thien_vuong\\tw_dao_t2_phalang.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\thien_vuong\\tw_dao_t3_tagiap.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\duong_mon\\tm_phidao_t1_manthien.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\duong_mon\\tm_phidao_t2_truyhon.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\duong_mon\\tm_phidao_t3_nguyetanh.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\duong_mon\\tm_tutien_t1_baovu.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\duong_mon\\tm_tutien_t2_hoale.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\duong_mon\\tm_tutien_t3_thietlien.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\duong_mon\\tm_bay_t1_hoancac.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\duong_mon\\tm_bay_t2_thienthach.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\duong_mon\\tm_bay_t3_loanhoan.spr",
+      "reason": "Không phải SPR"
+    },
+    {
+      "path": "\\spr\\skill110\\duong_mon\\tm_phitieu_t1_cuucung.spr",
+      "reason": "RLE vượt hàng"
+    },
+    {
+      "path": "\\spr\\skill110\\duong_mon\\tm_phitieu_t2_cankhon.spr",
+      "reason": "RLE vượt hàng"
     },
     {
       "path": "\\spr\\skill\\bm\\Äàöú.spr",

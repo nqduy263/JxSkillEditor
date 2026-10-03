@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-03T05:26:32.378Z",
-  "profileId": "jx6-client6-5fc2148c18a7745b",
+  "checkedAt": "2026-10-03T05:45:02.315Z",
+  "profileId": "jx6-client6-57a89f16cbfa324f",
   "pass": true,
   "checks": [
     "profile schema and profileId are internally consistent",

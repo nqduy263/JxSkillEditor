@@ -898,6 +898,56 @@
         "id": 1160,
         "name": "ầơÀÔềằệÀnpc",
         "line": 1161
+      },
+      {
+        "id": 1307,
+        "name": "Vô ảnh Truy Hụn Đao",
+        "line": 1268
+      },
+      {
+        "id": 1308,
+        "name": "Bạo Vũ Hoa Lờ",
+        "line": 1271
+      },
+      {
+        "id": 1309,
+        "name": "Loạn Hoàn Trưn Địạ",
+        "line": 1274
+      },
+      {
+        "id": 1310,
+        "name": "Càn Khụn Cỹu Cung Tinh",
+        "line": 1277
+      },
+      {
+        "id": 1357,
+        "name": "Ngõn Đao Xạ Nguyởt Trưn",
+        "line": 1269
+      },
+      {
+        "id": 1359,
+        "name": "Tam Giởi HỳĐa Lụi Trưn",
+        "line": 1275
+      },
+      {
+        "id": 1387,
+        "name": "Nhiởp Hụn Nguyởt ảnh KÙnh",
+        "line": 1270
+      },
+      {
+        "id": 1388,
+        "name": "Thiởt Liờn Tứ Sát KÙnh",
+        "line": 1273
+      },
+      {
+        "id": 1389,
+        "name": "Loạn Hoàn Tuyởt Diởt KÙnh",
+        "line": 1276
+      },
+      {
+        "id": 1390,
+        "name": "Cỹu Cung Tuyởt Diởt KÙnh",
+        "line": 1240
       }
     ]
   },
@@ -2349,11 +2399,6 @@
         "line": 1242
       },
       {
-        "id": 1390,
-        "name": "Thiên Cương Trảm Trận",
-        "line": 1240
-      },
-      {
         "id": 1391,
         "name": "Lưỡng Nghi Phá Kiếp Trảm",
         "line": 1243
@@ -2685,6 +2730,18 @@
         "name": "Bát Hoang Liởt Địa Trởn",
         "line": 1263,
         "learnLine": 1075
+      },
+      {
+        "id": 1358,
+        "name": "Mạn Thiên Hoa Vũ Trưn",
+        "line": 1272,
+        "learnLine": 1083
+      },
+      {
+        "id": 1360,
+        "name": "Càn Khụn Nhát Trịởch Trưn",
+        "line": 1278,
+        "learnLine": 1086
       },
       {
         "id": 1372,
