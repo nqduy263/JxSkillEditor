@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-03T04:15:51.633Z",
+  "sources": [
+    "Client6.0/settings/gamesetting.ini",
+    "Client6.0/settings/skilltemplate.txt"
+  ],
+  "sections": 87,
+  "passed": 5,
+  "checks": [
+    "Gamesetting and skilltemplate round-trip without edits",
+    "Sections and values expose byte spans",
+    "Values containing equals signs stay intact",
+    "One-value replacement preserves surrounding bytes and section",
+    "Comments, CRLF/LF style and invalid values are handled safely"
+  ],
+  "writesToGame": false,
+  "output": "evidence/raw-ini-checks.json"
+}

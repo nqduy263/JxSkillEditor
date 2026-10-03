@@ -137,6 +137,8 @@ Dialog tạo skill/đường đạn/tầng dùng `JXModel.nextDraftId` để tí
 
 P1 Lua span dùng `tools/raw-lua.cjs` và `tools/check-raw-lua.cjs`: kiểm 5/5 trên bảng `wudang_jianfa.addphysicsdamage_p`, thay literal trong buffer theo byte span, giữ comment/encoding và không chạy Lua. Artifact: `evidence/raw-lua-checks.json`.
 
+P1 INI span dùng `tools/raw-ini.cjs` và `tools/check-raw-ini.cjs`: kiểm 5/5 trên `gamesetting.ini` và `skilltemplate.txt`, giữ section/key/value, newline và giá trị có dấu `=`. Artifact: `evidence/raw-ini-checks.json`.
+
 Các lệnh tái lập:
 
 ```powershell
@@ -144,6 +146,7 @@ node tools/profile-audit.cjs
 node tools/check-profile.cjs
 node tools/check-raw-tsv.cjs
 node tools/check-raw-lua.cjs
+node tools/check-raw-ini.cjs
 node tools/check-demo.cjs
 node tools/check-workspace.cjs
 node tools/check-resources.cjs

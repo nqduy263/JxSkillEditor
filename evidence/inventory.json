@@ -1,6 +1,6 @@
 {
-  "snapshotId": "ebfafdd5df23dcbba0a657afb7ad8ac3a0891396ee3ba98c2e92e48d07b8c1ba",
-  "generatedAt": "2026-10-03T03:53:55.536Z",
+  "snapshotId": "e1572e44cd75d19a00638c4e1d4ed68981b67a8409642fb4c81910ef2d92313a",
+  "generatedAt": "2026-10-03T04:14:20.359Z",
   "scope": "Verified running client root; loose-file snapshot; learning references from captured running WSL server root. No in-memory skill list read.",
   "source": "Client6.0/settings/skills.txt",
   "coverage": {
@@ -26,13 +26,13 @@
   "files": [
     {
       "path": "Client6.0/settings/skills.txt",
-      "bytes": 585672,
-      "sha256": "859eeeaaa4b231e554d0ea6469280d8ff504a9f428d1107b22f7f6c491750299"
+      "bytes": 585749,
+      "sha256": "34654010365a696089b078e31b863617115c534e0fe2a5ca357f1b478a29c89f"
     },
     {
       "path": "Client6.0/settings/missles.txt",
-      "bytes": 91537,
-      "sha256": "630cffe08200f8fcfdb997937a2fc64343bf86997b5902a5d903b497f72bf571"
+      "bytes": 91538,
+      "sha256": "2b2ad61216f488a0189e188360530d844f6163b49e2f1c942e0525b4479a5396"
     },
     {
       "path": "SkillStudio/evidence/live_skills_table.lua",
@@ -106,8 +106,8 @@
     },
     {
       "path": "Client6.0/script/skill/kunlun.lua",
-      "bytes": 35864,
-      "sha256": "1cb1bdae5cd1a10a32418135246a7023956b7e758adef2cd7eba8cb68f5dfdab"
+      "bytes": 35863,
+      "sha256": "eaa4e5cf939a62590c5d0385a82e0993415108368f210388094de7798a99a3d1"
     },
     {
       "path": "Client6.0/script/skill/cuiyan.lua",

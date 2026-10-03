@@ -1,7 +1,7 @@
 {
   "schema": "jx-skill-studio/profile-audit/v1",
-  "generatedAt": "2026-10-03T03:53:38.233Z",
-  "profileId": "jx6-client6-c7d1731723febe69",
+  "generatedAt": "2026-10-03T04:12:17.942Z",
+  "profileId": "jx6-client6-fe412a4dbf81f5e7",
   "target": {
     "client": "JX1 Client6.0",
     "server": "JX Linux 6.0",
@@ -36,8 +36,8 @@
       "role": "client skill table",
       "required": true,
       "exists": true,
-      "bytes": 585672,
-      "sha256": "859eeeaaa4b231e554d0ea6469280d8ff504a9f428d1107b22f7f6c491750299",
+      "bytes": 585749,
+      "sha256": "34654010365a696089b078e31b863617115c534e0fe2a5ca357f1b478a29c89f",
       "crlf": 1249,
       "lf": 0
     },
@@ -46,8 +46,8 @@
       "role": "client missile table",
       "required": true,
       "exists": true,
-      "bytes": 91537,
-      "sha256": "630cffe08200f8fcfdb997937a2fc64343bf86997b5902a5d903b497f72bf571",
+      "bytes": 91538,
+      "sha256": "2b2ad61216f488a0189e188360530d844f6163b49e2f1c942e0525b4479a5396",
       "crlf": 454,
       "lf": 0
     },
@@ -136,8 +136,8 @@
       "role": "server skill table",
       "required": true,
       "exists": true,
-      "bytes": 573892,
-      "sha256": "414c43b41d0f6d41ccffc56d3585dda5b827d9a01ec9bf6eb5384078366d5292",
+      "bytes": 573969,
+      "sha256": "029d8aea9c1ed674ac04670b1de79a4702c2a3832d434c66164b0f00b9eab669",
       "crlf": 1229,
       "lf": 0
     },
@@ -146,8 +146,8 @@
       "role": "server missile table",
       "required": true,
       "exists": true,
-      "bytes": 91537,
-      "sha256": "630cffe08200f8fcfdb997937a2fc64343bf86997b5902a5d903b497f72bf571",
+      "bytes": 91538,
+      "sha256": "2b2ad61216f488a0189e188360530d844f6163b49e2f1c942e0525b4479a5396",
       "crlf": 454,
       "lf": 0
     },
@@ -847,7 +847,7 @@
     "path": "Server 6.0/server_moi/jxser_bachkim_6.0/server1/script/skill",
     "exists": true,
     "files": 517,
-    "contentIndexSha256": "0ce93e570adaa1d6ad2830fbe987edc6b0e08975fa39acfdb5a258c5a86b49d9"
+    "contentIndexSha256": "38b603bac6c5144ba8ded425e9891b79ae95fced8c376499ce6302f1f321c891"
   },
   "capturedSnapshot": {
     "capturedAt": "2026-10-03T02:54:16.546Z",
