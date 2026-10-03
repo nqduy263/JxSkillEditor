@@ -25,8 +25,10 @@ const characterSource='Client6.0/settings/npcres/ÈËÎïÀàÐÍ.txt',character
 // keeps the same action order in the head, clothes, hands and weapon tables;
 // LeftHand uses Chinese column names, so resolve it by the shared column index
 // rather than by the translated header text.
-const componentNames=['Body','LeftHand','RightHead','LeftWeapon','RightWeapon','Shoulder','Head','Hair','Mantle'];
-const componentLabels={Body:'Thân',LeftHand:'Tay trái',RightHead:'Tay phải',LeftWeapon:'Vũ khí trái',RightWeapon:'Vũ khí phải',Shoulder:'Vai / áo',Head:'Đầu',Hair:'Tóc',Mantle:'Phi phong'};
+// Phi phong is a separate cosmetic layer and is excluded from the cast preview;
+// it obscures the hand and cast action in the compact inspector.
+const componentNames=['Body','LeftHand','RightHead','LeftWeapon','RightWeapon','Shoulder','Head','Hair'];
+const componentLabels={Body:'Thân',LeftHand:'Tay trái',RightHead:'Tay phải',LeftWeapon:'Vũ khí trái',RightWeapon:'Vũ khí phải',Shoulder:'Vai / áo',Head:'Đầu',Hair:'Tóc'};
 for(const row of characters){
  const c=row.raw,base='Client6.0/settings/npcres/',mapSource=base+c.WeaponActionTab1,mapping=readTable(mapSource),components={};
  for(const name of componentNames){try{components[name]=readTable(base+c[name]);}catch{components[name]=null;}}

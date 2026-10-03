@@ -1,6 +1,6 @@
 {
-  "snapshotId": "984ec84365905cc5f8b998996cd41d7756eee2d0b32e031de36540ba66292ff4",
-  "generatedAt": "2026-10-03T06:04:28.584Z",
+  "snapshotId": "d9540252776cdd08dcd938b5e1c988ccf8da931257f434bae5b333a0315af178",
+  "generatedAt": "2026-10-03T06:17:45.595Z",
   "scope": "Verified running client root; loose-file snapshot; learning references from captured running WSL server root. No in-memory skill list read.",
   "source": "Client6.0/settings/skills.txt",
   "coverage": {
@@ -27,7 +27,7 @@
     {
       "path": "Client6.0/settings/skills.txt",
       "bytes": 604848,
-      "sha256": "48b81bf7768f9be0c0aecff852b15a4709e1dbe44b63981b44462c583b99c3c7"
+      "sha256": "c1ab7c1c498b5a40e271dd643c5e3c4ad2e489ca508fd05aac1df53b622722e4"
     },
     {
       "path": "Client6.0/settings/missles.txt",

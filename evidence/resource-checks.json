@@ -1,12 +1,12 @@
 {
-  "checkedAt": "2026-10-03T05:45:41.546Z",
-  "ready": 3559,
+  "checkedAt": "2026-10-03T06:20:13.115Z",
+  "ready": 3491,
   "unavailable": 461,
-  "frames": 308266,
-  "animated": 3545,
-  "actionResources": 3456,
-  "actionLayerReferences": 51940,
-  "readyActionLayerReferences": 39023,
+  "frames": 301810,
+  "animated": 3477,
+  "actionResources": 3384,
+  "actionLayerReferences": 46060,
+  "readyActionLayerReferences": 33143,
   "checks": [
     "All packaged SPR payloads match source SHA256 and decode every frame",
     "Inconsistent direction headers use explicit raw-frame mode without losing frames",
@@ -25,8 +25,7 @@
         "\\spr\\npcres\\man\\MA_RH_001_MG02.spr",
         "\\spr\\npcres\\man\\MA_LW_000_MG02.spr",
         "\\spr\\npcres\\man\\MA_RW_000_MG02.spr",
-        "\\spr\\npcres\\man\\MA_HD_001_MG02.spr",
-        "\\spr\\npcres\\man\\20100607001_MG02.spr"
+        "\\spr\\npcres\\man\\MA_HD_001_MG02.spr"
       ],
       "container": "spr.pak",
       "direction": 0,

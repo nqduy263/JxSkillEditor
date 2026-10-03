@@ -1,7 +1,7 @@
 {
   "schema": "jx-skill-studio/profile-audit/v1",
-  "generatedAt": "2026-10-03T06:04:28.200Z",
-  "profileId": "jx6-client6-977f506751e2795c",
+  "generatedAt": "2026-10-03T06:17:45.184Z",
+  "profileId": "jx6-client6-ffbaa5f1d75fbb59",
   "target": {
     "client": "JX1 Client6.0",
     "server": "JX Linux 6.0",
@@ -37,7 +37,7 @@
       "required": true,
       "exists": true,
       "bytes": 604848,
-      "sha256": "48b81bf7768f9be0c0aecff852b15a4709e1dbe44b63981b44462c583b99c3c7",
+      "sha256": "c1ab7c1c498b5a40e271dd643c5e3c4ad2e489ca508fd05aac1df53b622722e4",
       "crlf": 1282,
       "lf": 0
     },
@@ -137,7 +137,7 @@
       "required": true,
       "exists": true,
       "bytes": 593360,
-      "sha256": "9f5ad84221ccf0098597297b05dd270b10ea68d648375777655132f7f88092e9",
+      "sha256": "6406d95148903162a6164ac50be0214b075d801706a686caa4754366390a9717",
       "crlf": 1262,
       "lf": 0
     },
@@ -847,7 +847,7 @@
     "path": "Server 6.0/server_moi/jxser_bachkim_6.0/server1/script/skill",
     "exists": true,
     "files": 517,
-    "contentIndexSha256": "cc8f08ba6bb1e3be7fa23c06217cc5a017eee6de171ab8ff2dfd68c652b7b3bd"
+    "contentIndexSha256": "5f434e22acd90b6f574d3e80cb2e1e025212babe1e064cbb7e6a3fe394c4ad1b"
   },
   "capturedSnapshot": {
     "capturedAt": "2026-10-03T02:54:16.546Z",

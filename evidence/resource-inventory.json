@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-03T05:44:52.970Z",
+  "generatedAt": "2026-10-03T06:18:11.750Z",
   "policy": "Snapshot: ưu tiên loose, sau đó PAK đầu tiên trong package.ini. Chưa xác minh thứ tự engine đang chạy; giữ danh sách mọi PAK ứng viên.",
   "files": [
     {
       "path": "Client6.0/settings/skills.txt",
-      "sha256": "0acd5d95168d7d50e84a8f30171ef3564cc44809647a13209356919a127e23f0"
+      "sha256": "c1ab7c1c498b5a40e271dd643c5e3c4ad2e489ca508fd05aac1df53b622722e4"
     },
     {
       "path": "Client6.0/settings/missles.txt",
-      "sha256": "a0e88328263585be752b23d2737d66c0f6dc951c6fd873f38baf18f03aa3d52b"
+      "sha256": "41eb468e9ef4dcc7be272d84d4e765faa64406d3ef89a7cf0c7bed33971474f3"
     },
     {
       "path": "Client6.0/settings/skilltemplate.txt",
@@ -63,10 +63,6 @@
       "sha256": "8eba272a3ad67814f2e448e7be404bccc5b743332c7e976fd0d836a500e5f0b2"
     },
     {
-      "path": "Client6.0/settings/npcres/ÄÐÖ÷½ÇÅû·ç.txt",
-      "sha256": "cd3788f106f931d1efea41d9ad149c38688f0e258dea7c8db11461c726b87a90"
-    },
-    {
       "path": "Client6.0/settings/npcres/Å®Ö÷½ÇÎ´ÆïÂí¹ØÁª±í.txt",
       "sha256": "8d3269e5f91e93d862f16296380cb41961fe3a81eb892a96aa3fb25f9ff16755"
     },
@@ -103,10 +99,6 @@
       "sha256": "87db91473f27a7fa76d364c6e3fea1b649e9781e01fa951a1b10aad7f6d6d7f3"
     },
     {
-      "path": "Client6.0/settings/npcres/Å®Ö÷½ÇÅû·ç.txt",
-      "sha256": "2098f55d561b21e97e4cc261daa882f7e5a12817d725260808f5d74bdf977257"
-    },
-    {
       "path": "Client6.0/settings/npcres/×´Ì¬Í¼ÐÎ¶ÔÕÕ±í.txt",
       "sha256": "a56404b715bdcb6025b650ce52863356f26fbf7a42967cc6a84620c427956d1a"
     },
@@ -116,9 +108,9 @@
     }
   ],
   "packErrors": [],
-  "total": 4020,
-  "ready": 3559,
-  "gzipBytes": 402103804,
+  "total": 3952,
+  "ready": 3491,
+  "gzipBytes": 396634680,
   "unavailable": [
     {
       "path": "\\spr\\npcres\\man\\MA_SH_001_ST03.spr",
